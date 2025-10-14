@@ -175,7 +175,7 @@
 
 /* Details Container */
 .expedition-details-container {
-    max-height: 0;
+    max-height: 420px !important;
     overflow: hidden;
     transition: max-height 0.5s ease-in-out, margin-top 0.5s ease-in-out;
 }

@@ -453,7 +453,7 @@ document.addEventListener('DOMContentLoaded', function () {
         container.innerHTML = `
             <div class="summit-audiences">
                 <div class="audience" id="audience-academic" style="top: 10%; left: 5%;">
-                    <div class="audience-icon">🧑‍🏫</div><span class="audience-label">Academia</span>
+                    <div class="audience-icon">🧑‍🏫</div><span class="audience-label">University</span>
                 </div>
                 <div class="audience" id="audience-public" style="top: 10%; right: 42%;">
                     <div class="audience-icon">🌍</div><span class="audience-label">Public</span>
