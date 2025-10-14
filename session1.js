@@ -725,4 +725,6 @@ document.addEventListener('DOMContentLoaded', function () {
         container.innerHTML = `<p style="color: #888; font-style: italic;">Interactive element coming soon!</p>`;
         container.id = '';
     }
+
+    document.querySelector('#stage-1').click();
 });
