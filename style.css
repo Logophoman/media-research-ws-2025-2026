@@ -1,0 +1,244 @@
+/* style.css */
+:root {
+    --primary-color: #003366;
+    /* Dunkelblau Uni Hohenheim */
+    --secondary-color: #f4f4f4;
+    /* Helles Grau */
+    --text-color: #333;
+    --accent-color: #e8491d;
+    /* Akzentfarbe Orange */
+    --max-width: 960px;
+    --border-radius: 8px;
+    --hover-lighten: rgba(255, 255, 255, 0.1);
+    --hover-darken: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #fff;
+    padding-bottom: 60px;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+header {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 2rem 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header .uni-logo {
+    max-width: 200px;
+    margin-bottom: 1rem;
+    background-color: white;
+    padding: 10px;
+    border-radius: 3%;
+}
+
+header h1 {
+    color: #fff;
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+}
+
+header .subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+    max-width: 80%;
+}
+
+nav {
+    background: var(--secondary-color);
+    padding: 0.5rem 0;
+    border-radius: var(--border-radius);
+    margin-bottom: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0.5rem 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+    padding: 0.5rem 0.75rem;
+    border-radius: 5px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: var(--accent-color);
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+main {
+    margin-top: 2rem;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+    margin-top: 2rem;
+}
+
+h2:first-of-type {
+    margin-top: 0;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+ul,
+ol {
+    margin-bottom: 1rem;
+    margin-left: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+blockquote {
+    background: #e7f3fe;
+    border-left: 5px solid #2196F3;
+    margin: 1.5em 0;
+    padding: 1em 1.5em;
+    font-style: italic;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    margin: 2rem 0;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+footer {
+    background: var(--text-color);
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+/* Course Schedule Table Styles */
+.course-schedule {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    font-size: 0.95em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.course-schedule thead tr {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    text-align: left;
+}
+
+.course-schedule th,
+.course-schedule td {
+    padding: 12px 15px;
+}
+
+.course-schedule tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.course-schedule tbody tr:nth-of-type(even) {
+    background-color: var(--secondary-color);
+}
+
+.course-schedule tbody tr:last-of-type {
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.course-schedule tbody tr.break-row {
+    background-color: #e9ecef;
+    font-style: italic;
+    color: #6c757d;
+    text-align: center;
+}
+
+.course-schedule .session-number {
+    font-weight: bold;
+    text-align: center;
+    width: 80px;
+}
+
+.course-schedule .note {
+    font-style: italic;
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* Styling für Interaktive Elemente (beibehalten für spätere Sessions) */
+.interactive-box {
+    background-color: var(--secondary-color);
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin: 2rem 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
