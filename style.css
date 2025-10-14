@@ -49,9 +49,8 @@ header {
 }
 
 header .uni-logo {
-    max-width: 200px;
+    max-width: 350px;
     margin-bottom: 1rem;
-    background-color: white;
     padding: 10px;
     border-radius: 3%;
 }
