@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderSingleList(listElement, items, category) {
         listElement.innerHTML = ''; // Clear current items
         if (!items || items.length === 0) {
-            listElement.innerHTML = '<li class="empty-list">Noch keine Ideen...</li>';
+            listElement.innerHTML = '<li class="empty-list">No Ideas yet...</li>';
             return;
         }
         items.forEach((item, index) => {
@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ];
 
         if (allItems.length === 0) {
-            vizContainer.innerHTML = '<p class="empty-viz">Keine Daten zum Visualisieren.</p>';
+            vizContainer.innerHTML = '<p class="empty-viz">No ideas to visualize.</p>';
             return;
         }
 
