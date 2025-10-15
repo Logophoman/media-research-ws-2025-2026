@@ -530,7 +530,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-        const timelineContainer = document.getElementById('stats-timeline-container');
+    const timelineContainer = document.getElementById('stats-timeline-container');
     if (timelineContainer) {
         const progress = timelineContainer.querySelector('.timeline-progress');
         const milestones = timelineContainer.querySelectorAll('.timeline-milestone');
@@ -602,6 +602,42 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             },
             {
+                question: "A new topic lands on your desk. You start by:",
+                options: {
+                    A: { emoji: '📚', text: 'Diving into papers — you love exploring details' },          // lit recherche
+                    B: { emoji: '🤔', text: 'Questioning what it could really mean' },                    // ergebnisinterpretation
+                    C: { emoji: '✍️', text: 'Sketching how to tell its story' },                          // verschriftlichung
+                    D: { emoji: '🎨', text: 'Visualizing how to present it beautifully' }                 // präsentation/layout
+                }
+            },
+            {
+                question: "Your strength in research shows when you:",
+                options: {
+                    A: { emoji: '🔎', text: 'Dig deep and find hidden connections in literature' },       // lit recherche
+                    B: { emoji: '🧩', text: 'Spot what the data really says — and what it doesn’t' },     // ergebnisinterpretation
+                    C: { emoji: '🖋️', text: 'Turn findings into a clear, engaging story' },              // verschriftlichung
+                    D: { emoji: '🖼️', text: 'Make results look sharp and intuitive' }                    // präsentation/layout
+                }
+            },
+            {
+                question: "In a research team, others rely on you to:",
+                options: {
+                    A: { emoji: '📖', text: 'Know every detail from the background readings' },           // lit recherche
+                    B: { emoji: '🧠', text: 'Think critically about what results mean' },                 // ergebnisinterpretation
+                    C: { emoji: '💬', text: 'Write and shape the report’s story' },                       // verschriftlichung
+                    D: { emoji: '🎞️', text: 'Design slides and layouts that wow' }                       // präsentation/layout
+                }
+            },
+            {
+                question: "The part of research you secretly enjoy most:",
+                options: {
+                    A: { emoji: '🧾', text: 'Reading, highlighting, and connecting ideas' },              // lit recherche
+                    B: { emoji: '📊', text: 'Figuring out what’s really behind the numbers' },            // ergebnisinterpretation
+                    C: { emoji: '🗒️', text: 'Writing up results in your own words' },                    // verschriftlichung
+                    D: { emoji: '🪄', text: 'Crafting a beautiful final presentation' }                   // präsentation/layout
+                }
+            },
+            {
                 question: "Which podcast research topic sparks your immediate interest?",
                 options: {
                     A: { emoji: '👥', text: 'The listeners & community' },
@@ -611,7 +647,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             }
         ];
-        
+
         // Element Hooks
         const overlay = document.getElementById('game-overlay');
         const overlayTitle = document.getElementById('overlay-title');
@@ -626,7 +662,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // State
         let currentQuestionIndex = -1;
         let timerInterval;
-        const TIMER_DURATION = 20;
+        const TIMER_DURATION = 30;
 
         function initGame() {
             startGameBtn.addEventListener('click', () => {
@@ -640,7 +676,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         function startRound(index) {
             const questionData = questions[index];
-            
+
             // Reset UI
             nextQuestionBtn.disabled = true;
             questionCounter.textContent = `Round ${index + 1} / ${questions.length}`;
@@ -653,7 +689,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 card.classList.remove('disabled');
                 card.querySelector('.peer-count').textContent = '0';
             });
-            
+
             // Start Timer
             let secondsLeft = TIMER_DURATION;
             timerText.textContent = `0:${secondsLeft < 10 ? '0' : ''}${secondsLeft}`;
@@ -677,17 +713,17 @@ document.addEventListener('DOMContentLoaded', function () {
                     endRound();
                 }
             }, 1000);
-            
+
             timerBar.style.width = '0%';
         }
 
         function handleCardClick(event) {
             const selectedCard = event.currentTarget;
             if (selectedCard.classList.contains('disabled')) return;
-            
+
             cards.forEach(card => card.classList.remove('selected'));
             selectedCard.classList.add('selected');
-            
+
             // SIMULATION: On your screen, it shows you've made a choice.
             // In class, students see their choice highlighted on the main screen.
             const peerCountEl = selectedCard.querySelector('.peer-count');
