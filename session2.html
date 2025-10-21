@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Andreas Reich">
-    <!-- !!! CHANGE THIS TITLE FOR EACH SESSION !!! -->
-    <title>Session X: [Topic] – Media Research WS 2025/26</title>
+    <title>Session 2: Group Formation & Topic Brainstorming – Media Research WS 2025/26</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="session2.css">
+    <link rel="stylesheet" href="literature-matrix-tool.css">
 </head>
 
 <body>
@@ -17,22 +18,490 @@
             <img src="uni-logo-de_hoh_weiss.png" alt="Universität Hohenheim Logo" class="uni-logo">
         </a>
         <h1>Media Research & Audience Intelligence - Part 2 (B)</h1>
-        <!-- !!! CHANGE THIS SUBTITLE FOR EACH SESSION !!! -->
-        <p class="subtitle">Session 2: 	Group Formation & Topic Brainstorming</p>
+        <p class="subtitle">Session 2: Group Formation & Topic Brainstorming</p>
     </header>
 
     <div class="container">
         <nav>
             <ul>
-                <li><a href="index.html">Back to the Course Overview</a></li>
+                <li><a href="index.html">Course Overview</a></li>
+                <li><a href="session1.html">Session 1</a></li>
+                <li><a href="session2.html" class="active">Session 2</a></li>
+                <li><a href="session3.html">Session 3</a></li>
             </ul>
         </nav>
-        
+
         <main>
-            <div class="interactive-box" style="text-align: center; padding: 3rem 2rem;">
-                <h2 style="margin-top: 0;">Content Coming Soon!</h2>
-                <p style="font-size: 1.1em; color: #555;">The materials and interactive elements for this session will be available here shortly.</p>
-                <p>Please refer to the <a href="index.html">Course Overview</a> for the schedule and main topics.</p>
+            <h2>Today's Session Plan</h2>
+            <p>Welcome back! Today, we transition from individual interests to collaborative research. Our session is
+                structured as a hands-on workshop to form your teams, brainstorm initial topics, and equip you with the
+                tools for the critical first phase of your project: the literature review.</p>
+
+            <div class="agenda-list">
+                <div class="agenda-item">
+                    <div class="agenda-icon">👥</div>
+                    <div class="agenda-text">
+                        <h4>Activity: Form Your Research Tribes</h4>
+                        <p>We'll start with a dynamic in-class activity to finalize your project groups for the
+                            semester.</p>
+                    </div>
+                </div>
+                <div class="agenda-item">
+                    <div class="agenda-icon">💡</div>
+                    <div class="agenda-text">
+                        <h4>Workshop: Initial Topic Pitches</h4>
+                        <p>In your new groups, you will brainstorm and present 1-2 initial ideas for your research
+                            project.</p>
+                    </div>
+                </div>
+                <div class="agenda-item">
+                    <div class="agenda-icon">🔎</div>
+                    <div class="agenda-text">
+                        <h4>Live Demo & Toolkit</h4>
+                        <p>I'll walk you through the practical steps of starting a literature review and introduce the
+                            key databases and organizational tools.</p>
+                    </div>
+                </div>
+                <div class="agenda-item">
+                    <div class="agenda-icon">🎯</div>
+                    <div class="agenda-text">
+                        <h4>Next Steps & Homework</h4>
+                        <p>We'll conclude by clarifying your group's task for the next two weeks: the in-depth topic
+                            study.</p>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="section-divider">
+
+            <h2><span>Activity:</span> Form Your Research Tribes</h2>
+            <div class="workshop-task-box">
+                <h4>Your Task (10-15 Minutes)</h4>
+                <p>It's time to make it official! Please stand up, move around the room, and finalize your project
+                    groups of 3-4 members. Connect with peers who share your research interests or who you collaborated
+                    with in last week's "Tribe Finder" game. My role is to help facilitate, so please let me know if you
+                    need assistance finding a team.</p>
+            </div>
+
+            <div id="group-tool-container">
+                <div class="group-tool-header">
+                    <h4>Interactive Group Manager</h4>
+                    <div class="group-tool-status" id="group-tool-status">Ready</div>
+                </div>
+
+                <ul id="group-list-dynamic" class="group-list-dynamic">
+                    <!-- Groups will be dynamically added here by JavaScript -->
+                </ul>
+
+                <div class="group-tool-controls">
+                    <button id="add-new-group-btn" class="btn-control btn-add">
+                        <span class="icon">➕</span> Add New Group
+                    </button>
+                    <div class="group-file-ops">
+                        <button id="save-to-browser-btn" class="btn-control btn-save">
+                            <span class="icon">💾</span> Save to Browser
+                        </button>
+                        <button id="export-json-btn" class="btn-control btn-export">
+                            <span class="icon">📤</span> Export to File
+                        </button>
+                        <label for="import-json-input" class="btn-control btn-import">
+                            <span class="icon">📥</span> Import from File
+                        </label>
+                        <input type="file" id="import-json-input" accept=".json" style="display: none;">
+                    </div>
+                </div>
+            </div>
+
+            <hr class="section-divider">
+
+            <h2><span>Workshop:</span> Initial Topic Pitches</h2>
+            <div class="workshop-task-box">
+                <h4>Your First Group Task (20 Minutes)</h4>
+                <p>In your newly formed groups, discuss your shared interests in the world of podcasts. Your goal is to
+                    brainstorm and select <strong>1-3 initial project ideas</strong> that you find exciting. Use the
+                    guiding questions below to prepare for a brief, informal presentation of your ideas to the class.
+                </p>
+            </div>
+
+            <div class="pitch-container">
+                <div class="pitch-format-box">
+                    <h4>Workshop Format</h4>
+                    <ul>
+                        <li><span class="icon">🗣️</span> <strong>No Slides Needed:</strong> This is a conversation, not
+                            a formal presentation.</li>
+                        <li><span class="icon">⏱️</span> <strong>2-3 Minutes per Idea:</strong> A brief, informal pitch
+                            from one group spokesperson.</li>
+                        <li><span class="icon">💬</span> <strong>Goal is Feedback:</strong> The aim is to share your
+                            initial thoughts and get constructive feedback to guide your next steps.</li>
+                    </ul>
+                </div>
+                <div class="pitch-questions-box">
+                    <h4>Guiding Questions for Your Pitch</h4>
+                    <ul>
+                        <li>What is your general topic idea?</li>
+                        <li>What makes this topic interesting or relevant to you?</li>
+                        <li>What is a potential, very rough research question you could imagine?</li>
+                        <li>What are some initial keywords you would use to search for literature on this topic?</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pitch-example-box">
+                <h4>💡 Example Pitch</h4>
+                <p>"Our group is interested in <strong>parasocial relationships</strong> in podcasts. We've all noticed
+                    how attached we get to certain hosts. A rough research question might be: <em>'How do different
+                        podcast formats, like solo shows versus interviews, affect the intensity of parasocial
+                        relationships listeners form with hosts?'</em> Our initial keywords for searching would be:
+                    <strong>'parasocial interaction'</strong>, <strong>'podcast host'</strong>, <strong>'audience
+                        engagement'</strong>, and <strong>'listening habits'</strong>."
+                </p>
+            </div>
+
+            <div id="pitchboard-tool">
+                <div class="pitchboard-main-controls">
+                    <h3>Live Topic Board</h3>
+                    <div class="control-group">
+                        <button id="add-board-btn" class="tool-btn add-btn">
+                            <span class="icon">➕</span> Add Group Board
+                        </button>
+                        <button id="export-boards-btn" class="tool-btn export-btn">
+                            <span class="icon">📤</span> Export All
+                        </button>
+                        <label for="import-boards-input" class="tool-btn import-btn">
+                            <span class="icon">📥</span> Import All
+                        </label>
+                        <input type="file" id="import-boards-input" accept=".json" style="display: none;">
+                    </div>
+                </div>
+
+                <div class="pitchboard-viewport">
+                    <div id="pitchboard-slider" class="pitchboard-slider">
+                        <!-- Pitch boards will be dynamically generated here -->
+                    </div>
+                </div>
+            </div>
+
+            <hr class="section-divider">
+
+            <h2><span>Live Demo:</span> From Topic to Research Gap</h2>
+            <p>A great research project is built on the foundation of existing knowledge. Let's bridge the gap between
+                your topic idea and a formal research question with a practical look at how to begin a literature
+                review.</p>
+
+            <div class="live-demo-box">
+                <div class="demo-icon">👩‍🏫</div>
+                <div class="demo-text">
+                    <h4>In-Class Walkthrough: Using Google Scholar</h4>
+                    <p>We will take one of the topic ideas pitched today and perform a live search together. I will
+                        demonstrate how to:</p>
+                    <ul>
+                        <li>Refine keywords for effective searching.</li>
+                        <li>Quickly scan abstracts to identify relevant articles.</li>
+                        <li>Use one good article to "snowball" and find other key sources.</li>
+                        <li>Begin thinking about where the "research gap" might be.</li>
+                        <li>Show you how to use AI for preliminary research filtering.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="ai-pro-tip-section">
+                <div class="ai-header">
+                    <h3><span class="icon">🤖</span> Pro Tip: Using AI as Your Research Assistant</h3>
+                    <p>Modern AI tools can be incredibly powerful for accelerating research, but they must be used
+                        responsibly and critically. Here’s a guide to leveraging them effectively.</p>
+                </div>
+
+                <div class="ai-guidelines">
+                    <!-- DO'S -->
+                    <div class="ai-dos">
+                        <h4>What AI is Great For ✅</h4>
+                        <ul>
+                            <li><strong>Summarization:</strong> Quickly get the gist of a dense academic paper. Paste in
+                                the text and ask for the key arguments, methods, and findings.</li>
+                            <li><strong>Clarification:</strong> Simplify complex concepts or jargon. Ask, "Explain
+                                'parasocial interaction' in simple terms."</li>
+                            <li><strong>Proofreading & Formalities:</strong> Check your writing for grammar, style, and
+                                formatting errors. It's excellent for polishing your final report.</li>
+                            <li><strong>Coding Assistance:</strong> When you reach the analysis phase, AI can help write
+                                or debug code for statistical software like R or Python.</li>
+                        </ul>
+                    </div>
+
+                    <!-- DON'TS / CAUTIONS -->
+                    <div class="ai-cautions">
+                        <h4>Where to Be Cautious ⚠️</h4>
+                        <ul>
+                            <li><strong>Initial Research & "Hallucinations":</strong> AI can invent sources or
+                                misrepresent facts. <strong>NEVER</strong> trust an AI's claims or citations without
+                                verifying them
+                                yourself in a proper database.</li>
+                            <li><strong>Open-Access Bias:</strong> AI models are primarily trained on freely available
+                                web data. They often miss crucial research from paywalled academic journals. Relying
+                                solely on AI will give you an incomplete and biased view of the literature.</li>
+                            <li><strong>Critical Thinking:</strong> Do not let the AI do your thinking. Use it to
+                                process information, but the analysis, interpretation, and arguments in your paper must
+                                be your own.</li>
+                            <li><strong>Writing Your Paper:</strong> Submitting AI-generated text as your own is
+                                academic misconduct. Use it as a tool, not a ghostwriter. We have tools to spot
+                                AI-Writing!</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="ai-warning-box">
+                    <span class="icon">❗</span>
+                    <p><strong>Your Responsibility:</strong> You are 100% accountable for every word, fact, and citation
+                        in your submitted work. Use AI as a calculator, not as the mathematician. Always verify, always
+                        question, and always be the author of your own work.</p>
+                </div>
+
+                <div class="ai-tools">
+                    <h4>Recommended Tools:</h4>
+                    <p>Explore powerful models like <a href="https://aistudio.google.com/" target="_blank">Google's AI
+                            Studio (with Gemini 2.5 Pro)</a> or <a href="https://chat.deepseek.com/"
+                            target="_blank">DeepSeek</a> for advanced reasoning and text processing capabilities.</p>
+                </div>
+            </div>
+
+            <h2>Your Research Expedition Toolkit</h2>
+            <p>To conduct a thorough review, you'll need access to scientific databases and a system for organizing your
+                work. Here are the essential resources and best practices.</p>
+
+            <div class="info-box vpn-warning">
+                <span class="info-icon">❗</span>
+                <p><strong>Important Reminder:</strong> To access most of these databases from off-campus, you
+                    <strong>must</strong> be logged into the university's VPN client.
+                </p>
+            </div>
+
+            <div class="collapsible-box">
+                <button type="button" class="collapsible-trigger">▶ Click to reveal Key Research Databases</button>
+                <div class="collapsible-content">
+                    <ul class="resource-list">
+                        <li><a href="https://scholar.google.de/" target="_blank"><strong>Google Scholar:</strong></a>
+                            Your best starting point for a broad, interdisciplinary search.</li>
+                        <li><a href="https://search.ebscohost.com/" target="_blank"><strong>EBSCO Host (Communication &
+                                    Mass Media Complete):</strong></a> A core database for communication science
+                            literature.</li>
+                        <li><a href="https://www.scopus.com/pages/preview" target="_blank"><strong>Scopus:</strong></a>
+                            A large, comprehensive database for peer-reviewed articles across many fields.</li>
+                        <li><a href="https://www.wiso-net.de/?targetUrl=%2F" target="_blank"><strong>WISO
+                                    (Sozialwissenschaften):</strong></a> Excellent for finding German-language research
+                            in the social sciences.</li>
+                        <li><a href="https://rds-hoh.ibs-bw.de/hohsearch/" target="_blank"><strong>Hoh
+                                    Search:</strong></a> Your portal to all books provided by the university.</li>
+                        <li><a href="https://kim.uni-hohenheim.de/95584" target="_blank"><strong>University Research
+                                    Portals:</strong></a> Your portal to many research services provided by the
+                            university.</li>
+                        <li><a href="https://kim.uni-hohenheim.de/95582" target="_blank"><strong>University Research
+                                    Index:</strong></a> The university has liscensed many books and articles. Here you
+                            can check if they have what you're searching for</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="collapsible-box">
+                <button type="button" class="collapsible-trigger">▶ Click to reveal Tips for Effective Group
+                    Work</button>
+                <div class="collapsible-content">
+                    <ul class="tips-list">
+                        <li><strong>Shared Workspace:</strong> Immediately create a shared folder (Google Drive,
+                            Dropbox, etc.) to store all articles, notes, and drafts.</li>
+                        <li><strong>Task Allocation:</strong> Clearly define who is responsible for what. (e.g., "Anna
+                            searches EBSCO, Ben searches Scopus for the first 5 keywords.")</li>
+                        <li><strong>Literature Matrix:</strong> Start a shared spreadsheet to track your readings.
+                            Columns should include: Author/Year, Title, Theory, Method, Key Findings, and Your
+                            Notes/Relevance.</li>
+                        <li><strong>Regular Check-ins:</strong> Schedule brief, regular meetings (even 15 minutes) to
+                            sync your findings and discuss next steps.</li>
+                        <li><strong>Document Decisions:</strong> Keep a simple running log of key decisions or open
+                            questions. This will be a lifesaver for your final report.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="lit-matrix-tool">
+                <div class="lit-matrix-header">
+                    <h3>Live Literature Matrix</h3>
+                    <div class="lit-matrix-controls">
+                        <button id="matrix-add-row-btn" class="tool-btn add-btn">➕ Add Row</button>
+                        <button id="matrix-export-csv-btn" class="tool-btn export-btn">📤 Export CSV</button>
+                        <label for="matrix-import-csv-input" class="tool-btn import-btn">📥 Import CSV</label>
+                        <input type="file" id="matrix-import-csv-input" accept=".csv" style="display: none;">
+                    </div>
+                </div>
+                <div class="lit-matrix-table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Author(s) & Year</th>
+                                <th>Title</th>
+                                <th>Theory/Framework</th>
+                                <th>Method</th>
+                                <th>Key Findings</th>
+                                <th class="notes-col">Your Notes & Relevance</th>
+                                <th class="actions-col">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="lit-matrix-body">
+                            <!-- Rows will be generated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="template-link">
+                    <p>💡 Prefer working offline? Just copy the row headers to Excel.</a></p>
+                </div>
+            </div>
+
+            <hr class="section-divider">
+
+            <h2><span>Scaffolding:</span> Anatomy of a Research Question</h2>
+            <p>Developing a strong research question is a process of transformation, moving from a broad area of
+                curiosity to a specific, testable inquiry. Below is a breakdown of this process.</p>
+
+            <div class="rq-anatomy-section">
+
+                <div class="rq-transformation">
+                    <!-- BEFORE -->
+                    <div class="rq-box rq-before">
+                        <div class="rq-box-header">
+                            <span class="icon">☁️</span>
+                            <h3>Broad Topic Idea</h3>
+                        </div>
+                        <p>"Podcast Advertising"</p>
+                    </div>
+
+                    <!-- ARROW -->
+                    <div class="rq-arrow">➡️</div>
+
+                    <!-- AFTER -->
+                    <div class="rq-box rq-after">
+                        <div class="rq-box-header">
+                            <span class="icon">🎯</span>
+                            <h3>Focused Research Question</h3>
+                        </div>
+                        <blockquote>"To what extent does the <span class="highlight-iv">perceived authenticity of
+                                host-read ads</span> influence <span class="highlight-dv">listeners' purchase
+                                intent</span> in the context of <span class="highlight-context">German comedy
+                                podcasts</span>?"</blockquote>
+                    </div>
+                </div>
+
+                <div class="rq-breakdown">
+                    <h4>The Core Components:</h4>
+                    <ul>
+                        <li><span class="component-tag iv-tag">Independent Variable (IV):</span> The factor you
+                            manipulate or observe as the cause. (e.g., <span class="highlight-iv">perceived
+                                authenticity</span>).</li>
+                        <li><span class="component-tag dv-tag">Dependent Variable (DV):</span> The outcome you measure.
+                            (e.g., <span class="highlight-dv">listeners' purchase intent</span>).</li>
+                        <li><span class="component-tag context-tag">Scope/Context:</span> The specific population,
+                            medium, or setting of your study. (e.g., <span class="highlight-context">German comedy
+                                podcasts</span>).</li>
+                    </ul>
+                </div>
+
+                <div class="rq-checklist-container">
+                    <h4>Your Quality Checklist: The FINER Framework</h4>
+                    <p>Use these criteria to evaluate and refine your draft research question:</p>
+                    <ul class="rq-checklist">
+                        <li>
+                            <div class="finer-letter f-letter">F</div>
+                            <div><strong>Feasible:</strong> Can you realistically answer this question with the
+                                resources (time, skills, access to data) you have?</div>
+                        </li>
+                        <li>
+                            <div class="finer-letter i-letter">I</div>
+                            <div><strong>Interesting:</strong> Is the question intriguing to you, your peers, and the
+                                research community?</div>
+                        </li>
+                        <li>
+                            <div class="finer-letter n-letter">N</div>
+                            <div><strong>Novel:</strong> Does it confirm or refute previous findings, or does it explore
+                                a new area (fill a "research gap")?</div>
+                        </li>
+                        <li>
+                            <div class="finer-letter e-letter">E</div>
+                            <div><strong>Ethical:</strong> Can you conduct the research without causing harm to
+                                participants?</div>
+                        </li>
+                        <li>
+                            <div class="finer-letter r-letter">R</div>
+                            <div><strong>Relevant:</strong> Is the question relevant to scientific knowledge, practical
+                                application, or policy?</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="section-divider">
+
+            <h2><span>Workflow:</span> Putting It All Together</h2>
+            <p>Here’s how the tools and tasks from today’s session connect to form the start of your research journey.
+            </p>
+            <div class="workflow-steps">
+                <div class="workflow-step">
+                    <div class="workflow-icon">💡</div>
+                    <div class="workflow-text">
+                        <h4>1. Brainstorm Ideas</h4>
+                        <p>Use the <strong>Live Topic Board</strong> during the workshop to capture and refine your
+                            group's initial ideas and keywords.</p>
+                    </div>
+                </div>
+                <div class="workflow-arrow">↓</div>
+                <div class="workflow-step">
+                    <div class="workflow-icon">🔎</div>
+                    <div class="workflow-text">
+                        <h4>2. Search Databases</h4>
+                        <p>Take your keywords to the <strong>Key Research Databases</strong> (Google Scholar, EBSCO,
+                            etc.) to find relevant academic articles.</p>
+                    </div>
+                </div>
+                <div class="workflow-arrow">↓</div>
+                <div class="workflow-step">
+                    <div class="workflow-icon">✍️</div>
+                    <div class="workflow-text">
+                        <h4>3. Log Your Findings</h4>
+                        <p>As you read, systematically document your findings in the <strong>Live Literature
+                                Matrix</strong>. This is your evidence base.</p>
+                    </div>
+                </div>
+                <div class="workflow-arrow">↓</div>
+                <div class="workflow-step">
+                    <div class="workflow-icon">🎯</div>
+                    <div class="workflow-text">
+                        <h4>4. Formulate Your Question</h4>
+                        <p>Use the insights from your matrix and the <strong>Anatomy of a Research Question</strong>
+                            guide to craft a focused, FINER question.</p>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="section-divider">
+
+            <h2>Homework & Next Steps</h2>
+            <div class="homework-box">
+                <div class="homework-header">
+                    <span class="icon">🎯</span>
+                    <h3>Your Mission: In-depth Topic Study (Units 3 & 4)</h3>
+                </div>
+                <p>Your task for the next two weeks is to dive deep into the scientific literature surrounding your
+                    chosen topic. This foundational work is the most critical part of the research process.</p>
+                <ol>
+                    <li><strong>Conduct Literature Research:</strong> Begin systematically searching the databases for
+                        articles related to your topic. Aim to find and scan at least 10-15 relevant articles as a
+                        group.</li>
+                    <li><strong>Create a "State of Research" Overview:</strong> Start populating your Literature Matrix.
+                        This will help you synthesize findings and identify patterns in the existing research.</li>
+                    <li><strong>Identify a Research Gap:</strong> Based on your reading, start to formulate where your
+                        project could fit in. What questions are left unanswered? What are the limitations of previous
+                        studies?</li>
+                    <li><strong>Develop a Draft Research Question:</strong> Formulate a preliminary, focused research
+                        question that you aim to answer with your project.</li>
+                    <li><strong>Document Everything:</strong> Bring your literature matrix, draft research question, and
+                        any unresolved questions to our next session for feedback. PowerPoint Slides are warmly
+                        welcomed.</li>
+                </ol>
             </div>
         </main>
     </div>
@@ -41,6 +510,13 @@
         <p>© 2025 Andreas Reich - University of Hohenheim</p>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+        integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="session2.js" defer></script>
+    <!-- We will create this new script file -->
+    <script src="pitchboard-tool.js" defer></script>
+    <script src="literature-matrix-tool.js" defer></script>
 </body>
 
 </html>

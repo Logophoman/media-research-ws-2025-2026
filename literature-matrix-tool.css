@@ -1,0 +1,106 @@
+/* literature-matrix-tool.css */
+
+#lit-matrix-tool {
+    margin: 2.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.lit-matrix-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background-color: var(--secondary-color);
+    border-bottom: 1px solid #ccc;
+}
+.lit-matrix-header h3 { margin: 0; color: var(--primary-color); }
+.lit-matrix-controls { display: flex; gap: 10px; }
+/* Using .tool-btn class from pitchboard for consistency */
+
+.lit-matrix-table-wrapper {
+    max-height: 500px;
+    overflow: auto;
+    padding: 0;
+}
+
+#lit-matrix-tool table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9em;
+}
+
+#lit-matrix-tool thead {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+#lit-matrix-tool th {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#lit-matrix-tool tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+#lit-matrix-tool td {
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    vertical-align: top;
+    min-width: 150px;
+}
+
+#lit-matrix-tool td[contenteditable="true"] {
+    cursor: cell;
+    transition: background-color 0.2s;
+}
+
+#lit-matrix-tool td[contenteditable="true"]:focus {
+    background-color: #fff3cd;
+    outline: 2px solid var(--accent-color);
+    box-shadow: 0 0 10px rgba(255, 193, 7, 0.5);
+}
+
+.notes-col { width: 25%; }
+.actions-col { width: 80px; text-align: center; }
+
+.row-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    opacity: 0.6;
+    transition: all 0.2s;
+}
+.row-actions button:hover {
+    opacity: 1;
+    color: #dc3545; /* Red */
+    transform: scale(1.2);
+}
+
+.template-link {
+    padding: 1rem 1.5rem;
+    background-color: var(--secondary-color);
+    border-top: 1px solid #ccc;
+    font-size: 0.9em;
+}
+.template-link p { margin: 0; }
+
+.lit-matrix-controls .import-btn {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.lit-matrix-controls .import-btn:hover {
+    background-color: #f0f0f0;
+    border-color: #999;
+}
