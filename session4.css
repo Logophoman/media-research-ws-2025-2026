@@ -1,0 +1,836 @@
+/* session4.css - Specific styles for the Self-Guided Research Lab */
+
+/* --- Lab Welcome & General Structure --- */
+.lab-welcome-box {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1.5rem 2rem;
+    border-radius: var(--border-radius);
+    border-left: 5px solid var(--accent-color);
+}
+
+.lab-welcome-box h2 {
+    color: white;
+    margin-top: 0;
+}
+
+.lab-tool {
+    background-color: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-radius: var(--border-radius);
+    margin-top: 1.5rem;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.lab-tool h3 {
+    margin-top: 0;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+}
+
+.tool-intro {
+    margin-bottom: 1.5rem;
+}
+
+.tool-intro p {
+    margin-bottom: 0;
+    font-size: 0.95em;
+    color: #555;
+}
+
+/* --- Didactic Bridge Box --- */
+.didactic-bridge-box {
+    background-color: #e3f2fd;
+    border: 1px solid #cce5ff;
+    border-left: 4px solid #2196F3;
+    padding: 1rem 1.5rem;
+    margin-top: -1px;
+    /* Overlap with matrix tool border */
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+.didactic-bridge-box p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #0d47a1;
+}
+
+/* --- Variable Deconstructor Tool --- */
+#variable-deconstructor .deconstructor-inputs {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-end;
+    margin-bottom: 1.5rem;
+}
+
+#variable-deconstructor .input-group {
+    flex-grow: 1;
+}
+
+#variable-deconstructor label {
+    font-weight: bold;
+    font-size: 0.9em;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+#variable-deconstructor input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+#variable-deconstructor button {
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+#deconstruction-canvas {
+    background-color: #fff;
+    border: 1px dashed #ccc;
+    border-radius: 5px;
+    padding: 1.5rem;
+    transition: opacity 0.5s;
+}
+
+#deconstruction-canvas.canvas-hidden {
+    display: none;
+}
+
+#canvas-title {
+    margin-top: 0;
+    font-size: 1.2em;
+}
+
+#canvas-title span {
+    color: var(--primary-color);
+    font-style: italic;
+}
+
+.canvas-grid {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr;
+    /* 3 columns, 2 arrows */
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.canvas-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.canvas-column label {
+    font-weight: bold;
+}
+
+.canvas-column .helper-text {
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 0.25rem;
+    min-height: 2.5em;
+}
+
+.canvas-arrow {
+    font-size: 3rem;
+    color: #ccc;
+    font-weight: bold;
+    padding-top: 3rem;
+    text-align: center;
+}
+
+.tag-list {
+    min-height: 50px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 10px;
+    flex-grow: 1;
+}
+
+.tag {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.9em;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    line-height: 1.4;
+}
+
+.tag .delete-tag {
+    cursor: pointer;
+    font-weight: bold;
+    opacity: 0.7;
+}
+
+.tag .delete-tag:hover {
+    opacity: 1;
+}
+
+textarea#item-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 0.95em;
+    min-height: 60px;
+}
+
+@media (max-width: 900px) {
+    .canvas-grid {
+        grid-template-columns: 1fr;
+        /* Stack everything vertically */
+    }
+
+    .canvas-arrow {
+        transform: rotate(90deg);
+        padding-top: 0;
+        margin: 1rem 0;
+    }
+}
+
+/* --- Measurement Toolkit --- */
+.toolkit-example {
+    background-color: #e9ecef;
+    border-left: 4px solid var(--primary-color);
+    padding: 1rem;
+    margin-top: 1rem;
+    font-size: 0.9em;
+}
+
+.dos-and-donts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.dos h5 {
+    color: #155724;
+}
+
+.donts h5 {
+    color: #721c24;
+}
+
+.dos ul,
+.donts ul {
+    margin: 0;
+    padding-left: 1.2rem;
+}
+
+.item-checker-tool {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px dashed #ccc;
+}
+
+#item-checker-input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#item-checker-feedback {
+    margin-top: 0.5rem;
+    margin-bottom: 2.5rem;
+    font-size: 0.9em;
+    min-height: 1.2em;
+}
+
+#item-checker-feedback span {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-right: 5px;
+    font-weight: 500;
+}
+
+.feedback-ok {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.feedback-warn {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+/* --- Sampling Strategy Guide --- */
+.sampling-step {
+    margin-bottom: 1.5rem;
+}
+
+.trade-off-table {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.trade-off-table>div {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1.5rem;
+}
+
+.trade-off-table h5 {
+    margin-top: 0;
+}
+
+@media (max-width: 768px) {
+    .trade-off-table {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- Submission & Checkout --- */
+.submission-box {
+    background-color: #fffaf8;
+    border: 2px solid var(--accent-color);
+    border-radius: var(--border-radius);
+    padding: 1.5rem 2rem;
+}
+
+.submission-checklist {
+    list-style: none;
+    padding-left: 0;
+}
+
+.submission-checklist li {
+    font-size: 1.1em;
+    margin-bottom: 0.75rem;
+}
+
+.submission-box h3 {
+    margin-top: 0;
+}
+
+.submission-box ol {
+    line-height: 1.6;
+}
+
+/* --- Measurement Clinic: Good vs. Bad Examples --- */
+#item-writing-clinic {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.bad-good-example {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    padding: 1rem 1.5rem;
+}
+
+.bad-good-example h6 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+    font-size: 1em;
+}
+
+.bad-item {
+    font-weight: 500;
+    color: #721c24;
+    /* Dark Red */
+    margin-bottom: 1rem;
+}
+
+.good-item {
+    font-weight: 500;
+    color: #155724;
+    /* Dark Green */
+}
+
+.fix-it-btn {
+    padding: 6px 12px;
+    font-size: 0.85em;
+    font-weight: bold;
+    background-color: var(--secondary-color);
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.fix-it-btn:hover {
+    background-color: #e2e6ea;
+}
+
+.fix-explanation {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease-out, opacity 0.3s ease-in, margin-top 0.4s ease-out;
+    border-top: 1px dashed #ccc;
+    margin-top: 0;
+}
+
+.bad-good-example.is-revealed .fix-explanation {
+    max-height: 300px;
+    opacity: 1;
+    margin-top: 1rem;
+    padding-top: 1rem;
+}
+
+/* --- Interactive Sampling Guide --- */
+.interactive-guide-section {
+    background-color: #fff;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 1.5rem;
+}
+
+.interactive-guide-section h4 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+.tree-node,
+.tree-recommendation {
+    padding-bottom: 1rem;
+}
+
+.tree-node.hidden,
+.tree-recommendation.hidden,
+#reset-tree-btn.hidden {
+    display: none;
+}
+
+.tree-node h5 {
+    margin-bottom: 1rem;
+}
+
+.tree-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tree-options button {
+    flex: 1;
+    min-width: 250px;
+    padding: 12px;
+    font-size: 0.95em;
+    background-color: var(--secondary-color);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.2s ease;
+}
+
+.tree-options button:hover {
+    background-color: #e2e6ea;
+    border-color: var(--primary-color);
+}
+
+.tree-recommendation {
+    background-color: #e3f2fd;
+    border: 1px solid #cce5ff;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.tree-recommendation h5 {
+    margin-top: 0;
+    color: #0d47a1;
+}
+
+#reset-tree-btn {
+    margin-top: 1rem;
+    padding: 8px 16px;
+    font-size: 0.9em;
+    background: none;
+    border: 1px solid #888;
+    color: #555;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* Sample Size Estimator */
+#sample-size-estimator .estimator-inputs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.estimator-inputs .form-group label {
+    font-weight: bold;
+    font-size: 0.9em;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.estimator-inputs .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+#sample-size-result {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+}
+
+#sample-size-result.hidden {
+    display: none;
+}
+
+#sample-size-result h5 {
+    margin-top: 0;
+    color: #155724;
+}
+
+#sample-size-output {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #155724;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* --- Reference Library & Assembly Guide --- */
+#s4-reference-library .collapsible-content ul,
+#s4-reference-library .collapsible-content ol {
+    padding-left: 1.5rem;
+    margin-top: 1rem;
+    line-height: 1.6;
+}
+
+#s4-reference-library .collapsible-content p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+#s4-reference-library .collapsible-content h4 {
+    margin-top: 1.5rem;
+    color: var(--primary-color);
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.25rem;
+}
+
+#s4-reference-library .collapsible-content blockquote {
+    font-size: 0.95em;
+    font-style: italic;
+    background-color: #f8f9fa;
+    border-left: 4px solid var(--primary-color);
+    padding: 1rem;
+    margin: 0.5rem 0 1rem 0;
+}
+
+#s4-reference-library .collapsible-content code {
+    background-color: #e9ecef;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    color: #333;
+}
+
+/* === NEW: Inquiry Design Lab === */
+#inquiry-design-lab .tool-intro {
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Path Selection --- */
+.path-selection {
+    text-align: center;
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px dashed #ccc;
+}
+
+.path-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
+.path-buttons button {
+    flex: 1;
+    max-width: 400px;
+    padding: 1.5rem;
+    border: 2px solid #ddd;
+    border-radius: var(--border-radius);
+    background-color: #f8f9fa;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.2s ease-in-out;
+}
+
+.path-buttons button:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.path-buttons button.selected {
+    border-color: var(--accent-color);
+    background-color: #fffaf8;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px) scale(1.02);
+}
+
+.path-buttons button:disabled {
+    cursor: not-allowed;
+    background-color: #e9ecef;
+    filter: grayscale(80%);
+}
+
+.path-buttons button:disabled:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: #ddd;
+}
+
+
+.path-title {
+    display: block;
+    font-weight: bold;
+    font-size: 1.1em;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.path-desc {
+    display: block;
+    font-size: 0.9em;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* --- Builder Containers --- */
+.builder-container {
+    display: none;
+    /* Hidden by default */
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px dashed #ccc;
+    animation: fade 0.5s ease-in-out;
+}
+
+#inquiry-builder-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem 2rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.span-2 {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 0.5rem;
+    font-size: 0.9em;
+}
+
+.form-group input[type="text"],
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.1);
+}
+
+.hypothesis-builder {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    flex-wrap: wrap;
+}
+
+.hypothesis-builder input {
+    flex-grow: 1;
+    min-width: 150px;
+}
+
+.hypothesis-builder .short-select {
+    flex-grow: 0;
+}
+
+.hypothesis-builder span.hidden {
+    display: none;
+}
+
+.generate-button-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+#generate-blueprint-btn {
+    padding: 12px 30px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: white;
+    background-color: var(--accent-color);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+#generate-blueprint-btn:hover {
+    background-color: #d73a0a;
+    transform: scale(1.05);
+}
+
+/* --- Blueprint Generator Output --- */
+#generator-output.hidden {
+    display: none;
+}
+
+.output-block {
+    margin-top: 2rem;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.output-block h3 {
+    margin: 0;
+}
+
+/* Reset from lab-tool h3 */
+
+.output-block h4 {
+    margin: 0;
+    padding: 0.75rem 1.25rem;
+    background-color: var(--secondary-color);
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 1.1em;
+}
+
+.output-block>p {
+    font-size: 0.9em;
+    padding: 0 1.25rem;
+    margin-top: 1rem;
+    color: #555;
+}
+
+#blueprint-textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    padding: 1.25rem;
+    font-family: 'Georgia', serif;
+    font-size: 1.05em;
+    line-height: 1.6;
+    background-color: #fff;
+    color: #333;
+    resize: vertical;
+    border-top: 1px solid #e0e0e0;
+}
+
+#blueprint-visualization {
+    padding: 1.5rem;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Mock Visualization Styles */
+.mock-chart-container {
+    width: 300px;
+}
+
+.mock-finding {
+    font-style: italic;
+    color: #333;
+    text-align: center;
+    max-width: 450px;
+}
+
+.mock-bar-chart {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 150px;
+    border-bottom: 2px solid #333;
+}
+
+.mock-bar {
+    width: 40px;
+    background-color: var(--primary-color);
+}
+
+.mock-bar-label {
+    text-align: center;
+    font-size: 0.8em;
+    font-weight: bold;
+}

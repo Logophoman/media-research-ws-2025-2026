@@ -5,9 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Andreas Reich">
-    <!-- !!! CHANGE THIS TITLE FOR EACH SESSION !!! -->
-    <title>Session X: [Topic] – Media Research WS 2025/26</title>
+    <title>Session 4: From Concept to Measurement – Media Research WS 2025/26</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="session2.css"> <!-- Reusing some component styles -->
+    <link rel="stylesheet" href="session3.css">
+    <link rel="stylesheet" href="session4.css">
+    <link rel="stylesheet" href="literature-matrix-tool.css">
+
 </head>
 
 <body>
@@ -17,31 +21,553 @@
             <img src="uni-logo-de_hoh_weiss.png" alt="Universität Hohenheim Logo" class="uni-logo">
         </a>
         <h1>Media Research & Audience Intelligence - Part 2 (B)</h1>
-        <!-- !!! CHANGE THIS SUBTITLE FOR EACH SESSION !!! -->
-        <p class="subtitle">Session 4: 	Group Work: In-depth Topic Study II</p>
+        <p class="subtitle">Session 4: Self-Guided Lab – From Concept to Measurement</p>
     </header>
 
     <div class="container">
         <nav>
             <ul>
-                <li><a href="index.html">Back to the Course Overview</a></li>
+                <li><a href="index.html">Course Overview</a></li>
+                <li><a href="session3.html">Session 3</a></li>
+                <li><a href="session4.html" class="active">Session 4</a></li>
+                <li><a href="session5.html">Session 5</a></li>
             </ul>
         </nav>
-        
+
         <main>
-            <div class="interactive-box" style="text-align: center; padding: 3rem 2rem;">
-                <h2 style="margin-top: 0;">Content Coming Soon!</h2>
-                <h2 style="margin-top: 0;">No in-person lecture this week!</h2>
-                <p style="font-size: 1.1em; color: #555;">Write me an email if you need support!</p>
-                <p style="font-size: 1.1em; color: #555;">The materials and interactive elements for this session will be available here shortly.</p>
-                <p>Please refer to the <a href="index.html">Course Overview</a> for the schedule and main topics.</p>
+            <div class="lab-welcome-box" id="s4-welcome">
+                <h2>Welcome to the Digital Research Lab!</h2>
+                <p>This session is dedicated to focused, independent group work. Your mission is to follow the Lab
+                    Manual workflow below to translate your abstract concepts into a concrete, measurable research
+                    design. This will complete your <strong>Project Foundation Document.</strong></p>
+                <p><strong>This is a self-guided session.</strong> I am available for support via email, so please don't
+                    hesitate to reach out if you get stuck!</p>
             </div>
+
+            <hr class="section-divider">
+
+            <section id="s4-workflow">
+                <h2><span>Step 1:</span> The Lab Manual: Your Workflow</h2>
+                <div class="workflow-steps">
+                    <div class="workflow-step">
+                        <div class="workflow-icon">🎯</div>
+                        <div class="workflow-text">
+                            <h4>Finalize Core Concepts</h4>
+                            <p>Review your RQ and Hypotheses from Session 3. Are they clear and focused?</p>
+                        </div>
+                    </div>
+                    <div class="workflow-arrow">↓</div>
+                    <div class="workflow-step">
+                        <div class="workflow-icon">🔬</div>
+                        <div class="workflow-text">
+                            <h4>Operationalize Your Variables</h4>
+                            <p>Use the <strong>Variable Deconstructor</strong> to break down your IV and DV into
+                                observable dimensions and indicators.</p>
+                        </div>
+                    </div>
+                    <div class="workflow-arrow">↓</div>
+                    <div class="workflow-step">
+                        <div class="workflow-icon">📏</div>
+                        <div class="workflow-text">
+                            <h4>Find or Create Your Measures</h4>
+                            <p>Explore the <strong>Measurement Toolkit</strong> to find validated scales or learn the
+                                basics of writing good survey items.</p>
+                        </div>
+                    </div>
+                    <div class="workflow-arrow">↓</div>
+                    <div class="workflow-step">
+                        <div class="workflow-icon">🧑‍🤝‍🧑</div>
+                        <div class="workflow-text">
+                            <h4>Define Your Sample</h4>
+                            <p>Use the <strong>Sampling Strategy Guide</strong> to decide who you will study and how you
+                                will find them.</p>
+                        </div>
+                    </div>
+                    <div class="workflow-arrow">↓</div>
+                    <div class="workflow-step">
+                        <div class="workflow-icon">📤</div>
+                        <div class="workflow-text">
+                            <h4>Assemble & Submit</h4>
+                            <p>Compile all elements into your final "Project Foundation Document" and submit it on
+                                ILIAS.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="section-divider">
+
+            <div id="lit-matrix-tool">
+                <div class="lit-matrix-header">
+                    <h3>Live Literature Matrix</h3>
+                    <div class="lit-matrix-controls">
+                        <button id="matrix-add-row-btn" class="tool-btn add-btn">➕ Add Row</button>
+                        <button id="matrix-export-csv-btn" class="tool-btn export-btn">📤 Export CSV</button>
+                        <label for="matrix-import-csv-input" class="tool-btn import-btn">📥 Import CSV</label>
+                        <input type="file" id="matrix-import-csv-input" accept=".csv" style="display: none;">
+                    </div>
+                </div>
+                <div class="lit-matrix-table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Author(s) & Year</th>
+                                <th>Title</th>
+                                <th>Theory/Framework</th>
+                                <th>Method</th>
+                                <th>Key Findings</th>
+                                <th class="notes-col">Your Notes & Relevance</th>
+                                <th class="actions-col">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="lit-matrix-body">
+                            <!-- Rows will be generated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="didactic-bridge-box">
+                    <p><strong>Pro-Tip:</strong> Your Literature Matrix is your arsenal. The concepts, theories, and
+                        previous findings you've logged here are the direct source material for defining and
+                        deconstructing your variables in the canvas below.</p>
+                </div>
+            </div>
+
+
+            <section id="s4-lab-stations">
+                <h2><span>Steps 2, 3 & 4:</span> Your Lab Stations</h2>
+
+                <h3>Station 1: The Variable Deconstructor</h3>
+                <div id="variable-deconstructor" class="lab-tool">
+                    <div class="tool-intro">
+                        <h4>Deconstruct Your Abstract Concepts</h4>
+                        <p>Operationalization is the process of turning an abstract concept (like "credibility") into
+                            something concrete and measurable. Use this tool for both your Independent (IV) and
+                            Dependent (DV) variables.</p>
+                    </div>
+                    <div class="deconstructor-inputs">
+                        <div class="input-group">
+                            <label for="concept-input">Enter an Abstract Concept (e.g., Parasocial Relationship,
+                                Purchase
+                                Intent):</label>
+                            <input type="text" id="concept-input" placeholder="Type your variable concept here... Tipp - Try: 'Purchase Intent'">
+                        </div>
+                        <button id="start-deconstruction-btn">Deconstruct</button>
+                    </div>
+                    <div id="deconstruction-canvas" class="canvas-hidden">
+                        <h4 id="canvas-title">Operationalization Canvas for: </h4>
+                        <div class="canvas-grid">
+                            <!-- COLUMN 1: DIMENSIONS -->
+                            <div class="canvas-column">
+                                <label>1. Dimensions</label>
+                                <p class="helper-text">Break the concept into smaller parts. (e.g., Credibility ->
+                                    Expertise, Trustworthiness)</p>
+                                <div id="dimensions-list" class="tag-list"></div>
+                                <input type="text" id="dimension-input" placeholder="Type a dimension and press Enter">
+                            </div>
+                            <div class="canvas-arrow">→</div>
+                            <!-- COLUMN 2: INDICATORS -->
+                            <div class="canvas-column">
+                                <label>2. Indicators</label>
+                                <p class="helper-text">How could you observe or ask about these dimensions? Be concrete!
+                                    (e.g., "Ask about host's qualifications")</p>
+                                <div id="indicators-list" class="tag-list"></div>
+                                <input type="text" id="indicator-input" placeholder="Type an indicator and press Enter">
+                            </div>
+                            <div class="canvas-arrow">→</div>
+                            <!-- COLUMN 3: MEASUREMENT ITEMS (NEW) -->
+                            <div class="canvas-column">
+                                <label>3. Draft Measurement Item</label>
+                                <p class="helper-text">How would you phrase this as a survey question or define it as a
+                                    coding category?</p>
+                                <div id="items-list" class="tag-list"></div>
+                                <textarea id="item-input"
+                                    placeholder="Type a draft question and press Enter"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Station 2: The Measurement Toolkit</h3>
+                <div id="measurement-toolkit" class="lab-tool">
+                    <div class="tool-intro">
+                        <h4>Find Validated Scales or Create Your Own Items</h4>
+                        <p>Once you have indicators, you need questions to measure them. It's always best to use
+                            existing, scientifically validated scales. If none exist, you must create your own items
+                            carefully.</p>
+                    </div>
+
+                    <div class="collapsible-box">
+                        <button type="button" class="collapsible-trigger">▶ Part A: How to Find Existing Validated
+                            Scales</button>
+                        <div class="collapsible-content">
+                            <p><strong>Why use existing scales?</strong> They have been pre-tested for reliability and
+                                validity, making your research much stronger and more credible.</p>
+                            <h5>Key Resources for Finding Scales:</h5>
+                            <ul>
+                                <li><strong>Google Scholar:</strong> Search for your concept + "scale" or "measurement"
+                                    (e.g., <code>"parasocial interaction scale"</code>). Look for highly cited papers
+                                    that introduce or validate a scale.</li>
+                                <li><strong>Communication & Mass Media Complete (EBSCO):</strong> A core database with
+                                    many studies that detail their measurement instruments.</li>
+                                <li><strong>GESIS ZIS:</strong> A major German-language collection of social science
+                                    measurement instruments.</li>
+                                <li><strong>APA PsycTests:</strong> A database from the American Psychological
+                                    Association dedicated to tests and measures.</li>
+                            </ul>
+                            <div class="toolkit-example">
+                                <strong>Example: Finding the Parasocial Interaction Scale</strong>
+                                <ol>
+                                    <li>Search Google Scholar for <code>"parasocial interaction scale Rubin"</code>.
+                                    </li>
+                                    <li>Find the original 1985 paper by Rubin, Perse, & Powell.</li>
+                                    <li>The paper will list the exact items used, such as: <em>"The host of my favorite
+                                            program makes me feel comfortable, as if I am with a friend."</em> (rated on
+                                        a
+                                        5-point scale).</li>
+                                    <li>You can now use this validated scale in your own questionnaire.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="collapsible-box">
+                        <button type="button" class="collapsible-trigger">▶ Part B: The Basics of Writing Your Own
+                            Survey
+                            Items</button>
+                        <div class="collapsible-content">
+                            <p>If you absolutely cannot find an existing scale, follow these rules to write your own
+                                items (questions).</p>
+                            <div id="item-writing-clinic">
+                                <div class="bad-good-example">
+                                    <h6>Problem: Double-Barreled Question</h6>
+                                    <p class="bad-item">❌ "Do you find the podcast host funny and trustworthy?"</p>
+                                    <button class="fix-it-btn">Show Fix</button>
+                                    <div class="fix-explanation">
+                                        <p class="good-item">✅ <strong>Fix:</strong> Split into two questions.</p>
+                                        <p class="explanation"><strong>Why:</strong> A respondent might find the host
+                                            funny but not trustworthy (or vice-versa). Forcing a single 'yes/no' answer
+                                            provides inaccurate data. Always ask about one single concept per question.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="bad-good-example">
+                                    <h6>Problem: Leading Question</h6>
+                                    <p class="bad-item">❌ "Don't you agree that the long-form podcast format is superior
+                                        for in-depth analysis?"</p>
+                                    <button class="fix-it-btn">Show Fix</button>
+                                    <div class="fix-explanation">
+                                        <p class="good-item">✅ <strong>Fix:</strong> "To what extent do you agree that
+                                            the long-form podcast format is effective for in-depth analysis?"</p>
+                                        <p class="explanation"><strong>Why:</strong> The original phrasing pressures the
+                                            respondent to agree. A neutral question using a scale (e.g., Strongly
+                                            Disagree to Strongly Agree) removes this bias and captures a wider range of
+                                            opinions.</p>
+                                    </div>
+                                </div>
+
+                                <div class="bad-good-example">
+                                    <h6>Problem: Vague Quantifier</h6>
+                                    <p class="bad-item">❌ "Do you regularly listen to podcasts while commuting?"</p>
+                                    <button class="fix-it-btn">Show Fix</button>
+                                    <div class="fix-explanation">
+                                        <p class="good-item">✅ <strong>Fix:</strong> "On how many days during a typical
+                                            week do you listen to podcasts while commuting?" (0 days, 1-2 days, 3-4
+                                            days, 5+ days)</p>
+                                        <p class="explanation"><strong>Why:</strong> "Regularly" is subjective and means
+                                            different things to different people. Providing concrete, objective response
+                                            options ensures that every answer is comparable and the data is clean.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item-checker-tool">
+                                <h5>Interactive Item Checker</h5>
+                                <p>Paste your draft survey question below to check for common errors.</p>
+                                <input type="text" id="item-checker-input"
+                                    placeholder="e.g., Do you find the podcast host funny and trustworthy?">
+                                <div id="item-checker-feedback"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Station 3: The Sampling Strategy Guide</h3>
+                <div id="sampling-guide" class="lab-tool">
+                    <div class="tool-intro">
+                        <h4>Plan Who You Will Study</h4>
+                        <p>You can't survey everyone. Sampling is the process of selecting a representative group from
+                            the population you want to study. These tools will guide your decisions.</p>
+                    </div>
+
+                    <!-- NEW INTERACTIVE DECISION TREE -->
+                    <div class="interactive-guide-section">
+                        <h4>Part 1: Interactive Sampling Decision Tree</h4>
+                        <p>Answer the questions below to find the most appropriate sampling strategy for your project.
+                        </p>
+                        <div id="sampling-tree">
+                            <!-- Question 1 -->
+                            <div class="tree-node" id="node-1">
+                                <h5>Do you need to generalize your findings to a broader population (e.g., "all podcast
+                                    listeners in Germany")?</h5>
+                                <div class="tree-options">
+                                    <button data-next="node-prob">Yes, I need to generalize.</button>
+                                    <button data-next="node-nonprob">No, I am exploring a specific group or
+                                        phenomenon.</button>
+                                </div>
+                            </div>
+                            <!-- Question 2 (Probability Path) -->
+                            <div class="tree-node hidden" id="node-prob">
+                                <h5>Do you have a complete list of every single person in your target population?</h5>
+                                <div class="tree-options">
+                                    <button data-next="rec-srs">Yes, I have a full list.</button>
+                                    <button data-next="rec-prob-no">No, a full list is impossible to get.</button>
+                                </div>
+                            </div>
+                            <!-- Question 2 (Non-Probability Path) -->
+                            <div class="tree-node hidden" id="node-nonprob">
+                                <h5>How will you find your participants?</h5>
+                                <div class="tree-options">
+                                    <button data-next="rec-convenience">Based on who is easiest to reach (e.g.,
+                                        students, social media).</button>
+                                    <button data-next="rec-purposive">By targeting a specific group with certain
+                                        characteristics (e.g., listeners of a specific podcast).</button>
+                                    <button data-next="rec-snowball">By asking initial participants to refer
+                                        others.</button>
+                                </div>
+                            </div>
+
+                            <!-- Recommendations -->
+                            <div class="tree-recommendation hidden" id="rec-srs">
+                                <h5>Recommendation: Probability Sampling (e.g., Simple Random Sample)</h5>
+                                <p><strong>Why:</strong> You need to generalize and have a list of the entire
+                                    population. This method is the gold standard for representativeness, but it is
+                                    extremely difficult and often impractical for student projects. You must have a
+                                    strong justification for why this is feasible.</p>
+                            </div>
+                            <div class="tree-recommendation hidden" id="rec-prob-no">
+                                <h5>Recommendation: Re-evaluate Feasibility</h5>
+                                <p><strong>Analysis:</strong> You want to generalize (requiring probability sampling)
+                                    but don't have a list of the population. This makes true probability sampling nearly
+                                    impossible. For your project, you will almost certainly need to switch to a
+                                    non-probability approach and acknowledge this as a key limitation of your study.</p>
+                            </div>
+                            <div class="tree-recommendation hidden" id="rec-convenience">
+                                <h5>Recommendation: Non-Probability: Convenience Sampling</h5>
+                                <p><strong>Why:</strong> This is the most common and feasible method for student
+                                    projects. It's fast and efficient. <strong>Your Task:</strong> In your report, you
+                                    must clearly state that your results are not generalizable and describe the
+                                    potential biases of your sample (e.g., "Our sample consisted primarily of university
+                                    students, which may not reflect the views of the broader population.").</p>
+                            </div>
+                            <div class="tree-recommendation hidden" id="rec-purposive">
+                                <h5>Recommendation: Non-Probability: Purposive Sampling</h5>
+                                <p><strong>Why:</strong> Your research focuses on a very specific niche, and you need to
+                                    ensure your participants have the required experience or characteristics.
+                                    <strong>Your Task:</strong> In your report, clearly define your inclusion criteria
+                                    (e.g., "participants had to have listened to at least 10 episodes of the 'XYZ'
+                                    podcast") and justify why this specific group was necessary for your research
+                                    question.
+                                </p>
+                            </div>
+                            <div class="tree-recommendation hidden" id="rec-snowball">
+                                <h5>Recommendation: Non-Probability: Snowball Sampling</h5>
+                                <p><strong>Why:</strong> This is ideal when your target population is hard to find or
+                                    part of a hidden community. <strong>Your Task:</strong> In your report, describe
+                                    your initial "seeds" (the first participants) and acknowledge that this method can
+                                    lead to a homogenous sample, as people tend to refer others who are similar to
+                                    themselves.</p>
+                            </div>
+                        </div>
+                        <button id="reset-tree-btn" class="hidden">Start Over</button>
+                    </div>
+
+                    <!-- NEW SIMPLE SAMPLE SIZE ESTIMATOR -->
+                    <div class="interactive-guide-section">
+                        <h4>Part 2: Simple Sample Size Estimator</h4>
+                        <p>Get a conventional ballpark estimate for your study design. This is for initial planning, not
+                            a substitute for a formal power analysis.</p>
+                        <div id="sample-size-estimator">
+                            <div class="estimator-inputs">
+                                <div class="form-group">
+                                    <label for="study-type">My primary analysis will be:</label>
+                                    <select id="study-type">
+                                        <option value="">-- Select a study type --</option>
+                                        <option value="corr">A correlation (relationship between two variables)</option>
+                                        <option value="t-test">A t-test (comparing two groups)</option>
+                                        <option value="anova">An ANOVA (comparing three or more groups)</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="effect-size">I expect the effect I'm looking for to be:</label>
+                                    <select id="effect-size">
+                                        <option value="">-- Select an expected effect size --</option>
+                                        <option value="small">Small (subtle, hard to detect)</option>
+                                        <option value="medium">Medium (noticeable, a common assumption)</option>
+                                        <option value="large">Large (strong, obvious)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div id="sample-size-result" class="hidden">
+                                <h5>Conventional Sample Size Suggestion:</h5>
+                                <p id="sample-size-output"></p>
+                                <small>This is a common estimate for achieving ~80% statistical power with an alpha of
+                                    .05. You must state in your report that this is a conventional estimate and discuss
+                                    the limitations.</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <hr class="section-divider">
+
+
+            <section id="s4-reference-library">
+                <h2>The Reference Library: On-Demand Help</h2>
+                <p>Use these resources if you get stuck on a specific task during the lab session.</p>
+
+                <div class="collapsible-box">
+                    <button type="button" class="collapsible-trigger">▶ How to Read an Academic Paper
+                        Efficiently</button>
+                    <div class="collapsible-content">
+                        <ol>
+                            <li><strong>Read the Abstract:</strong> Get the 30,000-foot view. Does this paper seem
+                                relevant at all?</li>
+                            <li><strong>Read the Conclusion/Discussion:</strong> The authors summarize their key
+                                findings, contributions, and limitations here. This tells you the main takeaway and
+                                where future research (your project!) could go.</li>
+                            <li><strong>Skim the Introduction:</strong> Understand the research gap they identified and
+                                the core argument they are making.</li>
+                            <li><strong>Scan the Methods & Results:</strong> Only if the paper is highly relevant,
+                                examine the "how" and the "what". Don't get bogged down in complex statistics; focus on
+                                the description of the variables and the summary of the findings.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="collapsible-box">
+                    <button type="button" class="collapsible-trigger">▶ Troubleshooting: Common Research Design
+                        Problems</button>
+                    <div class="collapsible-content">
+                        <p><strong>Problem: "I can't find ANY literature on my topic!"</strong><br>
+                            <strong>Solution:</strong> Your topic is likely too specific. Broaden your keywords. Instead
+                            of "host authenticity in German true-crime podcasts," search for "source credibility in
+                            podcasts" or "parasocial relationships and trust."
+                        </p>
+                        <p><strong>Problem: "I found TOO MUCH literature!"</strong><br>
+                            <strong>Solution:</strong> Your topic is too broad. Narrow your scope. Add limiting keywords
+                            like a specific country ("Germany"), a specific platform ("TikTok"), a specific genre ("news
+                            podcasts"), or a specific demographic ("young adults").
+                        </p>
+                        <p><strong>Problem: "My variables are qualitative (e.g., 'community feeling'). How do I
+                                operationalize them?"</strong><br>
+                            <strong>Solution:</strong> This is where theory and previous literature are essential. Look
+                            at how seminal papers on your concept <strong>defined</strong> and <strong>measured</strong>
+                            it. Did they measure
+                            'community' as the frequency of user comments, the use of inclusive language ("we," "our
+                            community"), or through survey items asking about a 'sense of belonging'? Your job is to
+                            adopt or adapt their established measurement strategy.
+                        </p>
+                        <p><strong>Problem: "How do I properly cite a scale I found in another paper?"</strong><br>
+                            <strong>Solution:</strong> You must always cite the <strong>original source</strong> that
+                            developed and validated the scale, not just the recent paper where you found it. This shows
+                            you've done your due diligence. For example: 'To measure parasocial interaction, we used the
+                            10-item scale originally developed by <code>Rubin, Perse, and Powell (1985)</code>.'
+                        </p>
+                    </div>
+                </div>
+
+                <div class="collapsible-box">
+                    <button type="button" class="collapsible-trigger">▶ Document Assembly Guide: Example
+                        Snippets</button>
+                    <div class="collapsible-content">
+                        <p><strong>Purpose:</strong> These snippets are not meant to be copied directly. They are
+                            templates to guide your structure, academic tone, and the level of detail required. Use them
+                            as a model for your own writing.</p>
+
+                        <h4>Example for "State of Research & Research Gap" Section</h4>
+                        <blockquote>
+                            Previous research has firmly established that parasocial relationships (PSR) are a key
+                            driver of listener loyalty and engagement in broadcast media (<code>Author, 2022</code>).
+                            Studies have often measured PSR using the scale developed by
+                            <code>Rubin et al. (1985)</code> and have typically focused on television personalities or
+                            major influencers (<code>Author, 2021</code>). However, the role of host self-disclosure in
+                            fostering these relationships within the specific, intimate context of niche educational
+                            podcasts remains underexplored. While the effects of PSR are known, the mechanisms that
+                            build it in audio-only environments are less understood. Therefore, our project addresses
+                            this research gap by investigating how different levels of host vulnerability impact the
+                            formation of PSR among listeners of educational podcasts.
+                        </blockquote>
+
+                        <h4>Example for "Methodology Plan" Section</h4>
+                        <blockquote>
+                            The independent variable, <strong>host self-disclosure</strong>, will be operationalized as
+                            the presence or absence of a personal anecdote within the podcast introduction. The
+                            dependent variable, <strong>parasocial relationship</strong>, will be measured using the
+                            10-item Parasocial Interaction Scale (<code>Rubin et al., 1985</code>) on a 5-point Likert
+                            scale.<br><br>
+                            Our study will target German-speaking adults who listen to educational podcasts at least
+                            once a week. We will employ a <strong>purposive sampling</strong> strategy, recruiting
+                            participants from online forums and social media groups dedicated to popular science
+                            podcasts. Based on conventions for a two-group comparison (t-test) with an expected medium
+                            effect size, we will aim for a minimum sample size of <strong>128 participants</strong> (64
+                            per condition).
+                        </blockquote>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="section-divider">
+
+            <section id="s4-checkout">
+                <h2><span>Final Step:</span> Lab Checkout & Submission</h2>
+                <div class="submission-box">
+                    <h3>Your "Project Foundation Document" Checklist</h3>
+                    <p>Before submitting, ensure your single PDF or Word document contains all of the following
+                        components:</p>
+                    <ul class="submission-checklist">
+                        <li>✅ A clear <strong>Working Title</strong> for your project.</li>
+                        <li>✅ Your refined <strong>Research Question</strong> and at least two
+                            <strong>Hypotheses</strong>.
+                        </li>
+                        <li>✅ A breakdown of your <strong>Independent (IV)</strong> and <strong>Dependent (DV)</strong>
+                            variables.</li>
+                        <li>✅ A concise paragraph (400-600 words) summarizing the <strong>State of Research</strong> and
+                            explicitly stating the <strong>Research Gap</strong>.</li>
+                        <li>✅ Your <strong>Literature Matrix</strong> containing 5-7 core academic sources.</li>
+                        <li>✅ A brief section on your planned <strong>Methodology</strong>, including your initial ideas
+                            for operationalization, measurement, and your sampling strategy.</li>
+                    </ul>
+
+                    <h3>Submission Instructions</h3>
+                    <ol>
+                        <li>Compile all checklist items into a single PDF or Word document.</li>
+                        <li>Name your file clearly: <code>GroupX_FoundationDoc.pdf</code> (replace 'X' with your group
+                            number).</li>
+                        <li>Go to the <strong>ILIAS Forum for Session 4</strong>.</li>
+                        <li>Create a new post with your group name and project title as the subject.</li>
+                        <li>In the body of your post, please provide a "Status Update" emoji to let me know how the lab
+                            session went for your group:
+                            <ul>
+                                <li><strong>🟢 On track.</strong> We feel confident about our foundation.</li>
+                                <li><strong>🟡 We finished, but have some questions</strong> for the next session.</li>
+                                <li><strong>🔴 We encountered significant roadblocks</strong> and need guidance.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Attach your document</strong> to the post and submit it.</li>
+                    </ol>
+                </div>
+            </section>
         </main>
     </div>
 
     <footer>
         <p>© 2025 Andreas Reich - University of Hohenheim</p>
     </footer>
+
+    <script src="session4.js"></script>
+    <script src="literature-matrix-tool.js" defer></script>
 
 </body>
 
