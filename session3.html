@@ -5,9 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Andreas Reich">
-    <!-- !!! CHANGE THIS TITLE FOR EACH SESSION !!! -->
-    <title>Session X: [Topic] – Media Research WS 2025/26</title>
+    <title>Session 3: The Art of the Literature Review – Media Research WS 2025/26</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="session1.css">
+    <link rel="stylesheet" href="session2.css">
+    <!-- TODO: Create and link session3.css for specific styles (e.g., theory toolkit, SVG tabs) -->
+    <link rel="stylesheet" href="session3.css">
 </head>
 
 <body>
@@ -17,23 +20,1434 @@
             <img src="uni-logo-de_hoh_weiss.png" alt="Universität Hohenheim Logo" class="uni-logo">
         </a>
         <h1>Media Research & Audience Intelligence - Part 2 (B)</h1>
-        <!-- !!! CHANGE THIS SUBTITLE FOR EACH SESSION !!! -->
-        <p class="subtitle">Session 3: 	Group Work: In-depth Topic Study I</p>
+        <p class="subtitle">Session 3: The Art of the Literature Review</p>
     </header>
 
     <div class="container">
         <nav>
             <ul>
-                <li><a href="index.html">Back to the Course Overview</a></li>
+                <li><a href="index.html">Course Overview</a></li>
+                <li><a href="session2.html">Session 2</a></li>
+                <li><a href="session3.html" class="active">Session 3</a></li>
+                <li><a href="session4.html">Session 4</a></li>
             </ul>
         </nav>
-        
+
         <main>
-            <div class="interactive-box" style="text-align: center; padding: 3rem 2rem;">
-                <h2 style="margin-top: 0;">Content Coming Soon!</h2>
-                <p style="font-size: 1.1em; color: #555;">The materials and interactive elements for this session will be available here shortly.</p>
-                <p>Please refer to the <a href="index.html">Course Overview</a> for the schedule and main topics.</p>
+            <section id="s3-intro">
+                <h2>Building on Your Ideas</h2>
+                <p>Welcome back! Last week you pitched your initial ideas. Today, we build the scientific foundation for
+                    those ideas. Our goal is to find the "shoulders of giants" on which your project will stand by
+                    diving deep into the art of the literature review.</p>
+            </section>
+
+            <hr>
+
+            <h2>Today's Session Plan</h2>
+            <div class="agenda-list">
+                <!-- TODO (CSS): Style this agenda-list component as in session2.css -->
+                <div class="agenda-item">
+                    <div class="agenda-icon">🎯</div>
+                    <div class="agenda-text">
+                        <h4>The "Why": The Quest for a Research Gap</h4>
+                        <p>Understand the purpose of a literature review beyond just summarizing papers.</p>
+                    </div>
+                </div>
+                <div class="agenda-item">
+                    <div class="agenda-icon">🛠️</div>
+                    <div class="agenda-text">
+                        <h4>The "What": The Communication Theory Toolkit</h4>
+                        <p>Explore a set of powerful theoretical lenses to apply to your podcast research.</p>
+                    </div>
+                </div>
+                <div class="agenda-item">
+                    <div class="agenda-icon">🗺️</div>
+                    <div class="agenda-text">
+                        <h4>The "Where": Workshop: Locating Your Project</h4>
+                        <p>Use interactive models to see where theory fits into your specific research process.</p>
+                    </div>
+                </div>
+                <div class="agenda-item">
+                    <div class="agenda-icon">🧭</div>
+                    <div class="agenda-text">
+                        <h4>Mission Briefing for Session 4</h4>
+                        <p>Receive a clear, actionable plan for next week's self-guided research lab.</p>
+                    </div>
+                </div>
             </div>
+
+            <hr class="section-divider">
+
+            <section id="s3-group-updates">
+                <h2><span>Recap:</span> Where Do Your Projects Stand?</h2>
+                <div class="workshop-task-box">
+                    <h4>Your Task: Quick Group Check-in (5 Minutes)</h4>
+                    <p>Let's start by quickly hearing from each group. Please designate one person to briefly share the
+                        following with the class:</p>
+                    <ol>
+                        <li><strong>Your current working topic or area of interest.</strong> (e.g., "We're looking at
+                            parasocial relationships in comedy podcasts.")</li>
+                        <li><strong>One initial, rough question you are exploring.</strong> (e.g., "We're wondering what
+                            makes hosts seem more like 'friends' to listeners.")</li>
+                    </ol>
+                    <p>Keep these ideas in mind—we will be refining them throughout today's session.</p>
+                </div>
+            </section>
+
+            <hr class="section-divider">
+
+            <section id="s3-research-gap">
+                <h2><span>The "Why":</span> The Quest for the Research Gap</h2>
+                <p>A literature review is not a random collection of articles. It's a systematic investigation with a
+                    clear goal: to move from a broad topic to a specific, answerable question that contributes something
+                    new to the scientific conversation. This process can be visualized as a funnel:</p>
+                <!-- TODO (CSS): Create styles for this funnel visualization to make it clear and engaging. -->
+                <div class="funnel-visualization">
+                    <div class="funnel-stage" id="funnel-1">Broad Topic (e.g., "Podcast Advertising")</div>
+                    <div class="funnel-arrow">↓</div>
+                    <div class="funnel-stage" id="funnel-2">State of Research (What is known? e.g., "We know host-read
+                        ads are generally effective.")</div>
+                    <div class="funnel-arrow">↓</div>
+                    <div class="funnel-stage" id="funnel-3"><strong>Research Gap (What is NOT known? e.g., "But do they
+                            work for controversial products?")</strong></div>
+                    <div class="funnel-arrow">↓</div>
+                    <div class="funnel-stage" id="funnel-4">Focused Research Question (e.g., "How does listener trust
+                        moderate the effectiveness of host-read ads for controversial products?")</div>
+                </div>
+            </section>
+
+            <hr class="section-divider">
+
+            <section id="s3-rq-hypothesis">
+                <h2><span>The "How":</span> From Gap to Guidance</h2>
+                <p>Finding a research gap is the first step. The next is to translate that gap into a formal, testable
+                    structure. This involves creating a precise <strong>Research Question</strong> and specific,
+                    directional <strong>Hypotheses</strong>.</p>
+
+                <div class="rq-anatomy-section"> <!-- Re-using style from session2 for consistency -->
+                    <h4>Research Questions vs. Hypotheses</h4>
+                    <div class="rq-transformation">
+                        <div class="rq-box">
+                            <div class="rq-box-header"><span class="icon">❓</span>
+                                <h3>Research Question</h3>
+                            </div>
+                            <p>An overarching question that guides your entire study. It describes the phenomenon you
+                                want to understand.</p>
+                            <blockquote><em>"What factors influence the credibility of a product advertisement on
+                                    Instagram?"</em></blockquote>
+                        </div>
+                        <div class="rq-arrow">➡️</div>
+                        <div class="rq-box rq-after">
+                            <div class="rq-box-header"><span class="icon">🔬</span>
+                                <h3>Hypothesis</h3>
+                            </div>
+                            <p>A specific, testable statement about the relationship between two or more variables. It
+                                predicts an outcome.</p>
+                            <blockquote><em>"The <strong>more clearly</strong> an ad is labeled as such, the
+                                    <strong>more credible</strong> it will be perceived."</em></blockquote>
+                        </div>
+                    </div>
+
+                    <h4>The Core Logic: IV → DV</h4>
+                    <p>Most quantitative hypotheses are built on a cause-and-effect logic between an <strong>Independent
+                            Variable (IV)</strong> and a <strong>Dependent Variable (DV)</strong>.</p>
+                    <ul>
+                        <li><span class="component-tag iv-tag">Independent Variable (IV):</span> The "cause." This is
+                            the variable you believe influences the other.</li>
+                        <li><span class="component-tag dv-tag">Dependent Variable (DV):</span> The "effect." This is the
+                            variable that is measured as the outcome.</li>
+                    </ul>
+                    <div class="rq-transformation" style="align-items: center;">
+                        <div class="rq-box">
+                            <p style="text-align:center; font-weight: bold; font-size: 1.2em;">Ad Credibility</p>
+                        </div>
+                        <div class="rq-arrow">➡️</div>
+                        <div class="rq-box">
+                            <p style="text-align:center; font-weight: bold; font-size: 1.2em;">Purchase Intention</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="workshop-task-box">
+                    <h4>Your Task: Draft Your First Hypothesis (10 Minutes)</h4>
+                    <p>Return to your group's topic from the check-in. Based on the research gap you are starting to
+                        see, try to formulate the following:</p>
+                    <ol>
+                        <li>A slightly more refined <strong>Research Question</strong>.</li>
+                        <li>At least one draft <strong>Hypothesis</strong>.</li>
+                        <li>Identify the clear <strong>Independent Variable (IV)</strong> and <strong>Dependent Variable
+                                (DV)</strong> in your hypothesis.</li>
+                    </ol>
+                    <p>Be ready to share. This doesn't have to be perfect—it's a starting point for applying theory.</p>
+                </div>
+            </section>
+
+            <hr class="section-divider">
+
+            <section id="s3-rq-hypothesis">
+                <h2><span>The "How":</span> Architecting Your Inquiry</h2>
+                <p>A research gap is a territory waiting to be explored. But not all explorations follow the same map.
+                    Your task is to choose the right trail: the <strong>Quantitative Trail</strong> for testing relationships and
+                    measuring effects, or the <strong>Qualitative Trail</strong> for understanding meanings and exploring processes.
+                </p>
+
+                <div class="inquiry-paths-container">
+                    <!-- THE QUANTITATIVE TRAIL -->
+                    <div class="inquiry-path quantitative-path">
+                        <div class="inquiry-path-header">
+                            <span class="icon">🔬</span>
+                            <div>
+                                <h3>The Quantitative Trail</h3>
+                                <p>Focuses on "if," "to what extent," or "how much." Aims to test theories and identify
+                                    generalizable patterns.</p>
+                            </div>
+                        </div>
+                        <h4>Anatomy of a Quantitative Hypothesis</h4>
+                        <p>A strong hypothesis clearly states a testable relationship. It typically contains three
+                            ingredients:</p>
+                        <ul>
+                            <li><strong>The Variables:</strong> The Independent Variable (IV, the cause) and Dependent
+                                Variable (DV, the effect).</li>
+                            <li><strong>The Population:</strong> The specific group or context you are studying.</li>
+                            <li><strong>The Direction:</strong> The nature of the predicted relationship (e.g.,
+                                more/less, positive/negative, difference).</li>
+                        </ul>
+
+                        <div class="hypothesis-formats">
+                            <h4>Common Hypothesis Formats:</h4>
+                            <div class="format-item"><strong>Difference Hypothesis:</strong> "Podcast listeners (Group
+                                A) will report higher trust in a brand than radio listeners (Group B)."</div>
+                            <div class="format-item"><strong>Correlation Hypothesis:</strong> "The more time spent
+                                listening to a podcast (Variable X), the stronger the parasocial relationship with the
+                                host (Variable Y)."</div>
+                        </div>
+                    </div>
+
+                    <!-- THE QUALITATIVE TRAIL -->
+                    <div class="inquiry-path qualitative-path">
+                        <div class="inquiry-path-header">
+                            <span class="icon">💬</span>
+                            <div>
+                                <h3>The Qualitative Trail</h3>
+                                <p>Focuses on "how" or "what." Aims to explore phenomena in depth, understand
+                                    experiences, and generate new theories.</p>
+                            </div>
+                        </div>
+                        <h4>Anatomy of a Qualitative Research Question</h4>
+                        <p>A strong qualitative RQ is open-ended and exploratory. It guides your investigation without
+                            predicting an outcome.</p>
+                        <ul>
+                            <li><strong>The Phenomenon:</strong> The central concept, experience, or process you want to
+                                understand.</li>
+                            <li><strong>The Context:</strong> The specific setting, group, or situation where the
+                                phenomenon occurs.</li>
+                            <li><strong>The Scope:</strong> The boundaries of your exploration (e.g., focusing on
+                                "strategies," "perceptions," "narratives").</li>
+                        </ul>
+
+                        <h4>Example: From Topic to Question</h4>
+                        <div class="example-box">
+                            <p><strong>Broad Topic:</strong> "Community in Podcasts"</p>
+                            <p><strong>Refined RQ:</strong>
+                            <blockquote><em>"<strong>What communicative strategies</strong> (Scope) do <strong>hosts of
+                                        niche hobby podcasts</strong> (Context) use to <strong>foster a sense of
+                                        community</strong> (Phenomenon) among their listeners?"</em></blockquote>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="workshop-task-box">
+                    <h4>Your Task: Choose Your Trail (15 Minutes)</h4>
+                    <p>Return to your group's topic. First, decide which trail is a better fit for your current research
+                        interest. Then, complete the relevant task:</p>
+                    <ol>
+                        <li><strong>If you chose the Quantitative Trail:</strong> Formulate at least one draft
+                            <strong>Hypothesis</strong> (as a Difference or Correlation statement) and clearly identify
+                            your IV, DV, and Population.</li>
+                        <li><strong>If you chose the Qualitative Trail:</strong> Refine your <strong>Research
+                                Question</strong> to be more exploratory. Clearly identify the core Phenomenon, Context,
+                            and Scope you wish to investigate.</li>
+                    </ol>
+                    <p>This decision is not final, but it will guide your literature search and theoretical choices. Be
+                        ready to share your reasoning.</p>
+                </div>
+            </section>
+
+            <section id="s3-rq-hypothesis">
+                <h2><span>The "How":</span> From Gap to Guidance</h2>
+                <p>Finding a research gap is the first step. The next is to translate that gap into a formal, testable
+                    structure. This involves creating a precise <strong>Research Question</strong> and specific,
+                    directional <strong>Hypotheses</strong>.</p>
+
+                <div class="rq-anatomy-section"> <!-- Re-using style from session2 for consistency -->
+                    <h4>Research Questions vs. Hypotheses</h4>
+                    <div class="rq-transformation">
+                        <div class="rq-box">
+                            <div class="rq-box-header"><span class="icon">❓</span>
+                                <h3>Research Question</h3>
+                            </div>
+                            <p>An overarching question that guides your entire study. It describes the phenomenon you
+                                want to understand.</p>
+                            <blockquote><em>"What factors influence the credibility of a product advertisement on
+                                    Instagram?"</em></blockquote>
+                        </div>
+                        <div class="rq-arrow">➡️</div>
+                        <div class="rq-box rq-after">
+                            <div class="rq-box-header"><span class="icon">🔬</span>
+                                <h3>Hypothesis</h3>
+                            </div>
+                            <p>A specific, testable statement about the relationship between two or more variables. It
+                                predicts an outcome.</p>
+                            <blockquote><em>"The <strong>more clearly</strong> an ad is labeled as such, the
+                                    <strong>more credible</strong> it will be perceived."</em></blockquote>
+                        </div>
+                    </div>
+
+                    <h4>The Core Logic: IV → DV</h4>
+                    <p>Most quantitative hypotheses are built on a cause-and-effect logic between an <strong>Independent
+                            Variable (IV)</strong> and a <strong>Dependent Variable (DV)</strong>.</p>
+                    <ul>
+                        <li><span class="component-tag iv-tag">Independent Variable (IV):</span> The "cause." This is
+                            the variable you believe influences the other.</li>
+                        <li><span class="component-tag dv-tag">Dependent Variable (DV):</span> The "effect." This is the
+                            variable that is measured as the outcome.</li>
+                    </ul>
+                    <div class="rq-transformation" style="align-items: center;">
+                        <div class="rq-box">
+                            <p style="text-align:center; font-weight: bold; font-size: 1.2em;">Ad Credibility (IV)</p>
+                        </div>
+                        <div class="rq-arrow">➡️</div>
+                        <div class="rq-box">
+                            <p style="text-align:center; font-weight: bold; font-size: 1.2em;">Purchase Intention (DV)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="workshop-task-box">
+                    <h4>Your Task: Draft Your First Hypothesis (10 Minutes)</h4>
+                    <p>Return to your group's topic from the check-in. Based on the research gap you are starting to
+                        see, try to formulate the following:</p>
+                    <ol>
+                        <li>A slightly more refined <strong>Research Question</strong>.</li>
+                        <li>At least one draft <strong>Hypothesis</strong>.</li>
+                        <li>Identify the clear <strong>Independent Variable (IV)</strong> and <strong>Dependent Variable
+                                (DV)</strong> in your hypothesis.</li>
+                    </ol>
+                    <p>Be ready to share. This doesn't have to be perfect—it's a starting point for applying theory.</p>
+                </div>
+            </section>
+
+            <hr class="section-divider">
+
+            <section id="s3-theory-recommender">
+                <h2><span>Interactive Tool:</span> Find Your Theoretical Lens</h2>
+                <p>Feeling overwhelmed by the list of theories? This short quiz will help you identify the 2-3 most
+                    relevant theoretical lenses for your specific research interest. Answer the two questions below
+                    based on your group's current project idea.</p>
+
+                <div id="theory-recommender-tool">
+                    <form id="recommender-quiz">
+                        <!-- Question 1: Focus -->
+                        <div class="quiz-question">
+                            <h4>1. What is the primary <strong>focus</strong> of your research idea?</h4>
+                            <div class="quiz-options">
+                                <label>
+                                    <input type="radio" name="focus" value="listener" required>
+                                    <div class="option-card">
+                                        <span class="option-icon">👥</span>
+                                        <strong>The Listener</strong>
+                                        <span class="option-desc">Their motivations, choices, needs (e.g., "Why do
+                                            people listen to this?").</span>
+                                    </div>
+                                </label>
+                                <label>
+                                    <input type="radio" name="focus" value="content">
+                                    <div class="option-card">
+                                        <span class="option-icon">🎙️</span>
+                                        <strong>The Content</strong>
+                                        <span class="option-desc">How topics, people, or groups are represented (e.g.,
+                                            "How is X portrayed?").</span>
+                                    </div>
+                                </label>
+                                <label>
+                                    <input type="radio" name="focus" value="effects">
+                                    <div class="option-card">
+                                        <span class="option-icon">🧠</span>
+                                        <strong>The Effects</strong>
+                                        <span class="option-desc">Changes in listener attitude, belief, or feeling
+                                            (e.g., "Does listening cause Y?").</span>
+                                    </div>
+                                </label>
+                                <label>
+                                    <input type="radio" name="focus" value="relationship">
+                                    <div class="option-card">
+                                        <span class="option-icon">🤝</span>
+                                        <strong>The Host-Listener Relationship</strong>
+                                        <span class="option-desc">Perceptions of the host, bonds, and trust (e.g., "How
+                                            do listeners see the host?").</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Question 2: Process -->
+                        <div class="quiz-question">
+                            <h4>2. What is the key <strong>process</strong> you want to investigate?</h4>
+                            <div class="quiz-options">
+                                <label>
+                                    <input type="radio" name="process" value="persuasion" required>
+                                    <div class="option-card">
+                                        <span class="option-icon">🎯</span>
+                                        <strong>Persuasion</strong>
+                                        <span class="option-desc">How a podcast persuades or influences a decision
+                                            (e.g., in advertising).</span>
+                                    </div>
+                                </label>
+                                <label>
+                                    <input type="radio" name="process" value="shaping_view">
+                                    <div class="option-card">
+                                        <span class="option-icon">🌍</span>
+                                        <strong>Shaping a World View</strong>
+                                        <span class="option-desc">How repeated listening shapes a listener's perception
+                                            of reality.</span>
+                                    </div>
+                                </label>
+                                <label>
+                                    <input type="radio" name="process" value="highlighting">
+                                    <div class="option-card">
+                                        <span class="option-icon">🔍</span>
+                                        <strong>Highlighting & Framing</strong>
+                                        <span class="option-desc">How the presentation of a topic highlights certain
+                                            aspects to guide interpretation.</span>
+                                    </div>
+                                </label>
+                                <label>
+                                    <input type="radio" name="process" value="identity">
+                                    <div class="option-card">
+                                        <span class="option-icon">🚩</span>
+                                        <strong>Community & Identity</strong>
+                                        <span class="option-desc">How a sense of community or group identity is formed
+                                            around a podcast.</span>
+                                    </div>
+                                </label>
+                                <label>
+                                    <input type="radio" name="process" value="spread">
+                                    <div class="option-card">
+                                        <span class="option-icon">📡</span>
+                                        <strong>Spreading & Influence</strong>
+                                        <span class="option-desc">How ideas, trends, or influence spread from hosts (as
+                                            opinion leaders) to listeners and beyond.</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="quiz-question">
+                            <h4>3. Which primary <strong>method</strong> are you considering for your project?</h4>
+                            <div class="quiz-options">
+                                <label>
+                                    <input type="radio" name="method" value="survey" required>
+                                    <div class="option-card">
+                                        <span class="option-icon">📋</span>
+                                        <strong>Survey / Befragung</strong>
+                                        <span class="option-desc">Asking a large group of people questions to find
+                                            patterns, correlations, and opinions.</span>
+                                    </div>
+                                </label>
+                                <label>
+                                    <input type="radio" name="method" value="content-analysis">
+                                    <div class="option-card">
+                                        <span class="option-icon">🔎</span>
+                                        <strong>Content Analysis / Inhaltsanalyse</strong>
+                                        <span class="option-desc">Systematically analyzing media content (text, audio,
+                                            video) to identify themes and representations.</span>
+                                    </div>
+                                </label>
+                                <label>
+                                    <input type="radio" name="method" value="experiment">
+                                    <div class="option-card">
+                                        <span class="option-icon">🧪</span>
+                                        <strong>Experiment</strong>
+                                        <span class="option-desc">Testing a cause-and-effect relationship under
+                                            controlled conditions by manipulating a stimulus.</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="quiz-controls">
+                            <button type="submit" class="recommender-button">Get Recommendation</button>
+                        </div>
+                    </form>
+
+                    <!-- Results Area (Initially Hidden) -->
+                    <div id="recommendation-results" class="results-hidden">
+                        <!-- JS will populate this section -->
+                    </div>
+                </div>
+            </section>
+
+            <hr class="section-divider">
+
+            <section id="s3-theory-toolkit">
+                <h2><span>The "What":</span> Your Communication Theory Toolkit</h2>
+                <div class="workshop-task-box">
+                    <h4>Your Task: Select the Right Tool</h4>
+                    <p>Your goal is not to memorize all these theories. Your goal is to practice the skill of
+                        <strong>identifying and selecting</strong> the one or two most relevant theoretical lenses for
+                        your specific project. Scan the descriptions, and as a group, choose which "drawers" to open and
+                        explore more deeply.
+                    </p>
+                </div>
+
+                <!-- USES & GRATIFICATIONS -->
+                <div class="collapsible-box">
+                    <button type="button" class="collapsible-trigger" data-theory-id="ug">▶ Uses & Gratifications Theory
+                        (U&G)</button>
+                    <div class="collapsible-content">
+                        <hr>
+                        <p><strong>Use this to understand...</strong> why people actively choose and use specific
+                            podcasts.</p>
+                        <p><strong>Core Idea:</strong> U&G flips the question from "What do media do to people?" to
+                            "What do people do with media?". It assumes audiences are active and goal-oriented,
+                            choosing media to satisfy needs like information, entertainment, social connection, or
+                            personal identity.</p>
+                        <p><strong>Podcast Application:</strong> This is perfect for survey-based research to
+                            understand listening motivations. Why choose a 3-hour deep-dive podcast over a 10-minute
+                            news brief? Is it for learning (cognitive need), feeling connected to the host
+                            (affective need), passing time while commuting (tension release), or reinforcing one's
+                            values (personal identity)?</p>
+                        <ul>
+                            <li><strong>Key Sources:</strong> Katz, Blumler, & Gurevitch (1973); Rubin, A. M.
+                                (2009).</li>
+                            <li><strong>Keywords for Searching:</strong> <code>media choice</code>,
+                                <code>audience motivation</code>, <code>gratifications sought</code>,
+                                <code>podcast listening motives</code>.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- PARASOCIAL INTERACTION -->
+                <div class="collapsible-box">
+                    <button type="button" class="collapsible-trigger" data-theory-id="psi">▶ Parasocial Interaction &
+                        Relationships
+                        (PSI/PSR)</button>
+                    <div class="collapsible-content">
+                        <hr>
+                        <p><strong>Use this to analyze...</strong> the powerful, one-sided bond between hosts and
+                            listeners.</p>
+                        <p><strong>Core Idea:</strong> Listeners develop a sense of intimacy, friendship, and trust
+                            with media figures (like podcast hosts), even though the host doesn't know them
+                            personally. This "illusion of a face-to-face relationship" is a core driver of media
+                            engagement and loyalty.</p>
+                        <p><strong>Podcast Application:</strong> Arguably the most important theory for podcasting.
+                            It explains listener loyalty, the effectiveness of host-read ads (trusting a "friend's"
+                            recommendation), and the deep emotional connection that makes podcasting feel so
+                            personal. It's ideal for both surveys (measuring PSR strength) and experiments (testing
+                            what host behaviors, like self-disclosure, increase PSR).</p>
+                        <ul>
+                            <li><strong>Key Sources:</strong> Horton & Wohl (1956); Tukachinsky, R. (2020); Giles,
+                                D. C. (2002).</li>
+                            <li><strong>Keywords for Searching:</strong> <code>parasocial interaction</code>,
+                                <code>host credibility</code>, <code>audience engagement</code>,
+                                <code>listener loyalty</code>, <code>celebrity worship</code>.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- FRAMING THEORY -->
+                <div class="collapsible-box">
+                    <button type="button" class="collapsible-trigger" data-theory-id="framing">▶ Framing Theory</button>
+                    <div class="collapsible-content">
+                        <hr>
+                        <p><strong>Use this to understand...</strong> how the presentation of an issue influences
+                            audience interpretation.</p>
+                        <p><strong>Core Idea:</strong> Media "frame" issues by selecting certain aspects of a
+                            reality and making them more salient. This influences how audiences understand the
+                            problem, its causes, moral implications, and potential solutions.</p>
+                        <p><strong>Podcast Application:</strong> Excellent for content analysis. How does a
+                            political news podcast frame immigration—as a security threat or a humanitarian crisis?
+                            How does a true-crime podcast frame the perpetrator—as a monster or a product of their
+                            environment? This theory helps uncover the subtle narrative choices that shape listener
+                            perspectives.</p>
+                        <ul>
+                            <li><strong>Key Sources:</strong> Entman, R. M. (1993); Scheufele & Tewksbury (2007).
+                            </li>
+                            <li><strong>Keywords for Searching:</strong> <code>framing analysis</code>,
+                                <code>media frames</code>, <code>news framing</code>,
+                                <code>narrative analysis</code>, <code>political communication</code>.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- AGENDA-SETTING THEORY -->
+                <div class="collapsible-box">
+                    <button type="button" class="collapsible-trigger" data-theory-id="agenda">▶ Agenda-Setting
+                        Theory</button>
+                    <div class="collapsible-content">
+                        <hr>
+                        <p><strong>Use this to analyze...</strong> how podcasts influence what topics audiences
+                            think are important.</p>
+                        <p><strong>Core Idea:</strong> The media may not tell us *what to think*, but they are
+                            stunningly successful in telling us *what to think about*. The prominence of issues in
+                            the media influences their perceived importance among the public.</p>
+                        <p><strong>Podcast Application:</strong> Do podcasts set agendas differently from
+                            traditional news? Does a surge in true-crime podcasts lead to a perception that crime
+                            rates are rising (a classic "mean world syndrome" link)? This is great for comparing
+                            podcast content with public opinion data or surveying listeners about their issue
+                            priorities.</p>
+                        <ul>
+                            <li><strong>Key Sources:</strong> McCombs & Shaw (1972).</li>
+                            <li><strong>Keywords for Searching:</strong> <code>agenda setting</code>,
+                                <code>media agenda</code>, <code>public agenda</code>, <code>issue salience</code>,
+                                <code>media effects</code>.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- ELABORATION LIKELIHOOD MODEL -->
+                <div class="collapsible-box">
+                    <button type="button" class="collapsible-trigger" data-theory-id="elm">▶ Elaboration Likelihood
+                        Model (ELM)</button>
+                    <div class="collapsible-content">
+                        <hr>
+                        <p><strong>Use this to explore...</strong> how listeners are persuaded by podcast messages
+                            (like ads or arguments).</p>
+                        <p><strong>Core Idea:</strong> Persuasion happens via two routes. The "central route"
+                            involves deep, logical thinking about an argument. The "peripheral route" relies on
+                            superficial cues like host attractiveness, likability, or background music. The chosen
+                            route depends on the listener's motivation and ability to process the message.</p>
+                        <p><strong>Podcast Application:</strong> A perfect framework for experiments. Does a
+                            data-heavy, expert-led ad persuade via the central route? Does a funny, host-read ad
+                            persuade via the peripheral route (liking the host)? ELM helps explain *why* a
+                            persuasive attempt succeeds or fails.</p>
+                        <ul>
+                            <li><strong>Key Sources:</strong> Petty & Cacioppo (1986).</li>
+                            <li><strong>Keywords for Searching:</strong> <code>elaboration likelihood model</code>,
+                                <code>persuasion</code>, <code>central route</code>, <code>peripheral cues</code>,
+                                <code>attitude change</code>, <code>podcast advertising</code>.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- CULTIVATION THEORY -->
+                <div class="collapsible-box">
+                    <button type="button" class="collapsible-trigger" data-theory-id="cultivation">▶ Cultivation
+                        Theory</button>
+                    <div class="collapsible-content">
+                        <hr>
+                        <p><strong>Use this to investigate...</strong> the long-term effects of heavy podcast
+                            listening on listeners' perceptions of reality.</p>
+                        <p><strong>Core Idea:</strong> Long-term, heavy exposure to media shapes our perception of
+                            the world to be more like the world portrayed in the media. Originally for TV, it can be
+                            adapted for consistent, genre-specific podcast consumption.</p>
+                        <p><strong>Podcast Application:</strong> Do heavy listeners of political commentary podcasts
+                            perceive the world as more polarized? Do heavy listeners of finance podcasts
+                            overestimate the ease of stock market success? This theory is suited for surveys that
+                            correlate listening habits with real-world beliefs and attitudes.</p>
+                        <ul>
+                            <li><strong>Key Sources:</strong> Gerbner & Gross (1976).</li>
+                            <li><strong>Keywords for Searching:</strong> <code>cultivation theory</code>,
+                                <code>mean world syndrome</code>, <code>long-term media effects</code>,
+                                <code>social reality</code>.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- TECHNOLOGY ACCEPTANCE MODEL (TAM) -->
+                <div class="collapsible-box">
+                    <button type="button" class="collapsible-trigger" data-theory-id="tam">▶ Technology Acceptance Model
+                        (TAM)</button>
+                    <div class="collapsible-content">
+                        <hr>
+                        <p><strong>Use this to understand...</strong> why people adopt (or reject) podcast platforms
+                            or related technologies.</p>
+                        <p><strong>Core Idea:</strong> A user's intention to adopt a new technology is primarily
+                            determined by two factors: its <strong>Perceived Usefulness</strong> ("Will this help me
+                            achieve my goals?") and its <strong>Perceived Ease of Use</strong> ("Will this be easy
+                            for me to operate?").</p>
+                        <p><strong>Podcast Application:</strong> Excellent for surveys exploring platform choice.
+                            Why did some users switch from Apple Podcasts to Spotify? Why might a listener adopt a
+                            new app like "Snipd" that uses AI to create transcripts and summaries? TAM provides a
+                            structured way to measure the key drivers of technology adoption in the podcasting
+                            ecosystem.</p>
+                        <ul>
+                            <li><strong>Key Sources:</strong> Davis, F. D. (1989).</li>
+                            <li><strong>Keywords for Searching:</strong> <code>technology acceptance model</code>,
+                                <code>user adoption</code>, <code>perceived usefulness</code>,
+                                <code>perceived ease of use</code>, <code>platform choice</code>.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- SOCIAL IDENTITY THEORY -->
+                <div class="collapsible-box">
+                    <button type="button" class="collapsible-trigger" data-theory-id="sit">▶ Social Identity
+                        Theory</button>
+                    <div class="collapsible-content">
+                        <hr>
+                        <p><strong>Use this to analyze...</strong> how podcasts create and reinforce group
+                            identities among listeners.</p>
+                        <p><strong>Core Idea:</strong> People derive part of their self-concept from the groups they
+                            belong to ("in-groups"). To enhance their self-esteem, they favor their in-group and may
+                            view others as an "out-group."</p>
+                        <p><strong>Podcast Application:</strong> How do niche podcasts (e.g., for specific hobbies,
+                            political views, or fandoms) build a sense of community? How do the shared language,
+                            inside jokes, and common values of a podcast create an "in-group" of dedicated
+                            listeners? This is a great lens for analyzing listener communities on platforms like
+                            Reddit, Discord, or Patreon.</p>
+                        <ul>
+                            <li><strong>Key Sources:</strong> Tajfel & Turner (1979).</li>
+                            <li><strong>Keywords for Searching:</strong> <code>social identity theory</code>,
+                                <code>in-group favoritism</code>, <code>fandom studies</code>,
+                                <code>community building</code>, <code>audience identity</code>.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- DIFFUSION OF INNOVATIONS -->
+                <div class="collapsible-box">
+                    <button type="button" class="collapsible-trigger" data-theory-id="diffusion">▶ Diffusion of
+                        Innovations Theory</button>
+                    <div class="collapsible-content">
+                        <hr>
+                        <p><strong>Use this to understand...</strong> how new podcasts, ideas, or trends spread
+                            through a population.</p>
+                        <p><strong>Core Idea:</strong> Innovations are adopted over time by different segments of a
+                            population (Innovators, Early Adopters, Early/Late Majority, Laggards). The spread is
+                            influenced by the innovation's attributes (e.g., relative advantage, compatibility) and
+                            the communication channels used.</p>
+                        <p><strong>Podcast Application:</strong> How did a specific podcast go from unknown to a
+                            chart-topper? Who were the early adopters who recommended it? How do podcast hosts
+                            themselves act as "opinion leaders" that accelerate the adoption of new ideas, products,
+                            or even other podcasts discussed on their show?</p>
+                        <ul>
+                            <li><strong>Key Sources:</strong> Rogers, E. M. (2003).</li>
+                            <li><strong>Keywords for Searching:</strong> <code>diffusion of innovations</code>,
+                                <code>opinion leadership</code>, <code>word-of-mouth</code>,
+                                <code>podcast trends</code>, <code>viral media</code>.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- TWO-STEP FLOW OF COMMUNICATION -->
+                <div class="collapsible-box">
+                    <button type="button" class="collapsible-trigger" data-theory-id="two-step">▶ Two-Step Flow of
+                        Communication</button>
+                    <div class="collapsible-content">
+                        <hr>
+                        <p><strong>Use this to examine...</strong> the role of podcast hosts as influential
+                            intermediaries.</p>
+                        <p><strong>Core Idea:</strong> Media messages often don't reach everyone directly. They flow
+                            from mass media to "opinion leaders," who then interpret, filter, and disseminate the
+                            information to their less-active social circles.</p>
+                        <p><strong>Podcast Application:</strong> This classic theory is reborn in the influencer
+                            era. Podcast hosts are modern opinion leaders. They digest complex information (news,
+                            science, finance, politics) and present it to their audience, shaping their opinions and
+                            understanding. This is crucial for understanding the influence of expert- or
+                            personality-driven shows.</p>
+                        <ul>
+                            <li><strong>Key Sources:</strong> Katz & Lazarsfeld (1955).</li>
+                            <li><strong>Keywords for Searching:</strong> <code>two-step flow</code>,
+                                <code>opinion leader</code>, <code>media influence</code>,
+                                <code>podcast host</code>, <code>influencer effect</code>.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- NARRATIVE TRANSPORTATION THEORY -->
+                <div class="collapsible-box">
+                    <button type="button" class="collapsible-trigger" data-theory-id="narrative">▶ Narrative
+                        Transportation Theory</button>
+                    <div class="collapsible-content">
+                        <p><strong>Use this to understand...</strong> how listeners get "lost" in a story and how this
+                            immersion influences their beliefs.</p>
+                        <p><strong>Core Idea:</strong> When a person is absorbed into a narrative, they are less likely
+                            to counter-argue its points. Persuasion occurs because the listener is "transported" into
+                            the story world, making them more open to the attitudes and beliefs embedded within it.</p>
+                        <p><strong>Podcast Application:</strong> This is a must-have for analyzing <strong>True
+                                Crime</strong>, audio dramas, or any story-driven content. It explains why a compelling
+                            narrative can be more persuasive than a list of facts, and it's a powerful alternative to
+                            the logic-focused Elaboration Likelihood Model (ELM).</p>
+                        <ul>
+                            <li><strong>Key Sources:</strong> Green, M. C., & Brock, T. C. (2000).</li>
+                            <li><strong>Keywords for Searching:</strong> <code>narrative persuasion</code>,
+                                <code>transportation theory</code>, <code>storytelling</code>, <code>immersion</code>,
+                                <code>parasocial relationship</code>.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- SELF-DETERMINATION THEORY (SDT) -->
+                <div class="collapsible-box">
+                    <button type="button" class="collapsible-trigger" data-theory-id="sdt">▶ Self-Determination Theory
+                        (SDT)</button>
+                    <div class="collapsible-content">
+                        <p><strong>Use this to analyze...</strong> the deeper psychological needs that podcast listening
+                            fulfills.</p>
+                        <p><strong>Core Idea:</strong> SDT posits that well-being and motivation are fueled by
+                            satisfying three innate needs: <strong>Autonomy</strong> (control over one's choices),
+                            <strong>Competence</strong> (feeling effective and knowledgeable), and
+                            <strong>Relatedness</strong> (feeling socially connected).
+                        </p>
+                        <p><strong>Podcast Application:</strong> A modern and powerful lens for motivation research.
+                            It's perfect for projects on <strong>loneliness</strong> (Relatedness), educational podcasts
+                            (Competence), or why the freedom of on-demand audio is so appealing (Autonomy). It provides
+                            a more structured framework than the broader Uses & Gratifications theory.</p>
+                        <ul>
+                            <li><strong>Key Sources:</strong> Deci, E. L., & Ryan, R. M. (2000).</li>
+                            <li><strong>Keywords for Searching:</strong> <code>self-determination theory</code>,
+                                <code>psychological needs</code>, <code>audience motivation</code>,
+                                <code>relatedness</code>, <code>listener well-being</code>.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- MOOD MANAGEMENT THEORY -->
+                <div class="collapsible-box">
+                    <button type="button" class="collapsible-trigger" data-theory-id="mood">▶ Mood Management
+                        Theory</button>
+                    <div class="collapsible-content">
+                        <p><strong>Use this to explain...</strong> how people select podcasts to regulate their
+                            emotional state.</p>
+                        <p><strong>Core Idea:</strong> People subconsciously choose media to manage their moods—either
+                            to maintain a good mood or to alleviate a bad one. They select content based on its
+                            excitatory potential, absorption potential, and hedonic valence (is it pleasant or
+                            unpleasant?).</p>
+                        <p><strong>Podcast Application:</strong> Explains seemingly contradictory listening habits. Why
+                            listen to a comedy podcast after a good day? To maintain the mood. Why listen to a
+                            high-arousal True Crime podcast when you're bored? To increase stimulation. It's a great
+                            theory for survey research connecting mood to listening choices.</p>
+                        <ul>
+                            <li><strong>Key Sources:</strong> Zillmann, D. (1988).</li>
+                            <li><strong>Keywords for Searching:</strong> <code>mood management</code>,
+                                <code>media selection</code>, <code>affect regulation</code>,
+                                <code>listening habits</code>, <code>emotional gratification</code>.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </section>
+            </section>
+
+            <hr class="section-divider">
+
+            <section id="s3-research-map">
+                <h2><span>The "Where":</span> Workshop: Locating Your Project on the Research Map</h2>
+                <div class="workshop-task-box">
+                    <h4>Workshop Task: Find Your Place</h4>
+                    <ol>
+                        <li>Select the tab below that matches your group's chosen research method.</li>
+                        <li>Explore the interactive (german) resarch process models. Hover over or click on each step to
+                            learn its
+                            function.</li>
+                        <li>As a group, identify the early-stage boxes: <strong>"Fundierung durch Theorie,"
+                                "Konzeptualisierung," and "Hypothesenbildung."</strong></li>
+                        <li>Discuss: How will the theory you just selected from the Toolkit concretely inform these
+                            specific steps in your project?</li>
+                    </ol>
+                </div>
+
+                <!-- TODO (JS): Implement tab switching logic. -->
+                <!-- TODO (JS): Implement the SVG interactivity (highlighting, tooltips) from your provided HTML file. -->
+                <div class="tab-navigation">
+                    <button class="tab-button active" data-tab="content-analysis">Inhaltsanalyse (nach Rössler)</button>
+                    <button class="tab-button" data-tab="survey">Befragung (nach Scholl)</button>
+                    <button class="tab-button" data-tab="experiment">Experiment (nach Brosius)</button>
+                </div>
+
+                <div id="tab-content-analysis" class="tab-content active">
+                    <!-- TODO: Paste the full SVG code for the Rössler model here. -->
+                    <svg class="process-model-svg" id="roessler-svg" viewBox="0 0 650 880"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <!-- Definitions -->
+                        <defs>
+                            <marker id="arrowhead-roessler" markerWidth="8" markerHeight="6" refX="8" refY="3"
+                                orient="auto" markerUnits="userSpaceOnUse">
+                                <path d="M0,0 L8,3 L0,6 Z" fill="var(--connector-color)" />
+                            </marker>
+                        </defs>
+
+                        <!-- Context Separators -->
+                        <line class="context-separator" x1="20" y1="60" x2="630" y2="60" />
+                        <line class="context-separator" x1="20" y1="780" x2="630" y2="780" />
+
+                        <!-- Context Labels -->
+                        <text class="process-text context-label" x="627" y="50">Entdeckungszusammenhang</text>
+                        <text class="process-text context-label" x="630" y="67">Begründungszusammenhang</text>
+                        <!-- Adjusted Y -->
+                        <text class="process-text context-label" x="630" y="770">Begründungszusammenhang</text>
+                        <text class="process-text context-label" x="628" y="787">Verwertungszusammenhang</text>
+                        <!-- Adjusted Y -->
+
+                        <!-- Top Level Boxes -->
+                        <rect id="roessler-erkenntnisinteresse" class="process-box" x="245" y="20" width="160"
+                            height="30" />
+                        <text class="process-text" x="325" y="35">Erkenntnisinteresse</text>
+                        <text class="process-text label" x="150" y="10">wissenschaftlich-theoretisch</text>
+                        <text class="process-text label" x="500" y="10">konkret-situativ</text>
+
+                        <rect id="roessler-fundierung" class="process-box" x="70" y="80" width="160" height="40" />
+                        <text class="process-text" x="150" y="100">
+                            <tspan x="150" dy="-0.5em">Fundierung</tspan>
+                            <tspan x="150" dy="1.2em">durch Theorie</tspan>
+                        </text>
+
+                        <rect id="roessler-forschungsstand" class="process-box" x="420" y="80" width="160"
+                            height="40" />
+                        <text class="process-text" x="500" y="100">Forschungsstand</text>
+
+                        <rect id="roessler-begriffe" class="process-box" x="245" y="140" width="160" height="40" />
+                        <text class="process-text" x="325" y="160">
+                            <tspan x="325" dy="-0.5em">Definition zentraler</tspan>
+                            <tspan x="325" dy="1.2em">Begriffe</tspan>
+                        </text>
+
+                        <rect id="roessler-hypothesen" class="process-box" x="245" y="200" width="160" height="30" />
+                        <text class="process-text" x="325" y="215">Hypothesenbildung</text>
+
+                        <!-- Methodenwahl Container -->
+                        <rect class="process-box multi-part" x="50" y="260" width="550" height="450" />
+                        <text class="process-text" x="325" y="275" font-weight="bold">METHODENWAHL
+                            (Inhaltsanalyse)</text>
+
+                        <!-- Inner Boxes & Phase Lines -->
+                        <!-- Planungsphase -->
+                        <rect id="roessler-problemstellung" class="process-box" x="70" y="300" width="150"
+                            height="40" />
+                        <text class="process-text" x="145" y="320">Problemstellung</text>
+                        <rect id="roessler-projektplanung" class="process-box" x="365" y="296" width="150"
+                            height="50" />
+                        <text class="process-text" x="445" y="325">
+                            <tspan x="445" dy="-1.2em">Projektplanung:</tspan>
+                            <tspan x="445" dy="1.2em">Geld, Zeit, Codierer</tspan>
+                        </text>
+                        <line class="phase-line" x1="60" y1="370" x2="590" y2="370" />
+                        <text class="process-text phase-label" x="585" y="360">Planungsphase</text>
+
+                        <!-- Entwicklungsphase -->
+                        <rect id="roessler-material" class="process-box" x="255" y="390" width="150" height="50" />
+                        <text class="process-text" x="330" y="415">Untersuchungsmaterial</text>
+                        <text class="process-text small" x="115" y="400" dy="-0.8em">(ggf. Hypo-</text>
+                        <text class="process-text small" x="115" y="400" dy="0.2em">thesen-</text>
+                        <text class="process-text small" x="115" y="400" dy="1.2em">Bildung)</text>
+                        <rect id="roessler-analyseeinheiten" class="process-box" x="70" y="460" width="300"
+                            height="40" />
+                        <text class="process-text" x="150" y="480">
+                            <tspan x="215" dy="-0.5em">Definition der</tspan>
+                            <tspan x="215" dy="1.2em">Analyseeinheiten</tspan>
+                        </text>
+                        <line class="phase-line" x1="60" y1="580" x2="590" y2="580" />
+                        <text class="process-text phase-label" x="585" y="570">Entwicklungsphase</text>
+
+                        <!-- Testphase -->
+                        <rect id="roessler-kategorien" class="process-box" x="70" y="540" width="300" height="30" />
+                        <text class="process-text" x="220" y="555">Kategorienbildung</text>
+                        <text class="process-text label" x="190" y="518">theoriegeleitet</text>
+                        <text class="process-text label" x="380" y="518">empiriegeleitet</text>
+                        <rect id="roessler-probecodierung" class="process-box" x="170" y="590" width="130"
+                            height="30" />
+                        <text class="process-text" x="235" y="605">Probecodierung</text>
+                        <rect id="roessler-codierschulung" class="process-box" x="350" y="590" width="130"
+                            height="30" />
+                        <text class="process-text" x="415" y="605">Codierschulung</text>
+                        <line class="phase-line" x1="60" y1="640" x2="590" y2="640" />
+                        <text class="process-text phase-label" x="585" y="630">Testphase</text>
+
+                        <!-- Anwendungsphase -->
+                        <rect id="roessler-codebuch" class="process-box" x="70" y="660" width="150" height="30" />
+                        <text class="process-text" x="140" y="675">Codebuch</text>
+                        <rect id="roessler-codierung" class="process-box" x="350" y="660" width="130" height="30" />
+                        <text class="process-text" x="415" y="675">Codierung</text>
+                        <!-- No line needed here, it's the end of the Methodenwahl box -->
+                        <text class="process-text phase-label" x="585" y="680">Anwendungs-</text>
+                        <text class="process-text phase-label" x="585" y="692">phase</text>
+
+
+                        <!-- Bottom Level Boxes -->
+                        <rect id="roessler-auswertung" class="process-box" x="175" y="720" width="300" height="50" />
+                        <!-- Below Methodenwahl -->
+                        <text class="process-text" x="325" y="745">
+                            <tspan x="325" dy="-1.2em">Auswertungsphase: Datenerfassung &</tspan>
+                            <tspan x="325" dy="1.2em">-aufbereitung; statistische Analyse</tspan>
+                        </text>
+
+                        <rect id="roessler-interpretation" class="process-box" x="70" y="790" width="160" height="30" />
+                        <text class="process-text" x="150" y="805">Interpretation, Inferenz</text>
+                        <rect id="roessler-darstellung" class="process-box" x="270" y="790" width="160" height="30" />
+                        <text class="process-text" x="350" y="805">Darstellung der Ergebnisse</text>
+
+                        <rect id="roessler-publikation" class="process-box" x="70" y="840" width="160" height="30" />
+                        <text class="process-text" x="150" y="855">Publikationen</text>
+                        <rect id="roessler-forschungsbericht" class="process-box" x="270" y="840" width="160"
+                            height="30" />
+                        <text class="process-text" x="350" y="855">Forschungsbericht</text>
+
+                        <!-- Arrows -->
+                        <polyline class="arrow" points="220,280 150,300" marker-end="url(#arrowhead-roessler)" />
+                        <!-- Methodenwahl -> Problem -->
+                        <polyline class="arrow" points="420,280 445,295" marker-end="url(#arrowhead-roessler)" />
+                        <!-- Methodenwahl -> Projektplanung -->
+                        <polyline class="arrow" points="325,300 325,390" marker-end="url(#arrowhead-roessler)" />
+                        <!-- Methodenwahl -> Material. -->
+
+                        <polyline class="arrow" points="325,50 150,80" marker-end="url(#arrowhead-roessler)" />
+                        <!-- Erkenntnis -> Fundierung -->
+                        <polyline class="arrow" points="325,50 500,80" marker-end="url(#arrowhead-roessler)" />
+                        <!-- Erkenntnis -> Forschungsstand -->
+                        <polyline class="arrow" points="150,120 150,140 245,150"
+                            marker-end="url(#arrowhead-roessler)" />
+                        <!-- Fundierung -> Begriffe -->
+                        <polyline class="arrow" points="500,120 500,140 405,150"
+                            marker-end="url(#arrowhead-roessler)" />
+                        <!-- Forschungsstand -> Begriffe -->
+                        <polyline class="arrow" points="325,180 325,200" marker-end="url(#arrowhead-roessler)" />
+                        <!-- Begriffe -> Hypothesen -->
+                        <polyline class="arrow" points="325,230 325,260" marker-end="url(#arrowhead-roessler)" />
+                        <!-- Hypothesen -> Methodenwahl -->
+
+                        <!-- Arrows within Methodenwahl -->
+                        <polyline class="arrow" points="145,340 145,460" marker-end="url(#arrowhead-roessler)" />
+                        <!-- Problemst -> Analyseeinh -->
+                        <polyline class="arrow" points="445,345 445,590" marker-end="url(#arrowhead-roessler)" />
+                        <!-- Planung -> Codierschulung -->
+                        <polyline class="arrow" points="325,440 325,460" marker-end="url(#arrowhead-roessler)" />
+                        <!-- Material -> Analyseeinh. -->
+                        <polyline class="arrow" points="325,500 325,540" marker-end="url(#arrowhead-roessler)" />
+                        <!-- Analyseeinh -> Kategorien -->
+                        <polyline class="arrow" points="145,500 145,540" marker-end="url(#arrowhead-roessler)" />
+                        <!-- Analyseeinh -> Kategorien -->
+                        <polyline class="arrow" points="235,570 235,590" marker-end="url(#arrowhead-roessler)" />
+                        <!-- Kategorien -> Probecod. -->
+                        <!-- <polyline class="arrow" points="325,570 325,590 415,590" marker-end="url(#arrowhead-roessler)" /> -->
+                        <!-- Kategorien -> Codierschul. -->
+                        <polyline class="arrow" points="145,570 145,660" marker-end="url(#arrowhead-roessler)" />
+                        <!-- Kategorien -> Codebuch -->
+                        <polyline class="arrow" points="235,620 145,660" marker-end="url(#arrowhead-roessler)" />
+                        <!-- Probecod -> Codebuch -->
+                        <polyline class="arrow" points="415,620 415,660" marker-end="url(#arrowhead-roessler)" />
+                        <!-- Codierschul -> Codierung -->
+                        <polyline class="arrow" points="350,605 300,605" marker-end="url(#arrowhead-roessler)" />
+                        <!-- Codierschul -> Probecodierung -->
+                        <polyline class="arrow" points="235,620 350,660" marker-end="url(#arrowhead-roessler)" />
+                        <!-- Probecod -> Codierung -->
+
+                        <!-- Arrows connecting Methodenwahl to Auswertung -->
+                        <!-- <polyline class="arrow" points="145,690 145,720 175,730" marker-end="url(#arrowhead-roessler)" /> -->
+                        <!-- Codebuch -> Auswertung -->
+                        <polyline class="arrow" points="415,690 415,720" marker-end="url(#arrowhead-roessler)" />
+                        <!-- Codierung -> Auswertung -->
+
+                        <!-- Bottom Arrows -->
+                        <!-- <polyline class="arrow" points="255,770 150,790" marker-end="url(#arrowhead-roessler)" /> -->
+                        <!-- Auswertung -> Interpretation -->
+                        <polyline class="arrow" points="350,770 350,790" marker-end="url(#arrowhead-roessler)" />
+                        <!-- Auswertung -> Darstellung -->
+                        <polyline class="arrow" points="230,805 270,805" marker-end="url(#arrowhead-roessler)" />
+                        <!-- Interpretation -> Darstellung -->
+                        <polyline class="arrow" points="350,820 350,840" marker-end="url(#arrowhead-roessler)" />
+                        <!-- Darstellung -> Forschungsbericht -->
+                        <polyline class="arrow" points="315,820 145,840" marker-end="url(#arrowhead-roessler)" />
+                        <!-- Darstellung -> Publikationen -->
+                        <!-- <polyline class="arrow" points="150,820 270,845" marker-end="url(#arrowhead-roessler)" /> -->
+                        <!-- Interpretation -> Forschungsbericht -->
+
+                        <!-- Feedback Loops (Curved) -->
+                        <path class="arrow" d="M 30 215 Q 0 150 70 100" fill="none"
+                            marker-end="url(#arrowhead-roessler)" />
+                        <!-- Hypothesen -> Fundierung -->
+                        <path class="arrow" d="M 30 215 Q 0 150 245,150" fill="none"
+                            marker-end="url(#arrowhead-roessler)" />
+                        <!-- Hypothesen -> Definition -->
+                        <path class="arrow" d="M 30 215 Q 0 150 245,215" fill="none"
+                            marker-end="url(#arrowhead-roessler)" />
+                        <!-- Hypothesen -> Hypothesen -->
+                        <path class="arrow" d="M 30 215 Q -20 500 70 805" fill="none"
+                            marker-end="url(#arrowhead-roessler)" />
+                        <!-- Hypothesen -> Interpretation -->
+                        <!-- <path class="arrow" d="M 60 415 Q 40 300 245 215" fill="none" marker-end="url(#arrowhead-roessler)" /> -->
+                        <!-- Material -> Hypothesen -->
+
+                        <!-- Dashed Arrow: Erkenntnisinteresse -> Publikationen -->
+                        <polyline class="arrow" points="245,35 5,35 5,860 70,860" stroke-dasharray="5, 3" fill="none"
+                            marker-end="url(#arrowhead-roessler)" />
+
+                    </svg>
+                </div>
+                <div id="tab-survey" class="tab-content">
+                    <!-- TODO: Paste the full SVG code for the Scholl model here. -->
+                    <svg class="process-model-svg" id="scholl-svg" viewBox="0 0 600 780"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <!-- Definitions -->
+                        <defs>
+                            <marker id="arrowhead-scholl" markerWidth="8" markerHeight="6" refX="8" refY="3"
+                                orient="auto" markerUnits="userSpaceOnUse">
+                                <path d="M0,0 L8,3 L0,6 Z" fill="var(--connector-color)" />
+                            </marker>
+                            <!-- No start marker needed for loops 1 & 2 -->
+                        </defs>
+
+                        <!-- BOX POSITIONS & SIZES - Achieving Symmetry -->
+                        <!-- Central Axis around x=300 -->
+                        <!-- Box Widths (adjust as needed for text, keep symmetrical ones same) -->
+                        <!-- Example: Konzept/Grundg = 180, Methode/Auswahl = 180, Operation/Auswahl = 180 -->
+                        <!-- Standard Box Height: 40 or 50/60 for multi-line -->
+
+                        <rect id="scholl-fragestellung" class="process-box" x="200" y="20" width="200" height="40" />
+                        <rect id="scholl-konzeptualisierung" class="process-box" x="200" y="100" width="200"
+                            height="60" />
+
+                        <!-- Level 1 Symmetry -->
+                        <rect id="scholl-methode" class="process-box" x="80" y="200" width="180" height="50" />
+                        <rect id="scholl-grundgesamtheit" class="process-box" x="340" y="200" width="180" height="40" />
+                        <!-- Aligned with Methode -->
+
+                        <!-- Level 2 Symmetry -->
+                        <rect id="scholl-operationalisierung" class="process-box" x="80" y="290" width="180"
+                            height="50" />
+                        <rect id="scholl-auswahl" class="process-box" x="340" y="290" width="180" height="50" />
+                        <!-- Aligned with Operationalisierung -->
+
+
+                        <rect id="scholl-pretest" class="process-box" x="250" y="380" width="100" height="30" />
+                        <!-- Centered -->
+
+                        <rect id="scholl-hauptuntersuchung" class="process-box" x="200" y="450" width="200"
+                            height="40" />
+                        <rect id="scholl-aufbereitung" class="process-box" x="200" y="530" width="200" height="50" />
+                        <rect id="scholl-auswertung" class="process-box" x="200" y="620" width="200" height="50" />
+                        <rect id="scholl-datenpraesentation" class="process-box" x="200" y="710" width="200"
+                            height="30" />
+
+
+                        <!-- TEXT POSITIONS -->
+                        <text class="process-text" x="300" y="40">
+                            <tspan x="300" dy="-0.5em">Fragestellung/</tspan>
+                            <tspan x="300" dy="1.2em">Problemformulierung</tspan>
+                        </text>
+                        <text class="process-text" x="300" y="130">
+                            <tspan x="300" dy="-1.2em">Konzeptualisierung</tspan>
+                            <tspan x="300" dy="1.2em" class="small">(eventuell mit Hypothesen</tspan>
+                            <tspan x="300" dy="1.2em" class="small">oder Theorie)</tspan>
+                        </text>
+                        <text class="process-text" x="170" y="225"> <!-- Text for Methode -->
+                            <tspan x="170" dy="-0.5em">Wahl der Methode</tspan>
+                            <tspan x="170" dy="1.2em" class="small">(hier: Befragung)</tspan>
+                        </text>
+                        <text class="process-text" x="430" y="220">Definition der Grundgesamtheit</text>
+                        <!-- Text for Grundgesamtheit -->
+
+                        <text class="process-text" x="170" y="315"> <!-- Text for Operationalisierung -->
+                            <tspan x="170" dy="-0.5em">Operationalisierung</tspan>
+                            <tspan x="170" dy="1.2em" class="small">(hier: Fragebogen)</tspan>
+                        </text>
+                        <text class="process-text" x="430" y="307"> <!-- Text for Auswahl -->
+                            <tspan x="430" dy="-0.5em">Auswahl der</tspan>
+                            <tspan x="430" dy="1.2em">Untersuchungsfälle</tspan>
+                            <tspan x="430" dy="1.2em" class="small">(hier: Befragte)</tspan>
+                        </text>
+
+                        <text class="process-text" x="300" y="395">Pretest</text>
+                        <text class="process-text" x="300" y="470">
+                            <tspan x="300" dy="-0.5em">Hauptuntersuchung</tspan>
+                            <tspan x="300" dy="1.2em" class="small">(Datenerhebung)</tspan>
+                        </text>
+                        <text class="process-text" x="300" y="555">
+                            <tspan x="300" dy="-1.2em">Datenaufbereitung</tspan>
+                            <tspan x="300" dy="1.2em" class="small">(Datenerfassung und</tspan>
+                            <tspan x="300" dy="1.2em" class="small">Datenbereinigung)</tspan>
+                        </text>
+                        <text class="process-text" x="300" y="645">
+                            <tspan x="300" dy="-0.5em">Datenauswertung</tspan>
+                            <tspan x="300" dy="1.2em" class="small">(inklusive Datenmodifikation)</tspan>
+                        </text>
+                        <text class="process-text" x="300" y="725">Datenpräsentation</text>
+
+
+                        <!-- ARROWS - Corrected Paths -->
+                        <polyline class="arrow" points="300,60 300,100" marker-end="url(#arrowhead-scholl)" />
+                        <!-- Frage -> Konzeptualisierung -->
+
+                        <polyline class="arrow" points="300,160 170,200" marker-end="url(#arrowhead-scholl)" />
+                        <!-- Konzept -> Methode -->
+                        <polyline class="arrow" points="300,160 430,200" marker-end="url(#arrowhead-scholl)" />
+                        <!-- Konzept -> Grundgesamtheit -->
+
+                        <polyline class="arrow" points="430,240 430,290" marker-end="url(#arrowhead-scholl)" />
+                        <!-- Grundges -> Auswahl -->
+                        <polyline class="arrow" points="170,250 170,290" marker-end="url(#arrowhead-scholl)" />
+                        <!-- Methode -> Operation. -->
+
+                        <polyline class="arrow" points="430,340 430,370 350,395" marker-end="url(#arrowhead-scholl)" />
+                        <!-- Auswahl -> Pretest -->
+                        <polyline class="arrow" points="170,340 170,370 250,395" marker-end="url(#arrowhead-scholl)" />
+                        <!-- Operation. -> Pretest -->
+
+                        <polyline class="arrow" points="300,410 300,450" marker-end="url(#arrowhead-scholl)" />
+                        <!-- Pretest -> Hauptuntersuchung -->
+                        <polyline class="arrow" points="300,490 300,530" marker-end="url(#arrowhead-scholl)" />
+                        <!-- Hauptuntersuchung -> Aufbereitung -->
+                        <polyline class="arrow" points="300,580 300,620" marker-end="url(#arrowhead-scholl)" />
+                        <!-- Aufbereitung -> Auswertung -->
+                        <polyline class="arrow" points="300,670 300,710" marker-end="url(#arrowhead-scholl)" />
+                        <!-- Auswertung -> Datenpräsentation -->
+
+
+                        <!-- FEEDBACK LOOPS (CURVED) - Corrected Direction & Markers -->
+
+                        <!-- Loop (1): Datenauswertung -> Fragestellung -->
+                        <path class="arrow" d="M 200,645 C -50,550 -20,100 200,40" stroke-width="1.5" fill="none"
+                            marker-end="url(#arrowhead-scholl)" /> <!-- ONLY marker-end -->
+                        <text class="process-text small" x="60" y="140">(1)</text>
+
+                        <!-- Loop (2): Datenauswertung -> Konzeptualisierung -->
+                        <path class="arrow" d="M 200,640 C 50,500 50,200 200,130" stroke-width="1.5" fill="none"
+                            marker-end="url(#arrowhead-scholl)" /> <!-- ONLY marker-end -->
+                        <text class="process-text small" x="130" y="170">(2)</text>
+
+                        <!-- Loop (3): Pretest -> Operationalisierung -->
+                        <path class="arrow" d="M 250,395 C 220,370 190,360 170,340" fill="none" stroke-width="1.5"
+                            marker-end="url(#arrowhead-scholl)" /> <!-- ONLY marker-end -->
+                        <text class="process-text small" x="235" y="355">(3)</text>
+
+
+                    </svg>
+                </div>
+                <div id="tab-experiment" class="tab-content">
+                    <!-- TODO: Paste the full SVG code for the Brosius model here. -->
+                    <svg class="process-model-svg" id="brosius-svg" viewBox="0 0 500 780"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <!-- Definitions -->
+                        <defs>
+                            <marker id="arrowhead-brosius" markerWidth="8" markerHeight="6" refX="8" refY="3"
+                                orient="auto" markerUnits="userSpaceOnUse">
+                                <path d="M0,0 L8,3 L0,6 Z" fill="var(--connector-color)" />
+                            </marker>
+                            <marker id="arrowhead-brosius-start" markerWidth="8" markerHeight="6" refX="0" refY="3"
+                                orient="auto" markerUnits="userSpaceOnUse">
+                                <path d="M8,0 L0,3 L8,6 Z" fill="var(--connector-color)" />
+                            </marker>
+                        </defs>
+
+                        <!-- Context Separators -->
+                        <line class="context-separator" x1="20" y1="145" x2="480" y2="145" />
+                        <line class="context-separator" x1="20" y1="720" x2="480" y2="720" />
+
+                        <!-- Context Labels -->
+                        <text class="process-text context-label" x="480" y="120">Entdeckungs-</text>
+                        <text class="process-text context-label" x="480" y="133">zusammenhang</text>
+                        <text class="process-text context-label" x="480" y="675">Begründungs-</text>
+                        <text class="process-text context-label" x="480" y="688">zusammenhang</text>
+                        <text class="process-text context-label" x="480" y="760">Verwertungs-</text>
+                        <text class="process-text context-label" x="480" y="773">zusammenhang</text>
+
+                        <!-- Side Label & Arrow -->
+                        <line class="arrow" x1="80" y1="45" x2="80" y2="695" stroke-width="1.5" />
+                        <text class="process-text rotated" x="65" y="370" transform="rotate(-90, 65, 370)">Lösung des
+                            sozialen
+                            Problems</text>
+
+                        <!-- Small connector lines from vertical arrow -->
+                        <line class="arrow" x1="80" y1="45" x2="100" y2="45" stroke-width="1"
+                            marker-end="url(#arrowhead-brosius)" /> <!-- To Phänomen -->
+                        <line class="arrow" x1="80" y1="200" x2="160" y2="200" stroke-width="1"
+                            marker-end="url(#arrowhead-brosius)" /> <!-- To Fundierung -->
+                        <line class="arrow" x1="80" y1="355" x2="160" y2="355" stroke-width="1"
+                            marker-end="url(#arrowhead-brosius)" /> <!-- To Hypothesenbildung -->
+                        <line class="arrow" x1="80" y1="695" x2="160" y2="695" stroke-width="1" />
+                        <!-- To Ergebnisdarstellung -->
+
+
+                        <!-- Boxes -->
+                        <rect id="brosius-phaenomen" class="process-box" x="100" y="20" width="140" height="50" />
+                        <text class="process-text" x="170" y="45">
+                            <tspan x="170" dy="-0.5em">Phänomen aus</tspan>
+                            <tspan x="170" dy="1.2em">sozialer Realität</tspan>
+                        </text>
+
+                        <rect id="brosius-auftrag" class="process-box" x="260" y="20" width="140" height="50" />
+                        <text class="process-text" x="330" y="45">
+                            <tspan x="330" dy="-0.5em">Auftrag: kommerziell,</tspan>
+                            <tspan x="330" dy="1.2em">selbstgestellt</tspan>
+                        </text>
+
+                        <rect id="brosius-fragestellung" class="process-box" x="160" y="90" width="180" height="40" />
+                        <text class="process-text" x="250" y="110">
+                            <tspan x="250" dy="-0.5em">wissenschaftliche</tspan>
+                            <tspan x="250" dy="1.2em">Fragestellung</tspan>
+                        </text>
+
+                        <rect id="brosius-fundierung" class="process-box" x="160" y="160" width="180" height="80" />
+                        <text class="process-text small" x="250" y="200">
+                            <tspan x="250" dy="-2.4em">Fundierung der</tspan>
+                            <tspan x="250" dy="1.2em">Fragestellung durch</tspan>
+                            <tspan x="250" dy="1.2em">geeignete Theorie,</tspan>
+                            <tspan x="250" dy="1.2em">Darstellung des For-</tspan> <!-- Avoided manual hyphen -->
+                            <tspan x="250" dy="1.2em">schungsgegenstandes</tspan>
+                        </text>
+
+                        <rect id="brosius-begriffe" class="process-box" x="160" y="270" width="180" height="40" />
+                        <text class="process-text" x="250" y="290">
+                            <tspan x="250" dy="-0.5em">Definition der</tspan>
+                            <tspan x="250" dy="1.2em">zentralen Begriffe</tspan>
+                        </text>
+
+                        <rect id="brosius-hypothesen" class="process-box" x="160" y="340" width="180" height="30" />
+                        <text class="process-text" x="250" y="355">Hypothesenbildung</text>
+
+                        <!-- Konzeption Box with Dashed Border -->
+                        <g>
+                            <rect id="brosius-konzeption" class="process-box" x="160" y="400" width="180" height="70" />
+                            <text class="process-text small" x="250" y="435">
+                                <tspan x="250" dy="-2.4em" style="font-size: var(--svg-text-size); font-weight:bold;">
+                                    Konzeption
+                                    der</tspan>
+                                <tspan x="250" dy="1.2em" style="font-size: var(--svg-text-size); font-weight:bold;">
+                                    Untersuchung:</tspan>
+                                <tspan x="250" dy="1.4em">Wahl der Methode</tspan>
+                                <tspan x="250" dy="1.2em">Wahl der Messung</tspan>
+                                <tspan x="250" dy="1.2em">Wahl der Untersuchungsanlage</tspan>
+                            </text>
+                            <!-- Dashed border *around* the konzeption box -->
+                            <rect class="process-box dashed-border" x="155" y="395" width="190" height="80" />
+                        </g>
+
+
+                        <rect id="brosius-indikatoren" class="process-box" x="160" y="500" width="180" height="30" />
+                        <text class="process-text" x="250" y="515">Indikatorenbildung</text>
+
+                        <rect id="brosius-datenerhebung" class="process-box" x="160" y="560" width="180" height="30" />
+                        <text class="process-text" x="250" y="575">Datenerhebung</text>
+
+                        <rect id="brosius-datenanalyse" class="process-box" x="160" y="620" width="180" height="30" />
+                        <text class="process-text" x="250" y="635">Datenanalyse</text>
+
+                        <rect id="brosius-ergebnisdarstellung" class="process-box" x="160" y="680" width="180"
+                            height="30" />
+                        <text class="process-text" x="250" y="695">Ergebnisdarstellung</text>
+
+                        <rect id="brosius-bericht" class="process-box" x="160" y="730" width="180" height="30" />
+                        <text class="process-text" x="250" y="745">Bericht, Publikation</text>
+
+                        <!-- Arrows -->
+                        <polyline class="arrow" points="170,70 170, 90" marker-end="url(#arrowhead-brosius)" />
+                        <!-- Phänomen -> Frage -->
+                        <polyline class="arrow" points="330,70 330, 90" marker-end="url(#arrowhead-brosius)" />
+                        <!-- Auftrag -> Frage -->
+                        <polyline class="arrow" points="250,130 250,160" marker-end="url(#arrowhead-brosius)" />
+                        <!-- Frage -> Fundierung -->
+                        <polyline class="arrow" points="250,240 250,270" marker-end="url(#arrowhead-brosius)" />
+                        <!-- Fundierung -> Begriffe -->
+                        <polyline class="arrow" points="250,310 250,340" marker-end="url(#arrowhead-brosius)" />
+                        <!-- Begriffe -> Hypothesen -->
+                        <polyline class="arrow" points="250,370 250,400" marker-end="url(#arrowhead-brosius)" />
+                        <!-- Hypothesen -> Konzeption -->
+                        <polyline class="arrow" points="250,470 250,500" marker-end="url(#arrowhead-brosius)" />
+                        <!-- Konzeption -> Indikatoren -->
+                        <polyline class="arrow" points="250,530 250,560" marker-end="url(#arrowhead-brosius)" />
+                        <!-- Indikatoren -> Datenerhebung -->
+                        <polyline class="arrow" points="250,590 250,620" marker-end="url(#arrowhead-brosius)" />
+                        <!-- Datenerhebung -> Datenanalyse -->
+                        <polyline class="arrow" points="250,650 250,680" marker-end="url(#arrowhead-brosius)" />
+                        <!-- Datenanalyse -> Ergebnisdarst. -->
+                        <polyline class="arrow" points="250,710 250,730" marker-end="url(#arrowhead-brosius)" />
+                        <!-- Ergebnisdarst. -> Bericht -->
+
+                        <!-- Feedback Loop (Curved) - Revised based on original B&W image -->
+                        <!-- Starts after Hypothesenbildung, goes back up to Fundierung -->
+                        <!-- <path class="arrow" d="M 160 360 C 120 300, 120 250, 160 200" fill="none"
+                    marker-end="url(#arrowhead-brosius)" stroke-width="1.5" /> -->
+
+                    </svg>
+                </div>
+            </section>
+
+            <hr class="section-divider">
+
+            <section id="s3-mission-briefing">
+                <div class="homework-box">
+                    <div class="homework-header">
+                        <span class="icon">🚀</span>
+                        <h3>Mission Briefing for Session 4</h3>
+                    </div>
+                    <p><strong>Your Objective:</strong> Next week's session is a self-guided lab. Your mission is to
+                        work as a team to complete and submit your <strong>"Project Foundation Document."</strong> This
+                        is the most critical document you will produce in this early phase.</p>
+
+                    <h4 style="padding-left: 10px;">The Deliverable: Project Foundation Document</h4>
+
+                    <div class="deliverable-list">
+                        <!-- Item 1: Title & RQ -->
+                        <div class="deliverable-item">
+                            <span class="icon">📝</span>
+                            <div>
+                                <h5>1. Working Title & Refined Research Question</h5>
+                                <p>Provide your current project title and your most focused, clear research question
+                                    based on today's session.</p>
+                            </div>
+                        </div>
+                        <!-- Item 2: Research Gap -->
+                        <div class="deliverable-item">
+                            <span class="icon">🔍</span>
+                            <div>
+                                <h5>2. State of Research Summary & The Gap</h5>
+                                <p>In a concise paragraph (400-600 words), summarize what is currently known about your
+                                    topic and then explicitly state the research gap your project intends to address.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Item 3: Literature Matrix -->
+                        <div class="deliverable-item">
+                            <span class="icon">📊</span>
+                            <div>
+                                <h5>3. The Literature Matrix</h5>
+                                <p>A completed matrix containing at least <strong>5-7 core academic
+                                        sources</strong> that are central to your topic and research gap.</p>
+                            </div>
+                        </div>
+                        <!-- Item 4: Hypotheses with IV/DV -->
+                        <div class="deliverable-item">
+                            <span class="icon">🔬</span>
+                            <div>
+                                <h5>4. Draft Hypotheses (with IV/DV Breakdown)</h5>
+                                <p>Formulate at least two clear, testable hypotheses derived from your theory and
+                                    research gap. For each hypothesis, you must also clearly identify the:
+                                    <code>Independent Variable (IV)</code> and <code>Dependent Variable (DV)</code>.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="homework-pro-tip">
+                        <h5>💡 Pro Tip: Look Ahead to the Next Step</h5>
+                        <p>As you define your variables (IVs and DVs), start thinking about the next question: "How
+                            would I actually <strong>measure</strong> this?" The <strong>operationalization</strong>
+                            will be covered
+                            in detail in Session 5. Having initial ideas now will give you a significant head start.
+                        </p>
+                    </div>
+
+                    <p><strong>Your Location & Instructions:</strong> All tools, resources, and the final submission
+                        portal are located on the <a href="session4.html"><strong>Session 4: Digital Lab
+                                page</strong></a>. Your first step next week is to open that page and follow the Lab
+                        Manual workflow. Good luck!</p>
+                </div>
+            </section>
+
         </main>
     </div>
 
@@ -41,6 +1455,8 @@
         <p>© 2025 Andreas Reich - University of Hohenheim</p>
     </footer>
 
+    <!-- TODO (JS): Add scripts for collapsibles, tabs, and SVG interactivity at the end of the body -->
+    <script src="session3.js"></script>
 </body>
 
 </html>
