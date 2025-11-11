@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Andreas Reich">
-    <!-- !!! CHANGE THIS TITLE FOR EACH SESSION !!! -->
-    <title>Session X: [Topic] – Media Research WS 2025/26</title>
+    <title>Session 5: The Research Design Lab – Media Research WS 2025/26</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="session2.css">
+    <link rel="stylesheet" href="session4.css">
+    <link rel="stylesheet" href="session5.css"> <!-- We will create this file for unique styles -->
 </head>
 
 <body>
@@ -17,29 +19,922 @@
             <img src="uni-logo-de_hoh_weiss.png" alt="Universität Hohenheim Logo" class="uni-logo">
         </a>
         <h1>Media Research & Audience Intelligence - Part 2 (B)</h1>
-        <!-- !!! CHANGE THIS SUBTITLE FOR EACH SESSION !!! -->
-        <p class="subtitle">Session 5: 	Group Work: Design Development</p>
+        <p class="subtitle">Session 5: The Research Design Lab</p>
     </header>
 
     <div class="container">
         <nav>
             <ul>
-                <li><a href="index.html">Back to the Course Overview</a></li>
+                <li><a href="index.html">Course Overview</a></li>
+                <li><a href="session4.html">Session 4</a></li>
+                <li><a href="session5.html" class="active">Session 5</a></li>
+                <li><a href="session6.html">Session 6</a></li>
             </ul>
         </nav>
-        
+
         <main>
-            <div class="interactive-box" style="text-align: center; padding: 3rem 2rem;">
-                <h2 style="margin-top: 0;">Content Coming Soon!</h2>
-                <p style="font-size: 1.1em; color: #555;">The materials and interactive elements for this session will be available here shortly.</p>
-                <p>Please refer to the <a href="index.html">Course Overview</a> for the schedule and main topics.</p>
+            <!-- =================================================================== -->
+            <!-- SECTION 1: KICK-OFF & FOUNDATION REVIEW                           -->
+            <!-- =================================================================== -->
+            <section id="s5-kickoff">
+                <h2>Lab Kick-off: Foundation Review</h2>
+                <div class="workshop-task-box">
+                    <h4>Your Task (15 Minutes)</h4>
+                    <p>Welcome to the lab. To begin, each group will designate a spokesperson to take 3-5 minutes to
+                        present their final <strong>Research Question</strong> and primary <strong>Hypotheses</strong>
+                        from their Project Foundation Document. This ensures your starting point is clear and provides
+                        context for today's design work.</p>
+                </div>
+            </section>
+
+            <hr class="section-divider">
+
+            <!-- =================================================================== -->
+            <!-- SECTION 2: CORE DIDACTIC INPUT (REVISED & ENHANCED)               -->
+            <!-- =================================================================== -->
+            <section id="s5-didactic-input">
+                <h2>The Chain of Command: From Theory to Data</h2>
+                <p>Your research is only as strong as the weakest link in its logical chain. Today, we forge the most
+                    critical links: the <strong>Operational Definition</strong> (the "how") and the <strong>Measurement
+                        Items</strong>. Every
+                    decision you make from now on must be a direct command from the step above it in this chain.</p>
+
+                <div id="chain-of-command-visual" class="interactive-visual-container">
+                    <button id="reveal-chain-btn">Reveal the Chain of Command</button>
+                    <div class="chain-content">
+                        <!-- ADDITION: data-tooltip attributes added to each step -->
+                        <div class="chain-step" data-step="1"
+                            data-tooltip="The overarching question that guides your entire study.">Research Question
+                        </div>
+
+                        <!-- ADDITION: div arrows replaced with SVG for animation -->
+                        <div class="chain-arrow" data-step="1">
+                            <svg width="20" height="40" xmlns="http://www.w3.org/2000/svg">
+                                <line x1="10" y1="5" x2="10" y2="35" stroke-width="2" marker-end="url(#arrowhead)" />
+                            </svg>
+                        </div>
+
+                        <div class="chain-step" data-step="2"
+                            data-tooltip="The theories or frameworks from your literature review that inform your concepts.">
+                            Theoretical Concepts</div>
+
+                        <div class="chain-arrow" data-step="2">
+                            <svg width="20" height="40">
+                                <line x1="10" y1="5" x2="10" y2="35" stroke-width="2" marker-end="url(#arrowhead)" />
+                            </svg>
+                        </div>
+
+                        <div class="chain-step" data-step="3"
+                            data-tooltip="The specific, measurable representations of your theoretical concepts (e.g., IV and DV).">
+                            Variables (IV/DV)</div>
+
+                        <div class="chain-arrow" data-step="3">
+                            <svg width="20" height="40">
+                                <line x1="10" y1="5" x2="10" y2="35" stroke-width="2" marker-end="url(#arrowhead)" />
+                            </svg>
+                        </div>
+
+                        <div class="chain-step" data-step="4"
+                            data-tooltip="The 'dictionary definition' of your variable, based on literature. What does it mean?">
+                            Conceptual Definition</div>
+
+                        <div class="chain-arrow" data-step="4">
+                            <svg width="20" height="40">
+                                <line x1="10" y1="5" x2="10" y2="35" stroke-width="2" marker-end="url(#arrowhead)" />
+                            </svg>
+                        </div>
+
+                        <div class="chain-step important" data-step="5"
+                            data-tooltip="The 'how-to' guide for your variable. Exactly how will you measure or manipulate it? This is the bridge to your data.">
+                            <strong>Operational Definition</strong>
+                        </div>
+
+                        <div class="chain-arrow" data-step="5">
+                            <svg width="20" height="40">
+                                <line x1="10" y1="5" x2="10" y2="35" stroke-width="2" marker-end="url(#arrowhead)" />
+                            </svg>
+                        </div>
+
+                        <div class="chain-step" data-step="6"
+                            data-tooltip="The final, specific questions in your survey or rules in your codebook used to capture the data.">
+                            Measurement Items</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ADDITION: SVG definitions needed for the arrowheads -->
+            <svg width="0" height="0" style="position:absolute;">
+                <defs>
+                    <marker id="arrowhead" markerWidth="5" markerHeight="4" refX="0" refY="2" orient="auto"
+                        markerUnits="strokeWidth">
+                        <path d="M0,0 L5,2 L0,4 z" fill="#888" />
+                    </marker>
+                </defs>
+            </svg>
+
+            <hr class="section-divider">
+            <!-- =================================================================== -->
+            <!-- SECTION 3: THE DESIGN SPRINT WORKSHOP                             -->
+            <!-- =================================================================== -->
+            <section id="s5-design-sprint">
+                <h2>The Design Sprint Workshop</h2>
+                <p>In Session 4, you created your map: the Project Foundation Document. Today is the in-class "war room"
+                    where we stress-test that map, find its weak points, and reinforce your design before you begin
+                    building.</p>
+
+                <!-- ------------------------------------------------------------------- -->
+                <!-- TRIAGE: Assess Your Design                                        -->
+                <!-- ------------------------------------------------------------------- -->
+                <div class="workshop-task-box" id="sprint-triage">
+                    <h4>Part 1: The Design Triage</h4>
+                    <p>Before we begin, open your Project Foundation Document. As a group, perform a quick
+                        triage on your own design. How confident are you in each area? Be honest—this will guide your
+                        focus today.</p>
+                    <ol>
+                        <li><strong>Research Question & Hypotheses:</strong> Are they sharp, testable, and unambiguous?
+                            (🟢/🟡/🔴)</li>
+                        <li><strong>Operationalization & Measurement:</strong> Is your plan to measure your variables
+                            clear and defensible? (🟢/🟡/🔴)</li>
+                        <li><strong>Sampling & Recruitment:</strong> Is your plan to find participants realistic and
+                            concrete? (🟢/🟡/🔴)</li>
+                    </ol>
+                    <p>A spokesperson from each group will report your triage results to the class.</p>
+                </div>
+
+                <h3 style="margin-top: 2.5rem;">Sprint Stations: Refine Your Design</h3>
+                <p>Work through the following stations, focusing on the areas your group marked as yellow or red.</p>
+
+                <!-- ------------------------------------------------------------------- -->
+                <!-- SPRINT STATION A: THE VARIABLE HEALTH CHECK (REVISED)               -->
+                <!-- ------------------------------------------------------------------- -->
+                <div class="lab-tool" id="station-a-variables">
+                    <h3><span>Station A:</span> The Variable Health Check</h3>
+                    <div class="tool-intro">
+                        <p>This is a diagnostic tool to stress-test your variable definitions. Input a variable from
+                            your Foundation Document to get an instant "Health Report" on its clarity, grounding, and
+                            suitability for analysis.</p>
+                    </div>
+
+                    <div id="variable-health-check">
+                        <!-- STEP 1: INTAKE FORM -->
+                        <div id="health-check-intake">
+                            <div class="form-group">
+                                <label for="hc-var-name">Variable Name to Diagnose:</label>
+                                <input type="text" id="hc-var-name" placeholder="e.g., Host Authenticity">
+                            </div>
+                            <button id="hc-start-btn">Run Health Check</button>
+                        </div>
+
+                        <!-- STEP 2: INTERACTIVE DIAGNOSTIC QUESTIONS (Initially Hidden) -->
+                        <form id="health-check-diagnostics" class="hidden">
+                            <h4 id="hc-title">Diagnosing Variable: <span></span></h4>
+
+                            <!-- Test 1: Clarity (Rephrased & expanded) -->
+                            <div class="diagnostic-test">
+                                <h5>1. Measurement Precision: How is this variable observed?</h5>
+                                <div class="diagnostic-options">
+                                    <label><input type="radio" name="clarity" value="10"> <strong>Established
+                                            Instrument:</strong> We are using a full, pre-existing scale from a cited
+                                        academic source (e.g., the complete PSI scale).</label>
+                                    <label><input type="radio" name="clarity" value="8"> <strong>Adapted
+                                            Instrument:</strong> We are using specific items or a modified version of a
+                                        pre-existing academic scale.</label>
+                                    <label><input type="radio" name="clarity" value="6"> <strong>Structured
+                                            Observation:</strong> We are using a self-constructed scale (e.g., 1-7) or a
+                                        detailed codebook with clear, objective rules.</label>
+                                    <label><input type="radio" name="clarity" value="2"> <strong>Exploratory
+                                            Inquiry:</strong> We are using an open-ended question or general observation
+                                        without a pre-defined scale (e.g., "What are your thoughts on...?").</label>
+                                </div>
+                            </div>
+
+                            <!-- Test 2: Data Type (Added Qualitative) -->
+                            <div class="diagnostic-test">
+                                <h5>2. Data Type: What kind of data will this measurement produce?</h5>
+                                <div class="diagnostic-options">
+                                    <label><input type="radio" name="level" value="interval"> <strong>Scale / Ratio
+                                            Data:</strong> A continuous scale or count (e.g., a score from 1-7, age in
+                                        years).</label>
+                                    <label><input type="radio" name="level" value="ordinal"> <strong>Ordered
+                                            Categories:</strong> A ranked order (e.g., Low, Medium, High; 1st, 2nd,
+                                        3rd).</label>
+                                    <label><input type="radio" name="level" value="nominal"> <strong>Distinct
+                                            Categories:</strong> Unordered groups (e.g., Podcast Genre: Comedy, News,
+                                        Crime).</label>
+                                    <label><input type="radio" name="level" value="qualitative"> <strong>Textual /
+                                            Qualitative Data:</strong> Transcripts, open-ended answers, descriptive
+                                        notes.</label>
+                                </div>
+                            </div>
+
+                            <!-- Test 3: Grounding (Rephrased) -->
+                            <div class="diagnostic-test">
+                                <h5>3. Scientific Grounding: What is the primary justification for this method?</h5>
+                                <div class="diagnostic-options">
+                                    <label><input type="radio" name="grounding" value="10"> <strong>Direct
+                                            Precedent:</strong> Our method directly replicates or adapts a measurement
+                                        from a key paper in our literature matrix.</label>
+                                    <label><input type="radio" name="grounding" value="7"> <strong>Theoretical
+                                            Synthesis:</strong> Our method is a logical synthesis, combining ideas from
+                                        several papers to fill a gap.</label>
+                                    <label><input type="radio" name="grounding" value="4"> <strong>Logical
+                                            Derivation:</strong> Our method seems like the most direct and logical way
+                                        to measure the concept, though not directly based on prior methods.</label>
+                                </div>
+                            </div>
+                            <button id="hc-report-btn" type="button" disabled>Generate Health Report</button>
+                        </form>
+
+                        <!-- STEP 3: THE HEALTH REPORT (Unchanged Structure) -->
+                        <div id="health-check-report" class="hidden">
+                            <h4>Health Report for: <span></span></h4>
+                            <div class="report-grid">
+                                <div class="report-gauge">
+                                    <h5>Overall Definition Health</h5>
+                                    <div class="gauge-container">
+                                        <div class="gauge-bar"></div>
+                                        <div class="gauge-value">0%</div>
+                                    </div>
+                                </div>
+                                <div class="report-feedback">
+                                    <h5>Diagnostics & Recommendations</h5>
+                                    <ul id="feedback-list"></ul>
+                                </div>
+                            </div>
+                            <button id="hc-reset-btn">Diagnose Another Variable</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ------------------------------------------------------------------- -->
+                <!-- SPRINT STATION B: THE INSTRUMENT FORGE (REVISED HTML)               -->
+                <!-- ------------------------------------------------------------------- -->
+                <div class="lab-tool" id="station-b-measurement">
+                    <h3><span>Station B:</span> The Instrument Forge</h3>
+                    <div class="tool-intro">
+                        <p>This is your interactive workbench. Use the insights from your "Health Check" to forge a
+                            draft of your measurement instrument using best-practice blueprints and troubleshooting
+                            exercises.</p>
+                    </div>
+
+                    <div class="method-selector">
+                        <button class="tool-btn" data-tool="scale-forge">
+                            <span class="icon">📏</span> Forge a Survey Scale
+                        </button>
+                        <button class="tool-btn" data-tool="codebook-forge">
+                            <span class="icon">🔍</span> Forge a Codebook
+                        </button>
+                    </div>
+
+                    <!-- WORKBENCH 1: THE SCALE FORGE -->
+                    <div id="scale-forge" class="clinic-tool hidden">
+                        <h4>The Scale Forge Workbench</h4>
+                        <div class="forge-layout">
+                            <!-- Left Side: Controls -->
+                            <div class="forge-controls">
+                                <!-- Step 1 -->
+                                <div class="forge-step">
+                                    <h5>Step 1: The Blueprint</h5>
+                                    <div class="form-group">
+                                        <label for="sf-var-name">Variable Name being measured:</label>
+                                        <input type="text" id="sf-var-name" placeholder="e.g., Host Authenticity">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="sf-instruction">Guiding instruction for participants:</label>
+                                        <textarea id="sf-instruction" rows="2"
+                                            placeholder="e.g., Please indicate your level of agreement with the following statements."></textarea>
+                                    </div>
+                                </div>
+                                <!-- Step 2 -->
+                                <div class="forge-step">
+                                    <h5>Step 2: The Anvil (Scale Architecture)</h5>
+                                    <div class="form-group">
+                                        <label for="sf-points">Scale Points: <span id="sf-points-value">5</span></label>
+                                        <input type="range" id="sf-points" min="3" max="7" value="5" step="1">
+                                    </div>
+                                    <div class="anchor-inputs">
+                                        <div class="form-group"><label for="sf-anchor-left">Left Anchor (Value
+                                                1)</label><input type="text" id="sf-anchor-left"
+                                                placeholder="e.g., Strongly Disagree"></div>
+                                        <div class="form-group hidden" id="sf-anchor-mid-container"><label
+                                                for="sf-anchor-mid">Midpoint Anchor</label><input type="text"
+                                                id="sf-anchor-mid" placeholder="e.g., Neutral"></div>
+                                        <div class="form-group"><label for="sf-anchor-right">Right Anchor</label><input
+                                                type="text" id="sf-anchor-right" placeholder="e.g., Strongly Agree">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Step 3 (REVISED STRUCTURE) -->
+                                <div class="forge-step">
+                                    <h5>Step 3: The Hammer (Forging Items)</h5>
+                                    <ul id="sf-items-list" class="forged-items-list">
+                                        <!-- JS will add li elements here -->
+                                    </ul>
+                                    <div class="add-item-control">
+                                        <input type="text" id="sf-item-input"
+                                            placeholder="Type a new statement and press Enter...">
+                                        <button id="sf-add-item-btn" title="Add Item">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Right Side: Live Preview (REVISED STRUCTURE) -->
+                            <div class="forge-preview">
+                                <h5>Live Preview</h5>
+                                <div id="scale-live-preview" class="live-preview-area">
+                                    <!-- JS will render the live preview here -->
+                                </div>
+                                <div id="sf-pro-tips-container" class="pro-tips-container">
+                                    <!-- JS will inject tip elements here -->
+                                </div>
+                                <button id="sf-export-btn" class="export-btn">Export Forged Scale Blueprint</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- WORKBENCH 2: THE CODEBOOK CRUCIBLE (FINAL VERSION) -->
+                    <div id="codebook-crucible" class="clinic-tool hidden">
+                        <h4>The Codebook Crucible</h4>
+
+                        <!-- STEP 1: THE BLUEPRINT / DIAGNOSTIC CHECKLIST -->
+                        <div id="crucible-intake-form">
+                            <h5>Step 1: The Blueprint</h5>
+                            <div class="form-group">
+                                <label for="cc-var-name">Variable Name to Analyze:</label>
+                                <input type="text" id="cc-var-name" placeholder="e.g., Host's Persuasive Strategy">
+                            </div>
+                            <div class="form-group">
+                                <label for="cc-unit">Precise Unit of Analysis:</label>
+                                <input type="text" id="cc-unit"
+                                    placeholder="e.g., Each host speaking turn of 30 seconds or more">
+                            </div>
+
+                            <!-- THE NEW DIAGNOSTIC CHECKLIST -->
+                            <div class="form-group">
+                                <label>What is your primary analytical goal for this variable? (Select all that
+                                    apply)</label>
+                                <div id="goal-checklist" class="diagnostic-checklist">
+                                    <label class="goal-tag">
+                                        <input type="checkbox" name="goal" value="frequency">
+                                        <span>📊 Frequency / Presence</span>
+                                        <small>Counting explicit things (keywords, brand mentions).</small>
+                                    </label>
+                                    <label class="goal-tag">
+                                        <input type="checkbox" name="goal" value="sentiment">
+                                        <span>👍 Sentiment / Valence</span>
+                                        <small>Coding for evaluative tone (Positive, Negative).</small>
+                                    </label>
+                                    <label class="goal-tag">
+                                        <input type="checkbox" name="goal" value="thematic">
+                                        <span>🧠 Themes / Topics</span>
+                                        <small>Identifying interpretive themes (community, advice).</small>
+                                    </label>
+                                    <label class="goal-tag">
+                                        <input type="checkbox" name="goal" value="framing">
+                                        <span>🖼️ Framing</span>
+                                        <small>Identifying how an issue is presented (us vs. them).</small>
+                                    </label>
+                                    <label class="goal-tag">
+                                        <input type="checkbox" name="goal" value="argument">
+                                        <span>🗣️ Argumentation / Evidence</span>
+                                        <small>Coding for types of arguments (stats, anecdotes).</small>
+                                    </label>
+                                    <label class="goal-tag">
+                                        <input type="checkbox" name="goal" value="psi">
+                                        <span>🤝 Parasocial Indicators</span>
+                                        <small>Identifying behaviors that build relationships (self-disclosure).</small>
+                                    </label>
+                                    <label class="goal-tag">
+                                        <input type="checkbox" name="goal" value="identity">
+                                        <span>👥 Social Identity Cues</span>
+                                        <small>Coding for in-group language (jargon, 'we' vs 'they').</small>
+                                    </label>
+                                    <label class="goal-tag">
+                                        <input type="checkbox" name="goal" value="rhetoric">
+                                        <span>😂 Rhetorical Strategies</span>
+                                        <small>Identifying communication techniques (humor, storytelling).</small>
+                                    </label>
+                                    <label class="goal-tag">
+                                        <input type="checkbox" name="goal" value="sourcing">
+                                        <span>🎤 Source Attribution</span>
+                                        <small>Identifying *who* is speaking or *what source* is being cited (host,
+                                            guest, news clip).</small>
+                                    </label>
+                                    <label class="goal-tag">
+                                        <input type="checkbox" name="goal" value="production">
+                                        <span>🎧 Audio Production Cues</span>
+                                        <small>Coding for non-verbal elements like sound effects, music, vocal tone, or
+                                            editing pace.</small>
+                                    </label>
+                                    <label class="goal-tag">
+                                        <input type="checkbox" name="goal" value="claims">
+                                        <span>📈 Causal / Relational Claims</span>
+                                        <small>Coding for how one element is presented as a cause or justification for
+                                            another.</small>
+                                    </label>
+                                    <label class="goal-tag">
+                                        <input type="checkbox" name="goal" value="cta">
+                                        <span>🎯 Call to Action (CTA)</span>
+                                        <small>Coding for explicit instructions given to the audience (e.g., "rate and
+                                            review," "join our Patreon," "buy this product").</small>
+                                    </label>
+                                    <label class="goal-tag">
+                                        <input type="checkbox" name="goal" value="interactivity">
+                                        <span>💬 Interactivity Cues</span>
+                                        <small>Coding for when the host directly references or incorporates audience
+                                            feedback (reading emails, answering listener questions, mentioning
+                                            comments).</small>
+                                    </label>
+                                    <label class="goal-tag">
+                                        <input type="checkbox" name="goal" value="format">
+                                        <span>🎭 Format / Modality</span>
+                                        <small>Coding for the structural format of a segment (e.g., Monologue,
+                                            Interview, Listener Call-in, Ad Read, Audio Clip).</small>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Based on your goals, list your Initial Categories:</label>
+                                <div id="cc-categories-list" class="tag-list"></div>
+                                <div class="add-item-control">
+                                    <input type="text" id="cc-category-input"
+                                        placeholder="Type a category and press Enter...">
+                                </div>
+                            </div>
+                            <button id="cc-generate-btn" class="start-test-btn">Generate My Crucible Gauntlet</button>
+                        </div>
+
+                        <!-- STEP 2: THE CRUCIBLE GAUNTLET (CHALLENGES) -->
+                        <div id="crucible-gauntlet" class="hidden">
+                            <h5>Step 2: The Crucible Gauntlet (Forge Your Rules)</h5>
+
+                            <!-- This container will be populated by JS with the relevant challenges -->
+                            <div id="challenge-container">
+
+                                <!-- Pre-written Challenge Templates (all hidden by default) -->
+                                <div id="challenge-synonym" class="challenge-box hidden">
+                                    <p class="challenge-title">🔢 Challenge: The Synonym Gauntlet</p>
+                                    <p>You are counting explicit keywords. This is prone to error if your search terms
+                                        are not precisely defined.</p>
+                                    <div class="form-group">
+                                        <label for="rule-synonym"><strong>Forge a Rule:</strong> List all specific
+                                            keywords, phrases, and potential misspellings that will count for your
+                                            categories. How will you handle ambiguous words?</label>
+                                        <textarea id="rule-synonym" rows="3"
+                                            placeholder="e.g., For 'advertisement', we will also code 'ad', 'sponsor', 'promo', 'promotion'..."></textarea>
+                                    </div>
+                                </div>
+
+                                <div id="challenge-sarcasm" class="challenge-box hidden">
+                                    <p class="challenge-title">😏 Challenge: The Sarcasm Gauntlet</p>
+                                    <p>A comment says: <em>"Wow, another brilliant take."</em> The literal meaning is
+                                        positive, but the context could imply sarcasm.</p>
+                                    <div class="form-group">
+                                        <label for="rule-sarcasm"><strong>Forge a Rule:</strong> How will your codebook
+                                            handle sarcasm and implicit sentiment?</label>
+                                        <textarea id="rule-sarcasm" rows="2"
+                                            placeholder="e.g., If tone and text contradict, code based on inferred tone and add a note..."></textarea>
+                                    </div>
+                                </div>
+
+                                <div id="challenge-mixed-valence" class="challenge-box hidden">
+                                    <p class="challenge-title">🌗 Challenge: The Mixed-Valence Gauntlet</p>
+                                    <p>A comment says: <em>"I love the host, but this guest is awful."</em></p>
+                                    <div class="form-group">
+                                        <label for="rule-mixed-valence"><strong>Forge a Rule:</strong> How do you code a
+                                            unit with both positive and negative sentiment? (e.g., Create a 'Mixed'
+                                            category? Code the dominant sentiment? Allow multiple codes?).</label>
+                                        <textarea id="rule-mixed-valence" rows="2"
+                                            placeholder="e.g., We will create a dedicated 'Mixed' category..."></textarea>
+                                    </div>
+                                </div>
+
+                                <div id="challenge-boundary" class="challenge-box hidden">
+                                    <p class="challenge-title">↔️ Challenge: The Boundary Gauntlet</p>
+                                    <p>Your categories <strong class="user-cat">[Category A]</strong> and <strong
+                                            class="user-cat">[Category B]</strong> seem related and could overlap.</p>
+                                    <div class="form-group">
+                                        <label for="rule-boundary"><strong>Forge a Rule:</strong> What is the precise,
+                                            observable difference that makes a coder choose one over the other? Provide
+                                            a clear "if-then" statement.</label>
+                                        <textarea id="rule-boundary" rows="3"
+                                            placeholder="e.g., IF the host talks about their personal life, THEN code as 'Self-Disclosure'. IF the host uses 'we' or 'our community', THEN code as 'In-Group Language'."></textarea>
+                                    </div>
+                                </div>
+
+                                <div id="challenge-indicator" class="challenge-box hidden">
+                                    <p class="challenge-title">🚦 Challenge: The Indicator Gauntlet</p>
+                                    <p>A theme like <strong class="user-cat">[Your Abstract Category]</strong> is an
+                                        abstract concept. Coders need concrete signals to identify it reliably.</p>
+                                    <div class="form-group">
+                                        <label for="rule-indicator"><strong>Forge a Rule:</strong> List 3-5 concrete,
+                                            observable indicators (keywords, phrases, ideas) that signal the presence of
+                                            this theme.</label>
+                                        <textarea id="rule-indicator" rows="3"
+                                            placeholder="e.g., For the 'Community Building' theme, indicators are: referencing past episodes, using audience nicknames, mentioning listener comments..."></textarea>
+                                    </div>
+                                </div>
+
+                                <div id="challenge-exclusivity" class="challenge-box hidden">
+                                    <p class="challenge-title">🔀 Challenge: The Exclusivity Gauntlet</p>
+                                    <p>Real-world content often contains multiple themes or frames in a single unit.</p>
+                                    <div class="form-group">
+                                        <label for="rule-exclusivity"><strong>Forge a Rule:</strong> Must a unit be
+                                            assigned only one dominant code, or can it be coded with multiple codes
+                                            present? What is the decision rule?</label>
+                                        <textarea id="rule-exclusivity" rows="2"
+                                            placeholder="e.g., Coders are allowed to apply up to two relevant codes per unit..."></textarea>
+                                    </div>
+                                </div>
+
+                                <div id="challenge-intent" class="challenge-box hidden">
+                                    <p class="challenge-title">🤔 Challenge: The Intent vs. Effect Gauntlet</p>
+                                    <p>A host says, "You all are the best," (a *behavior*). A listener says, "I feel
+                                        like I know the host," (a *perceived effect*).</p>
+                                    <div class="form-group">
+                                        <label for="rule-intent"><strong>Forge a Rule:</strong> Are you coding for the
+                                            host's objective behavior (the potential cause) or the listener's expressed
+                                            feeling (the effect)? Your codebook must be clear.</label>
+                                        <textarea id="rule-intent" rows="2"
+                                            placeholder="e.g., Our codebook will focus only on observable host behaviors, not infer listener feelings..."></textarea>
+                                    </div>
+                                </div>
+
+                                <div id="challenge-unit" class="challenge-box hidden">
+                                    <p class="challenge-title">📏 Challenge: The Shifting Unit Gauntlet</p>
+                                    <p>You defined your unit as '[user's unit]'. In one unit, the host might tell a
+                                        joke, then read an ad, then state a political opinion. Coding the entire unit
+                                        for all three things is messy.</p>
+                                    <div class="form-group">
+                                        <label for="rule-unit"><strong>Forge a Rule:</strong> Differentiate between your
+                                            'context unit' (e.g., the speaking turn) and your 'coding unit' (the
+                                            specific phrase that gets a code). How will you handle multiple codable
+                                            moments within one larger unit?</label>
+                                        <textarea id="rule-unit" rows="3"
+                                            placeholder="e.g., Our context unit is the host's speaking turn. However, we will apply codes to individual sentences (our coding unit) within that turn..."></textarea>
+                                    </div>
+                                </div>
+
+                                <div id="challenge-absence" class="challenge-box hidden">
+                                    <p class="challenge-title">∅ Challenge: The Absence Gauntlet</p>
+                                    <p>You are coding for a specific feature, like 'use of statistics'. In one segment,
+                                        the host makes a claim but provides no statistical evidence.</p>
+                                    <div class="form-group">
+                                        <label for="rule-absence"><strong>Forge a Rule:</strong> Will you have an
+                                            explicit code for the *absence* of a feature (e.g., '0 = No Statistics
+                                            Presented')? Why is this necessary to avoid 'missing data' errors in your
+                                            analysis?</label>
+                                        <textarea id="rule-absence" rows="2"
+                                            placeholder="e.g., Yes, our 'Evidence' variable will have a '0 = No Evidence Provided' code to ensure every unit is coded..."></textarea>
+                                    </div>
+                                </div>
+
+                                <div id="challenge-feasibility" class="challenge-box hidden">
+                                    <p class="challenge-title">⏳ Challenge: The Feasibility Gauntlet</p>
+                                    <p>Your current plan involves [X] categories for a sample of [Y units]. A complex
+                                        codebook can take many minutes per unit to apply reliably.</p>
+                                    <div class="form-group">
+                                        <label for="rule-feasibility"><strong>Forge a Rule:</strong> Review your
+                                            categories. Are they all *essential* to your core research question, or are
+                                            some just 'interesting'? Create a priority system ('Must-Have' vs.
+                                            'Nice-to-Have') to ensure you can complete the work.</label>
+                                        <textarea id="rule-feasibility" rows="3"
+                                            placeholder="e.g., Must-Haves: Sentiment, Ad Mention. Nice-to-Have: Host Vocal Tone. We will code must-haves first..."></textarea>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <button id="cc-export-btn" class="export-btn">Copy Forged Codebook to clipboard</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- =================================================================== -->
+                <!-- SPRINT STATION C: THE FEASIBILITY LAB (STRUCTURALLY REPAIRED)     -->
+                <!-- =================================================================== -->
+                <div class="lab-tool" id="feasibility-lab">
+                    <h3><span>Station C:</span> The Feasibility Lab</h3>
+                    <div class="tool-intro">
+                        <p>A research design is only as strong as its execution. This lab is a simulator to help you
+                            build and stress-test your plan for gathering data, forcing you to confront the real-world
+                            trade-offs between your goals and your resources.</p>
+                    </div>
+
+                    <!-- ===== ENTRY POINT: PATH SELECTION ===== -->
+                    <div id="lab-path-selection" class="lab-step">
+                        <h4>First, what is the primary unit of your study?</h4>
+                        <div class="path-selector-container">
+                            <button class="path-selector-btn" data-path="A">
+                                <span class="path-icon">🧑‍🤝‍🧑</span>
+                                <div class="path-text">
+                                    <strong>Path A: The Recruitment Strategist</strong>
+                                    <p>Choose this if you are studying <strong>human participants</strong> (e.g., via
+                                        surveys, experiments, or interviews).</p>
+                                </div>
+                            </button>
+                            <button class="path-selector-btn" data-path="B">
+                                <span class="path-icon">📚</span>
+                                <div class="path-text">
+                                    <strong>Path B: The Corpus Architect</strong>
+                                    <p>Choose this if you are studying <strong>media content</strong> (e.g., via content
+                                        analysis of podcasts, articles, or comments).</p>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- ===== PATH A: RECRUITMENT STRATEGIST (Initially Hidden) ===== -->
+                    <form id="path-a-recruitment" class="feasibility-path lab-hidden">
+                        <div class="lab-step">
+                            <h5>Step 1: Define Your Target</h5>
+                            <div class="form-group">
+                                <label for="a-population">Who is your ideal participant?</label>
+                                <input type="text" id="a-population"
+                                    placeholder="e.g., Fans of German comedy podcasts, aged 18-29">
+                            </div>
+                            <div class="form-group">
+                                <label>What is your target sample size?</label>
+                                <div class="card-selector is-radio-style">
+                                    <label class="selectable-card">
+                                        <input type="radio" name="sample-size" value="pilot">
+                                        <div class="card-content">
+                                            <span class="icon">🧪</span>
+                                            <strong>Exploratory Pilot (30-50)</strong>
+                                            <small>To test an instrument or explore a new idea.</small>
+                                        </div>
+                                    </label>
+                                    <label class="selectable-card">
+                                        <input type="radio" name="sample-size" value="standard" checked>
+                                        <div class="card-content">
+                                            <span class="icon">📊</span>
+                                            <strong>Standard Project (80-150)</strong>
+                                            <small>For conventional statistical power (e.g., t-tests).</small>
+                                        </div>
+                                    </label>
+                                    <label class="selectable-card">
+                                        <input type="radio" name="sample-size" value="ambitious">
+                                        <div class="card-content">
+                                            <span class="icon">📈</span>
+                                            <strong>Ambitious Project (&gt;150)</strong>
+                                            <small>For comparing multiple groups or finding small effects.</small>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lab-step">
+                            <h5>Step 2: Acknowledge Your Researcher Context</h5>
+                            <p class="step-intro">Your immediate network is your starting point and biggest source of
+                                bias. Acknowledging it is the first step to mitigating it.</p>
+                            <!-- THIS BLOCK IS NOW STRUCTURALLY CORRECT -->
+                            <div class="card-selector is-checkbox-style">
+                                <label class="selectable-card"><input type="checkbox" name="context" value="academic">
+                                    <div><strong>🎓 Academic/Student</strong></div>
+                                </label>
+                                <label class="selectable-card"><input type="checkbox" name="context" value="young">
+                                    <div><strong>🎂 Younger (Under 30)</strong></div>
+                                </label>
+                                <label class="selectable-card"><input type="checkbox" name="context"
+                                        value="progressive">
+                                    <div><strong>🌹 Politically Progressive</strong></div>
+                                </label>
+                                <label class="selectable-card"><input type="checkbox" name="context"
+                                        value="conservative">
+                                    <div><strong>🌳 Politically Conservative</strong></div>
+                                </label>
+                                <label class="selectable-card"><input type="checkbox" name="context" value="urban">
+                                    <div><strong>🏙️ Urban / Metropolitan</strong></div>
+                                </label>
+                                <label class="selectable-card"><input type="checkbox" name="context" value="online">
+                                    <div><strong>🌐 Highly Online / Niche Communities</strong></div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="lab-step">
+                            <h5>Step 3: Choose Your Recruitment Channels</h5>
+                            <div class="card-selector is-checkbox-style">
+                                <label class="selectable-card"><input type="checkbox" name="channel" value="uni_email">
+                                    <div><span class="icon">📧</span><strong>University Lists</strong><small>Official
+                                            student/staff mailing lists.</small></div>
+                                </label>
+                                <label class="selectable-card"><input type="checkbox" name="channel"
+                                        value="social_general">
+                                    <div><span class="icon">🌐</span><strong>General Social Media</strong><small>Posting
+                                            on your own profiles.</small></div>
+                                </label>
+                                <label class="selectable-card"><input type="checkbox" name="channel"
+                                        value="social_niche">
+                                    <div><span class="icon">🎯</span><strong>Niche Communities</strong><small>Targeted
+                                            Subreddits, Discord servers.</small></div>
+                                </label>
+                                <label class="selectable-card"><input type="checkbox" name="channel" value="personal">
+                                    <div><span class="icon">👥</span><strong>Personal Network</strong><small>Asking
+                                            friends, family.</small></div>
+                                </label>
+                                <label class="selectable-card"><input type="checkbox" name="channel" value="gatekeeper">
+                                    <div><span class="icon">🏢</span><strong>Gatekeeper Access</strong><small>Contacting
+                                            an organization/club.</small></div>
+                                </label>
+                                <label class="selectable-card"><input type="checkbox" name="channel" value="snowball">
+                                    <div><span class="icon">❄️</span><strong>Snowball Sampling</strong><small>Asking
+                                            participants to refer others.</small></div>
+                                </label>
+                            </div>
+                        </div>
+                        <button type="button" id="generate-memo-a-btn" class="generate-memo-btn">Generate My Recruitment
+                            Memo</button>
+                    </form>
+
+                    <!-- ===== PATH B: CORPUS ARCHITECT (Initially Hidden) ===== -->
+                    <form id="path-b-corpus" class="feasibility-path lab-hidden">
+                        <div class="lab-step">
+                            <h5>Stage 1: Construct Your Sampling Frame</h5>
+                            <div class="form-group">
+                                <label>Where will you find your raw content? (Choose your source(s))</label>
+                                <div class="card-selector is-checkbox-style">
+                                    <label class="selectable-card"><input type="checkbox" name="source" value="charts">
+                                        <div><strong>📈 Podcast Charts</strong><small>(e.g., Apple Top 100)</small>
+                                        </div>
+                                    </label>
+                                    <label class="selectable-card"><input type="checkbox" name="source" value="search">
+                                        <div><strong>🔍 Platform Search</strong><small>(e.g., on Spotify)</small></div>
+                                    </label>
+                                    <label class="selectable-card"><input type="checkbox" name="source"
+                                            value="specific">
+                                        <div><strong>🎙️ Specific Podcast(s)</strong><small>(Known, pre-defined
+                                                shows)</small></div>
+                                    </label>
+                                    <label class="selectable-card"><input type="checkbox" name="source" value="social">
+                                        <div><strong>💬 Social Media</strong><small>(e.g., Reddit comments)</small>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="tag-input">What are your inclusion criteria? (Type a rule and press
+                                    Enter)</label>
+                                <div id="tag-builder-container">
+                                    <div id="tag-list" class="tag-list-container"></div>
+                                    <input type="text" id="tag-input"
+                                        placeholder="e.g., Language: German, Published in 2025, Genre: News...">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lab-step">
+                            <h5>Stage 2: Choose Your Sampling Method</h5>
+                            <div class="card-selector is-radio-style">
+                                <label class="selectable-card"><input type="radio" name="method" value="census">
+                                    <div><strong>Census</strong><small>Analyze every unit that meets the
+                                            criteria.</small></div>
+                                </label>
+                                <label class="selectable-card"><input type="radio" name="method" value="probabilistic">
+                                    <div><strong>Probabilistic</strong><small>Randomly/systematically select from a
+                                            complete list.</small></div>
+                                </label>
+                                <label class="selectable-card"><input type="radio" name="method" value="purposive">
+                                    <div><strong>Purposive</strong><small>Hand-pick specific units most relevant to the
+                                            RQ.</small></div>
+                                </label>
+                                <label class="selectable-card"><input type="radio" name="method" value="convenience">
+                                    <div><strong>Convenience</strong><small>Select the most easily accessible
+                                            units.</small></div>
+                                </label>
+                            </div>
+                            <div class="form-group justification-box lab-hidden">
+                                <label for="b-justification">Justify why this method is the most appropriate for your
+                                    research question:</label>
+                                <textarea id="b-justification" rows="2"
+                                    placeholder="e.g., Because our RQ is about crisis communication, we must purposively select episodes published immediately after the election."
+                                    required></textarea>
+                            </div>
+                        </div>
+                        <button type="button" id="generate-memo-b-btn" class="generate-memo-btn">Generate My Corpus
+                            Memo</button>
+                    </form>
+
+                    <!-- ===== FINAL OUTPUT: THE METHODOLOGY MEMO (Initially Hidden) ===== -->
+                    <div id="lab-memo-output" class="lab-hidden">
+                        <h4>Your Generated Methodology Memo</h4>
+                        <p>This text is a starting point for your methodology chapter. Copy this and integrate it into
+                            your Foundation Document. Most importantly, use the Action Plan to strengthen your design.
+                        </p>
+                        <div class="memo-content-container">
+                            <textarea id="memo-textarea" readonly rows="8"></textarea>
+                            <button id="copy-memo-btn" title="Copy to Clipboard">📋 Copy</button>
+                        </div>
+                        <div class="mitigation-plan">
+                            <h5>Your Action Plan: Acknowledge & Mitigate Biases</h5>
+                            <ul id="mitigation-list">
+                                <!-- JS will generate list items here -->
+                            </ul>
+                        </div>
+                        <button id="lab-reset-btn" class="reset-lab-btn">Start Over</button>
+                    </div>
+                </div>
+    </div>
+
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- SECTION 4: PRE-MORTEM & MISSION BRIEFING (REVISED)                -->
+    <!-- =================================================================== -->
+    <section id="s5-final-sprint">
+        <hr class="section-divider">
+
+        <!-- COMPONENT A: THE PRE-MORTEM WORKSHOP -->
+        <div class="pre-mortem-workshop">
+            <div class="pre-mortem-header">
+                <span class="icon">🧠</span>
+                <div class="header-text">
+                    <h3>Final Sprint: The "Pre-Mortem" Workshop</h3>
+                    <p>Your last task for today's lab session.</p>
+                </div>
             </div>
-        </main>
+            <blockquote>Imagine it is two months from now and this project has failed catastrophically. Working
+                backwards, what went wrong?</blockquote>
+            <ul>
+                <li>As a group, brainstorm all the potential fatal flaws in the research design you've just built.</li>
+                <li>Focus on your weakest links: a vague variable, a biased sample, an impossible recruitment plan.</li>
+                <li>Your goal: Identify your project's <strong>#1 biggest risk</strong> to bring to the design review.
+                </li>
+            </ul>
+        </div>
+
+        <!-- COMPONENT B: THE MISSION BRIEFING -->
+        <div class="homework-box mission-briefing">
+            <div class="homework-header">
+                <span class="icon">🤝</span>
+                <h3>Mission Briefing: The Design Review Workshop</h3>
+            </div>
+
+            <div class="briefing-section">
+                <h4>What's Next: Peer Review & Reinforcement</h4>
+                <p>The next two class sessions (Sessions 6 & 7) are dedicated to collaborative design review. In each
+                    session, 3-4 groups will present their research design. This is not a graded performance; it is the
+                    single most important feedback opportunity you will have to strengthen your project before you begin
+                    collecting data.</p>
+            </div>
+
+            <div class="briefing-section briefing-highlight">
+                <h4>Your Presentation's #1 Goal</h4>
+                <p>Your objective is <strong>not</strong> to present a perfect, finished project. It is to
+                    <strong>honestly present your current design, transparently highlight your biggest challenge, and
+                        use the class as your first focus group to find solutions.</strong></p>
+            </div>
+
+            <div class="briefing-section">
+                <h4>Your Presentation Agenda</h4>
+                <div class="presentation-agenda-stack">
+                    <div class="agenda-card">
+                        <div class="card-icon">📍</div>
+                        <div class="card-text">
+                            <h5>The Foundation</h5>
+                            <p>Your final Research Question & Hypotheses.</p>
+                        </div>
+                    </div>
+                    <div class="agenda-card">
+                        <div class="card-icon">🗺️</div>
+                        <div class="card-text">
+                            <h5>The Blueprint</h5>
+                            <p>Your key variables, measurement plan, and sampling strategy.</p>
+                        </div>
+                    </div>
+                    <div class="agenda-card">
+                        <div class="card-icon">⚠️</div>
+                        <div class="card-text">
+                            <h5>The #1 Risk</h5>
+                            <p>The biggest flaw you identified in the "Pre-Mortem" workshop.</p>
+                        </div>
+                    </div>
+                    <div class="agenda-card">
+                        <div class="card-icon">❓</div>
+                        <div class="card-text">
+                            <h5>The Ask</h5>
+                            <p>Your direct, open question to the class seeking help and feedback.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="briefing-section">
+                <h4>Logistics</h4>
+                <ul>
+                    <li><strong>Timing:</strong> Plan for a presentation of ~10-15 minutes to allow for ample feedback
+                        and discussion.</li>
+                    <li><strong>Format:</strong> Prepare slides (e.g., PowerPoint) to guide the discussion.</li>
+                    <li><strong>Submission:</strong> After presenting, please upload your slide deck to ILIAS.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    </main>
     </div>
 
     <footer>
         <p>© 2025 Andreas Reich - University of Hohenheim</p>
     </footer>
+
+    <script src="session5.js"></script>
 
 </body>
 
