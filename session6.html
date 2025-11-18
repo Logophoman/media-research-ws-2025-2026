@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Andreas Reich">
-    <!-- !!! CHANGE THIS TITLE FOR EACH SESSION !!! -->
-    <title>Session X: [Topic] – Media Research WS 2025/26</title>
+    <title>Session 6: The Research Incubator – Media Research WS 2025/26</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="session6.css">
 </head>
 
 <body>
@@ -17,22 +17,36 @@
             <img src="uni-logo-de_hoh_weiss.png" alt="Universität Hohenheim Logo" class="uni-logo">
         </a>
         <h1>Media Research & Audience Intelligence - Part 2 (B)</h1>
-        <!-- !!! CHANGE THIS SUBTITLE FOR EACH SESSION !!! -->
-        <p class="subtitle">Session 6: 	Peer-Feedback I: Design Review</p>
+        <p class="subtitle">Session 6: The Research Incubator & Design Audit</p>
     </header>
 
     <div class="container">
         <nav>
             <ul>
-                <li><a href="index.html">Back to the Course Overview</a></li>
+                <li><a href="index.html">Course Overview</a></li>
+                <li><a href="session5.html">Session 5</a></li>
+                <li><a href="session6.html" class="active">Session 6</a></li>
+                <li><a href="session7.html">Session 7</a></li>
             </ul>
         </nav>
-        
+
         <main>
-            <div class="interactive-box" style="text-align: center; padding: 3rem 2rem;">
-                <h2 style="margin-top: 0;">Content Coming Soon!</h2>
-                <p style="font-size: 1.1em; color: #555;">The materials and interactive elements for this session will be available here shortly.</p>
-                <p>Please refer to the <a href="index.html">Course Overview</a> for the schedule and main topics.</p>
+            <section class="audit-intro">
+                <h2>The Research Incubator</h2>
+                <p>Welcome to the Incubator. I have reviewed your "Project Foundation Documents" and generated a custom
+                    <strong>Design Audit</strong> for each group.
+                </p>
+                <p>This is not a grade; it is a stress-test. Your goal today is to open your dashboard, review the
+                    deep-dive analysis, and use the "Field Kit" to upgrade your instrument before data collection
+                    begins.</p>
+            </section>
+
+            <!-- THE DASHBOARD CONTAINER -->
+            <div id="audit-dashboard" class="audit-container">
+                <div class="loading-state">
+                    <div class="spinner"></div>
+                    <p>Initializing Mission Control...</p>
+                </div>
             </div>
         </main>
     </div>
@@ -41,6 +55,7 @@
         <p>© 2025 Andreas Reich - University of Hohenheim</p>
     </footer>
 
+    <script src="session6.js" defer></script>
 </body>
 
 </html>
