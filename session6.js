@@ -300,9 +300,55 @@ const groupData = [
             }
         ]
     },
-    // GROUP 2 (TODO: Generate Deep Dive)
-    {
+{
         id: "2",
+        title: "Feminism vs. Misandry: Attitudes in German Podcasts",
+        method: "contentAnalysis",
+        audit: {
+            strengths: "Addressing the 'Misandry Myth' (Hopkins-Doyle et al.) within the German podcast landscape is a timely and socially relevant project. The theoretical distinction between <strong>'Systemic Critique'</strong> (attacking Patriarchy) and <strong>'Individual Derogation'</strong> (attacking Men) is excellent. If you can operationalize this distinction reliably, your study will provide valuable empirical evidence to a heated public debate.",
+            adjustments: "<strong>Operationalizing 'Derogatory':</strong> This is your hardest challenge. When does a joke become an insult? Is 'Men are trash' (a meme) coded as 'Derogatory towards individuals' or 'Systemic frustration'? You need an extremely precise codebook with 'Anchor Examples' for every level of your scale, or your Inter-Coder Reliability will be zero. <br><strong>Sampling Bias:</strong> You limit yourself to the '10 most popular' podcasts. These are professional media products that are likely highly curated and moderate to appeal to the masses. You might miss the more radical/authentic discourse found in niche indie podcasts, skewing your results towards 'No Misandry'.",
+            risks: "<strong>Context Collapse:</strong> Podcasts are conversational and ironic. A host might say something 'sexist' as a joke or to mock a sexist person. If you code keywords (Manifest content) without context, you will misinterpret irony. You must code for <strong>Speaker Intent/Tone</strong> (Latent content), which is subjective and requires rigorous pilot testing."
+        },
+        fieldKit: [], 
+        reflection: [
+            {
+                q: "System vs. Individual",
+                why: "Your entire study rests on this distinction. How do you code a statement like 'Men are annoying'? Is that a systemic critique of male socialization, or a personal insult? You need a 'Tie-Breaker Rule' for ambiguous statements."
+            },
+            {
+                q: "The 'Irony' Variable",
+                why: "Feminist discourse often uses irony/sarcasm to cope with sexism. If a host says 'Oh sure, because men are so rational,' and you code this literally, your data is wrong. You should include a variable for 'Modality': Serious vs. Humorous/Ironic."
+            },
+            {
+                q: "Defining 'Feminist' (The Inclusion Criteria)",
+                why: "How do you define a 'Feminist Podcast'? Is it self-labeling? Is it the topic? What about a True Crime podcast hosted by feminists? You need a strict inclusion rule (e.g., 'Must have 'Feminism' in the Spotify description or category tags')."
+            },
+            {
+                q: "The 'Men' Category",
+                why: "Are they criticizing 'All Men', 'Specific Men' (e.g., a politician), or 'The Concept of Masculinity'? Attacking a specific abuser is not misandry. Attacking 'All Men' is. Your codebook must distinguish the <strong>Target of Criticism</strong>."
+            },
+            {
+                q: "The 'Popularity' Bias",
+                why: "By choosing only the Top 10, you are studying 'Mainstream Corporate Feminism'. These shows have advertisers and PR teams. They are *least* likely to be radical. Acknowledge this limitation: You are measuring 'Mainstream Discourse', not 'Radical Activism'."
+            },
+            {
+                q: "Coding 'Patriarchy'",
+                why: "How do you identify 'System Critique'? Does the word 'Patriarchy' need to be used? Or do you code descriptions of 'Structural Inequality' (pay gap, violence stats) as system critique even if the buzzwords aren't used?"
+            },
+            {
+                q: "The 'Host Gender' Hypothesis (H3)",
+                why: "You want to compare male vs. female hosts (H3). Do you actually have enough male-hosted feminist podcasts in the Top 10 to make this comparison statistically valid? If you only have 1 male podcast vs. 9 female, you cannot test this hypothesis reliably."
+            },
+            {
+                q: "Unit of Analysis",
+                why: "Are you coding the *entire* episode? That is very long. Or are you coding specific 'Segments'? Or every 'Mention of Men'? We recommend 'Time Sampling' (e.g., 1st, middle, and last 10 mins) or 'Keyword Sampling' (coding the 2 minutes surrounding every use of the word 'Men/Männer')."
+            }
+        ]
+    },
+
+    // GROUP 3 (TODO: Generate Deep Dive)
+    {
+        id: "3",
         title: "Listening to Combat Loneliness (Survey)",
         method: "survey",
         audit: {
