@@ -1,0 +1,567 @@
+/* session8.css - Mid-Flight Correction & Methodological Split */
+
+/* --- General Layout --- */
+.divergence-box {
+    background-color: #e3f2fd; /* Light Blue */
+    border-left: 5px solid var(--primary-color);
+    padding: 1.5rem;
+    margin-bottom: 2.5rem;
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.divergence-box h3 {
+    margin-top: 0;
+    color: #0d47a1;
+}
+
+/* --- Shared Wisdom Modules (The "Families") --- */
+.wisdom-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.wisdom-module {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.wisdom-module:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Header Styling */
+.module-header {
+    padding: 1.25rem 1.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid transparent;
+    transition: background-color 0.2s;
+}
+
+.wisdom-module.open .module-header {
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.module-icon {
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.module-title h4 {
+    margin: 0;
+    font-size: 1.15em;
+    color: var(--primary-color);
+}
+
+.target-groups {
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 4px;
+}
+
+.target-tag {
+    display: inline-block;
+    background-color: #e9ecef;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.9em;
+    color: #495057;
+    margin-left: 4px;
+}
+
+.toggle-icon {
+    font-size: 1.5rem;
+    color: #aaa;
+    transition: transform 0.3s ease;
+}
+
+.wisdom-module.open .toggle-icon {
+    transform: rotate(180deg);
+    color: var(--primary-color);
+}
+
+/* Content Styling */
+.module-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s;
+    opacity: 0;
+}
+
+.wisdom-module.open .module-content {
+    opacity: 1;
+    /* max-height is set via JS for smooth animation */
+}
+
+.content-wrapper {
+    padding: 1.5rem;
+}
+
+/* Wisdom Points (The Cards inside the Module) */
+.wisdom-point {
+    margin-bottom: 1.5rem;
+    padding-left: 1rem;
+    border-left: 4px solid #ccc;
+}
+
+.wisdom-point:last-child {
+    margin-bottom: 0;
+}
+
+.wisdom-point h5 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.05em;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.wisdom-point p {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.95em;
+    color: #555;
+    line-height: 1.6;
+}
+
+.wisdom-fix {
+    background-color: #f8f9fa;
+    padding: 0.75rem;
+    border-radius: 4px;
+    font-size: 0.9em;
+    color: #0d47a1; /* Dark Blue for Action */
+    font-weight: 500;
+}
+
+/* Specific Color Themes per Family */
+
+/* Family A: Survey (Blue/Green) */
+.module-survey .wisdom-point { border-left-color: #28a745; }
+.module-survey .wisdom-point h5 { color: #155724; }
+
+/* Family B: Codebook (Orange/Yellow) */
+.module-ca .wisdom-point { border-left-color: #ffc107; }
+.module-ca .wisdom-point h5 { color: #856404; }
+
+/* Family C: Tech (Purple/Grey) */
+.module-tech .wisdom-point { border-left-color: #6f42c1; }
+.module-tech .wisdom-point h5 { color: #3c1e70; }
+
+/* --- Audit Grid Placeholders (Future Use) --- */
+.feedback-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(800px, 1fr));
+    gap: 1.5rem;
+}
+
+/* --- Method Workbenches (Future Use) --- */
+.track-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    .track-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- COLLAPSIBLE AUDIT SYSTEM --- */
+
+.audit-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+    border-left: 5px solid #ccc; /* Default color */
+}
+
+.audit-card:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    border-color: #bbb;
+}
+
+/* Status Colors for Left Border */
+.audit-card.status-green { border-left-color: #28a745; }
+.audit-card.status-yellow { border-left-color: #ffc107; }
+.audit-card.status-red { border-left-color: #dc3545; }
+
+/* 1. The Visible Summary (Header) */
+.audit-summary {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.audit-summary:hover {
+    background-color: #fcfcfc;
+}
+
+.summary-left {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.group-identity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.id-badge {
+    background-color: #333;
+    color: #fff;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.85em;
+    text-transform: uppercase;
+}
+
+.method-badge {
+    font-size: 0.85em;
+    color: #666;
+    background-color: #f0f0f0;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+.summary-left h3 {
+    margin: 0;
+    font-size: 1.25em;
+    color: var(--primary-color);
+}
+
+.summary-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.status-text {
+    font-weight: 600;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-green .status-text { color: #28a745; }
+.status-yellow .status-text { color: #d9a406; }
+.status-red .status-text { color: #dc3545; }
+
+.expand-icon {
+    font-size: 1.5rem;
+    color: #ccc;
+    transition: transform 0.3s ease;
+}
+
+/* Expanded State */
+.audit-card.expanded .expand-icon {
+    transform: rotate(180deg);
+    color: var(--primary-color);
+}
+
+/* 2. The Hidden Details (Content) */
+.audit-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, opacity 0.4s ease;
+    opacity: 0;
+    background-color: #fcfcfc;
+    border-top: 1px solid #eee;
+}
+
+.audit-card.expanded .audit-details {
+    opacity: 1;
+    /* max-height handled by JS */
+}
+
+.details-wrapper {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Feedback Sections */
+.feedback-deep-dive h4 {
+    margin-top: 0;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5rem;
+    color: #333;
+    font-size: 1.1em;
+}
+
+.strength-box {
+    background-color: #f0fdf4;
+    border-left: 4px solid #22c55e;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 4px;
+}
+
+.strength-box h5 { margin: 0 0 0.5rem 0; color: #15803d; }
+.strength-box p { margin: 0; font-size: 0.95em; color: #14532d; }
+
+.adjustment-box {
+    background-color: #fffbeb;
+    border-left: 4px solid #f59e0b;
+    padding: 1rem 1.5rem;
+    border-radius: 4px;
+}
+
+.adjustment-box h5 { margin: 0 0 0.5rem 0; color: #b45309; }
+.adjustment-box p { margin: 0; font-size: 0.95em; color: #78350f; line-height: 1.6; }
+
+/* Interactive Tool (Mission Control) */
+.mission-control {
+    background-color: #fff;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+
+.mission-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+.mission-header h4 { margin: 0; border: none; padding: 0; }
+
+.checklist-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.check-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    background-color: #fff;
+    transition: background-color 0.2s;
+}
+
+.check-item:hover {
+    background-color: #f9f9f9;
+}
+
+.check-item input[type="checkbox"] {
+    margin-top: 4px;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.check-item label {
+    cursor: pointer;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+.check-item label strong {
+    display: block;
+    color: #333;
+    margin-bottom: 2px;
+}
+
+.check-item label span {
+    color: #666;
+    font-size: 0.9em;
+}
+
+/* Status Bar */
+.status-bar-container {
+    margin-top: 1.5rem;
+    background-color: #e9ecef;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.status-bar-fill {
+    height: 100%;
+    width: 0%;
+    background-color: #28a745;
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.launch-message {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 0.9em;
+    color: #666;
+    min-height: 1.5em;
+}
+
+/* --- SECTION 4: THE PRE-TEST PROTOCOLS --- */
+
+.protocol-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.protocol-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Header Styling based on Track */
+.protocol-header {
+    padding: 1.5rem;
+    color: #fff;
+    text-align: center;
+}
+
+.header-survey {
+    background: linear-gradient(135deg, #003366, #004080);
+    border-bottom: 4px solid #28a745;
+}
+
+.header-ca {
+    background: linear-gradient(135deg, #856404, #b45309);
+    border-bottom: 4px solid #ffc107;
+}
+
+.protocol-header h3 {
+    margin: 0;
+    color: #fff;
+    font-size: 1.4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.protocol-header p {
+    margin: 5px 0 0 0;
+    font-size: 0.9em;
+    opacity: 0.9;
+}
+
+/* The Steps List */
+.protocol-steps {
+    padding: 1.5rem;
+    list-style: none;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.protocol-step {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px dashed #eee;
+}
+
+.protocol-step:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.step-number {
+    background-color: #f0f0f0;
+    color: #555;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+    border: 2px solid #ddd;
+}
+
+.step-content h5 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.step-content p {
+    margin: 0;
+    font-size: 0.95em;
+    color: #666;
+    line-height: 1.5;
+}
+
+.step-content ul {
+    margin-top: 0.5rem;
+    padding-left: 1.2rem;
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* Action Footer */
+.protocol-footer {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    text-align: center;
+    border-top: 1px solid #e0e0e0;
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 0.9em;
+    transition: all 0.2s;
+}
+
+.download-btn:hover {
+    background-color: #e2e6ea;
+    border-color: #bbb;
+}
+
+@media (max-width: 900px) {
+    .protocol-container {
+        grid-template-columns: 1fr;
+    }
+}
