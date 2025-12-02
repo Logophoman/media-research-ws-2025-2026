@@ -347,7 +347,77 @@
                 </div>
             </section>
 
+
+
             <hr class="section-divider">
+
+            <!-- AUTOMATION LAB TOOLS -->
+            <div class="digital-tool-section">
+                <div class="tool-section-header">
+                    <h3><span class="icon">🤖</span> Automation Lab: Python Helpers</h3>
+                    <p>Use these Google Colab notebooks to automate the tedious parts of data collection (downloading &
+                        transcribing). <strong>Note:</strong> You need a Google Account to run them.</p>
+                </div>
+
+                <div class="tool-grid">
+
+                    <!-- TOOL 1: SPOTIFY FINDER -->
+                    <div class="colab-card">
+                        <div class="card-header">
+                            <span class="tool-icon">🎵</span>
+                            <div>
+                                <h4>Spotify MP3 Finder</h4>
+                                <span class="tool-tag">Data Collection</span>
+                            </div>
+                        </div>
+                        <p>Attempts to find and download MP3s based on a list of Spotify links by searching alternative
+                            sources.</p>
+                        <div class="tool-specs">
+                            <ul>
+                                <li><strong>Input:</strong> A simple list of Spotify URLs.</li>
+                                <li><strong>Success Rate:</strong> ~66% (Capture rate varies).</li>
+                                <li><strong>Pro Tip:</strong> If it misses files, increase <code>TIMEOUT_SEC = 20</code>
+                                    in the code to search longer.</li>
+                            </ul>
+                        </div>
+                        <a href="https://colab.research.google.com/drive/1yHMqHxlSyzQ4kG_9ZGaMJyVeEq3pnWWu#scrollTo=6_chpXDC4LQn"
+                            target="_blank" class="colab-btn">🚀 Open Finder Colab</a>
+                    </div>
+
+                    <!-- TOOL 2: AI TRANSCRIPTION -->
+                    <div class="colab-card">
+                        <div class="card-header">
+                            <span class="tool-icon">📝</span>
+                            <div>
+                                <h4>AI Transcriber (Whisper)</h4>
+                                <span class="tool-tag">Data Processing</span>
+                            </div>
+                        </div>
+                        <p>Converts audio files into text transcripts using OpenAI's Whisper model. Essential for
+                            text-based coding.</p>
+                        <div class="tool-specs">
+                            <ul>
+                                <li><strong>Input:</strong> A single <code>.mp3</code> or a <code>.zip</code> of
+                                    multiple files.</li>
+                                <li><strong>Wait Time:</strong> Setup takes 3-4 minutes. Upload button appears at the
+                                    bottom.</li>
+                                <li><strong>Note:</strong> Be patient during the initialization phase.</li>
+                            </ul>
+                        </div>
+                        <a href="https://colab.research.google.com/drive/1gZ-qkDiCCLbjxHvnTTeodIjNjiBdBPuM#scrollTo=gohR70UVsMcb"
+                            target="_blank" class="colab-btn">🚀 Open Transcriber Colab</a>
+                    </div>
+
+                </div>
+
+                <div class="tech-warning">
+                    <strong>⚠️ Performance Note:</strong> These tools run on cloud servers. They may feel slow or
+                    require waiting for resources. Do not close the browser tab while the process is running.
+                </div>
+            </div>
+
+            <hr class="section-divider">
+
 
             <!-- SECTION 3: INDIVIDUAL AUDIT GRID -->
             <section id="group-audit">
@@ -405,7 +475,8 @@
                                             podcast clip that is highly engaging, narrative, and professionally
                                             produced, but devoid of violence/threat (e.g., a compelling interview from
                                             <em>Hotel Matze</em> or a story from <em>This American Life</em>).
-                                            Engagement must be constant; only Violence should vary.</p>
+                                            Engagement must be constant; only Violence should vary.
+                                        </p>
                                     </div>
                                 </div>
 
@@ -471,9 +542,9 @@
                             </div>
                         </div>
                     </div>
-<!-- GROUP 2: Content Analysis (Feminism) -->
+                    <!-- GROUP 2: Content Analysis (Feminism) -->
                     <div class="audit-card group-ca status-yellow" id="g2-card">
-                        
+
                         <div class="audit-summary">
                             <div class="summary-left">
                                 <div class="group-identity">
@@ -490,19 +561,32 @@
 
                         <div class="audit-details">
                             <div class="details-wrapper">
-                                
+
                                 <div class="feedback-deep-dive">
                                     <h4>🎯 Design Audit</h4>
-                                    
+
                                     <div class="strength-box">
                                         <h5>✅ Foundation Strength</h5>
-                                        <p>The strategic shift to <strong>"Attribution of Responsibility"</strong> is the key to making this project work. By moving away from the vague "Systemic Criticism," you now have a concrete framework: measuring whether the podcast blames <em>Individual Actors</em> (which risks being sexist/pauschalizing) or <em>Structural Forces</em> (socialization, laws, patriarchy). This effectively translates a latent vibe into a measurable framing variable.</p>
+                                        <p>The strategic shift to <strong>"Attribution of Responsibility"</strong> is
+                                            the key to making this project work. By moving away from the vague "Systemic
+                                            Criticism," you now have a concrete framework: measuring whether the podcast
+                                            blames <em>Individual Actors</em> (which risks being sexist/pauschalizing)
+                                            or <em>Structural Forces</em> (socialization, laws, patriarchy). This
+                                            effectively translates a latent vibe into a measurable framing variable.</p>
                                     </div>
 
                                     <div class="adjustment-box">
                                         <h5>⚠️ Critical Adjustment: The "Generalization" Boundary</h5>
-                                        <p><strong>The Issue:</strong> You will encounter statements that sit right on the line. Example: <em>"Men just don't listen."</em> Is this a <strong>Stereotype</strong> (Sexist) or a critique of male <strong>Socialization</strong> (Systemic)? Without a strict rule, your coders will guess based on their own political leanings.</p>
-                                        <p><strong>The Fix:</strong> You need an <strong>"Explicit Link" Rule</strong>. A statement only counts as "Systemic" if the host <em>explicitly</em> connects the behavior to a cause (upbringing, society). If they just complain about the group without naming the cause, it codes as "Stereotyping/Individual."</p>
+                                        <p><strong>The Issue:</strong> You will encounter statements that sit right on
+                                            the line. Example: <em>"Men just don't listen."</em> Is this a
+                                            <strong>Stereotype</strong> (Sexist) or a critique of male
+                                            <strong>Socialization</strong> (Systemic)? Without a strict rule, your
+                                            coders will guess based on their own political leanings.</p>
+                                        <p><strong>The Fix:</strong> You need an <strong>"Explicit Link" Rule</strong>.
+                                            A statement only counts as "Systemic" if the host <em>explicitly</em>
+                                            connects the behavior to a cause (upbringing, society). If they just
+                                            complain about the group without naming the cause, it codes as
+                                            "Stereotyping/Individual."</p>
                                     </div>
                                 </div>
 
@@ -512,12 +596,14 @@
                                         <h4>Codebook Stress Test</h4>
                                     </div>
                                     <div class="checklist-container">
-                                        
+
                                         <div class="check-item">
                                             <input type="checkbox" class="audit-check" data-group="g2" data-weight="34">
                                             <label>
                                                 <strong>Target of Criticism</strong>
-                                                <span>Do you have distinct codes for: 1. Specific Individuals (e.g. "My Ex"), 2. The Group "Men" (Generalization), and 3. The Structure "Patriarchy/Society"?</span>
+                                                <span>Do you have distinct codes for: 1. Specific Individuals (e.g. "My
+                                                    Ex"), 2. The Group "Men" (Generalization), and 3. The Structure
+                                                    "Patriarchy/Society"?</span>
                                             </label>
                                         </div>
 
@@ -525,7 +611,9 @@
                                             <input type="checkbox" class="audit-check" data-group="g2" data-weight="33">
                                             <label>
                                                 <strong>The "Irony" Modality</strong>
-                                                <span>Feminist humor often ironically reproduces sexist tropes to mock them. Have you included a "Modality" variable (Literal vs. Ironic) to prevent miscoding satire as sexism?</span>
+                                                <span>Feminist humor often ironically reproduces sexist tropes to mock
+                                                    them. Have you included a "Modality" variable (Literal vs. Ironic)
+                                                    to prevent miscoding satire as sexism?</span>
                                             </label>
                                         </div>
 
@@ -533,7 +621,9 @@
                                             <input type="checkbox" class="audit-check" data-group="g2" data-weight="33">
                                             <label>
                                                 <strong>AI-Assisted Sub-Categories</strong>
-                                                <span>Have you used the LLM approach (as discussed) to extract specific sub-themes of system critique (e.g. "Emotional Labor", "Mental Load") to populate your codebook indicators?</span>
+                                                <span>Have you used the LLM approach (as discussed) to extract specific
+                                                    sub-themes of system critique (e.g. "Emotional Labor", "Mental
+                                                    Load") to populate your codebook indicators?</span>
                                             </label>
                                         </div>
 
@@ -545,7 +635,8 @@
                                 </div>
 
                                 <div class="next-steps">
-                                    <strong>👉 Next Move:</strong> Finalize "Target" Definitions → Test the "Explicit Link" Rule on 1 Episode → <strong>Start Coding (Pre-Test)</strong>.
+                                    <strong>👉 Next Move:</strong> Finalize "Target" Definitions → Test the "Explicit
+                                    Link" Rule on 1 Episode → <strong>Start Coding (Pre-Test)</strong>.
                                 </div>
 
                             </div>
@@ -591,7 +682,8 @@
                                             to reduced loneliness. But lonely people often seek media to fill the void
                                             (The Compensation Hypothesis). Your data might show that Heavy Listeners are
                                             <em>more</em> lonely. Without a control, you won't know if the podcast
-                                            failed to help, or if they were just very lonely to start with.</p>
+                                            failed to help, or if they were just very lonely to start with.
+                                        </p>
                                         <p><strong>The Fix:</strong> You must measure <strong>Motive</strong>. Include
                                             items like <em>"I listen to podcasts to feel less alone"</em> or <em>"to
                                                 hear a human voice."</em> If High Motive correlates with High
@@ -680,7 +772,8 @@
                                         <p>The variable structure (Position, Function, Type) is clear and well-defined.
                                             Using <strong>Chart Position</strong> as a proxy for "Success" allows for a
                                             very interesting comparison: Do successful shows beg for ratings
-                                            <em>less</em> than smaller shows? This is a solid, testable hypothesis.</p>
+                                            <em>less</em> than smaller shows? This is a solid, testable hypothesis.
+                                        </p>
                                     </div>
 
                                     <div class="adjustment-box">
@@ -689,7 +782,8 @@
                                             use <strong>Dynamic Ad Insertion (DAI)</strong>. The ad you hear today is
                                             determined by <em>your</em> location, <em>your</em> cookies, and the
                                             <em>current date</em>. If your partner listens tomorrow, they might hear a
-                                            different ad. This destroys Inter-Coder Reliability.</p>
+                                            different ad. This destroys Inter-Coder Reliability.
+                                        </p>
                                         <p><strong>The Fix:</strong> You must strictly distinguish between
                                             <strong>Native (Host-Read)</strong> and <strong>Dynamic</strong> ads.
                                             <br><em>Rule:</em> Only code Native Ads (read by the host, part of the
@@ -781,7 +875,8 @@
                                             sophisticated. It captures the "Mean World" paradox: listeners might be
                                             <em>desensitized</em> to the gore (numbness) but <em>sensitized</em> to the
                                             risk (fear). Testing these opposing effects simultaneously adds significant
-                                            depth.</p>
+                                            depth.
+                                        </p>
                                     </div>
 
                                     <div class="adjustment-box">
@@ -789,7 +884,8 @@
                                         <p><strong>The Issue:</strong> H1 claims listeners perceive violence as "more
                                             frequent." More frequent than what? If a listener estimates "100 murders,"
                                             you don't know if that is a distortion unless you compare it to the
-                                            <strong>Objective Reality</strong>.</p>
+                                            <strong>Objective Reality</strong>.
+                                        </p>
                                         <p><strong>The Fix:</strong> You must calculate an <strong>"Error
                                                 Score"</strong> variable.
                                             <br><em>Variable = (Participant Estimate) MINUS (Official PKS
@@ -886,7 +982,8 @@
                                                 Victimization"</strong> and <strong>"General Anxiety."</strong> Ask:
                                             <em>"Have you or a close friend ever been a victim of a crime?"</em> If you
                                             don't control for this, a single real-world event will skew your data more
-                                            than 1,000 hours of podcasts.</p>
+                                            than 1,000 hours of podcasts.
+                                        </p>
                                     </div>
                                 </div>
 
@@ -991,8 +1088,8 @@
 
                                     <div class="adjustment-box">
                                         <h5>⚠️ Small Note: Segment length</h5>
-                                        <p><strong>The Issue:</strong> You will need to find a way to reliably code 
-                                        the segments. This is a hard problem to be honest.</p>
+                                        <p><strong>The Issue:</strong> You will need to find a way to reliably code
+                                            the segments. This is a hard problem to be honest.</p>
                                     </div>
                                 </div>
 
@@ -1132,7 +1229,8 @@
                                 <div class="step-content">
                                     <h5>The "Blind" Pilot</h5>
                                     <p>Select <strong>two new episodes</strong>. Every group member codes them
-                                        <strong>independently</strong> (no talking!).</p>
+                                        <strong>independently</strong> (no talking!).
+                                    </p>
                                     <p><em>Goal: Simulate the real data collection process.</em></p>
                                 </div>
                             </li>

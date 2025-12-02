@@ -565,3 +565,137 @@
         grid-template-columns: 1fr;
     }
 }
+
+/* --- AUTOMATION LAB TOOLS --- */
+
+.digital-tool-section {
+    background-color: #f1f5f9; /* Slate/Grey background */
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.tool-section-header h3 {
+    margin-top: 0;
+    color: #1e293b; /* Dark Slate */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tool-section-header p {
+    color: #475569;
+    margin-bottom: 1.5rem;
+}
+
+.tool-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.colab-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-top: 4px solid #f59e0b; /* Colab Orange */
+}
+
+.colab-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.tool-icon {
+    font-size: 2rem;
+    line-height: 1;
+    background-color: #fff7ed;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+.colab-card h4 {
+    margin: 0;
+    font-size: 1.1em;
+    color: #1e293b;
+}
+
+.tool-tag {
+    font-size: 0.75em;
+    text-transform: uppercase;
+    color: #94a3b8;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.colab-card p {
+    font-size: 0.95em;
+    color: #334155;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.tool-specs {
+    background-color: #f8fafc;
+    border: 1px solid #f1f5f9;
+    border-radius: 6px;
+    padding: 0.75rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.85em;
+}
+
+.tool-specs ul {
+    margin: 0;
+    padding-left: 1.2rem;
+    color: #475569;
+}
+
+.tool-specs li {
+    margin-bottom: 4px;
+}
+
+.tool-specs code {
+    background-color: #e2e8f0;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-family: monospace;
+    color: #0f172a;
+}
+
+.colab-btn {
+    display: block;
+    text-align: center;
+    background-color: #f59e0b; /* Orange */
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.colab-btn:hover {
+    background-color: #d97706;
+}
+
+.tech-warning {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background-color: #fffbeb; /* Light Yellow */
+    border-left: 4px solid #f59e0b;
+    color: #92400e;
+    font-size: 0.9em;
+    border-radius: 4px;
+}
